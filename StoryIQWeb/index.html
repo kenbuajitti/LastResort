@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>WORD IQ WORD LADDER</title>
+<title>StoryIQ</title>
 <style>
 html,body { width:100%; height:100%; margin:0; overflow:hidden; background:#f0f0f0; }
 body { -webkit-user-select:none; user-select:none; }
@@ -22,18 +22,18 @@ const loading = document.getElementById('loading');
 const message = document.getElementById('message');
 const progress = document.getElementById('progress');
 const config = {
-  dataUrl: 'Build/WordIQWeb.data.br',
-  frameworkUrl: 'Build/WordIQWeb.framework.js.br',
-  codeUrl: 'Build/WordIQWeb.wasm.br',
+  dataUrl: 'Build/StoryIQWeb.data.br',
+  frameworkUrl: 'Build/StoryIQWeb.framework.js.br',
+  codeUrl: 'Build/StoryIQWeb.wasm.br',
   streamingAssetsUrl: 'StreamingAssets',
   companyName: "Buajitti_Associates",
-  productName: "WORD IQ WORD LADDER",
+  productName: "StoryIQ",
   productVersion: "1.0",
   matchWebGLToCanvasSize: true
 };
 function fail(error) { loading.hidden = false; progress.hidden = true; message.textContent = 'Unable to load the game. Please reload the page.'; console.error(error); }
 const script = document.createElement('script');
-script.src = 'Build/WordIQWeb.loader.js';
+script.src = 'Build/StoryIQWeb.loader.js';
 script.onload = () => createUnityInstance(canvas, config, value => { progress.value = value; })
   .then(instance => { window.unityInstance = instance; loading.hidden = true; canvas.focus(); })
   .catch(fail);

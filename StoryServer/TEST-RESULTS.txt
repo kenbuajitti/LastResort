@@ -1,0 +1,3 @@
+13 tests passed on Node v24.19.0 using simulated AI responses.
+Covers full 20-choice game, idempotency, validation, provider errors, CORS/preflight, persistent restart recovery, disk failure rollback and durable daily cap.
+No live AI calls, Render deployment or Unity build performed.

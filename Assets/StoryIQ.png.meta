@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6e88da82556f02542b6eb04dc66624ee
+guid: ad9e684ee1e47c349a7201d9680fc4e4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7835631355031550014
-    second: WordIQ-portrait_0
+      213: -5719637536247507165
+    second: StoryIQ_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WordIQ-portrait_0
+      name: StoryIQ_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1536
+        width: 1672
+        height: 941
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e387193d331cdbc60800000000000000
-      internalID: 7835631355031550014
+      spriteID: 3271af7f6f3cf90b0800000000000000
+      internalID: -5719637536247507165
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      WordIQ-portrait_0: 7835631355031550014
+      StoryIQ_0: -5719637536247507165
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

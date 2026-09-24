@@ -1,0 +1,24 @@
+{
+  "title": "Last Resort",
+  "premise": "You won five nights at The Bellweather, a private island resort reopening its doors to a very particular guest list. The welcome is warm. The phone signal is not. By the time you begin to question your luck, the boat has already left.",
+  "openingTitle": "The welcome committee",
+  "opening": "The launch pulls away before anyone checks your invitation.\n\nOn the jetty, Tamsin Reed offers you a cold towel and the smile of someone paid to prevent questions. Beyond her, The Bellweather rises above a dazzling bay. Five nights. Everything included. Apparently, that includes being unreachable.\n\nPenny Price films her arrival for the third time. Felix Bellweather argues quietly with a porter. On the terrace above them, a silver-haired woman watches the boat disappear.\n\nYour welcome envelope contains a room key, a dinner invitation, and a handwritten note:\n\n\"You didn't win this holiday. None of us did.\"\n\nTamsin notices you stop reading. \"Everything all right?\"",
+  "cast": [
+    {"name":"You — the unexpected guest", "introduction":"A complimentary holiday sounded like an excellent idea. You are beginning to wonder who chose the guest list."},
+    {"name":"Vivian Bellweather — the owner", "introduction":"The formidable woman behind the resort's reopening. She appears to know more about her guests than a booking form could explain."},
+    {"name":"Felix Bellweather — the nephew", "introduction":"Immaculately dressed and easily inconvenienced. He talks about the resort as though it already belongs to him."},
+    {"name":"Dr. June Vale — the retired physician", "introduction":"A keen birdwatcher with a steady gaze. She is unusually good at noticing what everyone else misses."},
+    {"name":"Penny Price — the travel influencer", "introduction":"Never far from her camera. She knows that a perfect holiday sometimes needs a little editing."},
+    {"name":"Arthur Finch — the accountant", "introduction":"Polite, meticulous, and distinctly uncomfortable around extravagance. Numbers seem to interest him more than the view."},
+    {"name":"Rosa Mercado — the kitchen-equipment seller", "introduction":"Practical and observant, with an easy manner that puts people at ease. Something about the staff seems familiar to her."},
+    {"name":"Graham Pike — the retired magician", "introduction":"A charming collector of small distractions. Watch his hands, and you may miss what he wants you to miss."},
+    {"name":"Tamsin Reed — the activities director", "introduction":"Your guide to a flawless stay. She knows the island's paths, its timetable, and precisely which questions to avoid."}
+  ],
+  "choices": [
+    {"id":"show_tamsin", "text":"Show Tamsin the note and ask who put it there.", "previewResponse":"Tamsin's smile holds for a second too long. She takes one look at the handwriting, then folds the note along its existing crease.\n\n\"Perhaps we should discuss this somewhere less public.\"\n\nShe gestures toward a side entrance. Above the jetty, Vivian Bellweather has stopped watching the sea. She is watching you."},
+    {"id":"ask_penny", "text":"Ask Penny whether she received the same welcome.", "previewResponse":"Penny lowers her phone. \"Depends. Did yours come with a threat or just the complimentary toiletries?\"\n\nThe joke lands badly because neither of you laughs. She angles her screen away before you can see the paused recording.\n\n\"Don't show that to anyone yet,\" she says. \"Especially anyone who works here.\""},
+    {"id":"listen_felix", "text":"Pocket the note and listen to Felix's argument.", "previewResponse":"You pause beside the luggage as though looking for your case.\n\n\"My aunt can't keep doing this,\" Felix tells the porter. \"Tell her I want the list. The real one.\"\n\nHe notices you, straightens his cuffs, and becomes instantly pleasant. \"First visit? You're going to find this place unforgettable.\""},
+    {"id":"approach_vivian", "text":"Go to the terrace and introduce yourself to Vivian.", "previewResponse":"Vivian waits until you reach the last step before speaking.\n\n\"I wondered which of you would come straight to me.\"\n\nYou introduce yourself. She does not look surprised by your name. Behind her, a table has been laid for dinner, each place marked with a sealed envelope.\n\n\"Enjoy the afternoon,\" she says. \"Tonight may be less relaxing.\""},
+    {"id":"inspect_envelope", "text":"Find a quiet spot and examine the envelope.", "previewResponse":"You settle on a bench out of sight of the welcome desk. The dinner invitation is thick, expensive paper. The warning is torn from something cheaper.\n\nThere is an indentation beneath the message, as though another line was written on the sheet above it. You turn it toward the light, but footsteps interrupt you.\n\n\"Lose something?\" asks Graham Pike. He is holding your room key. You could have sworn it was beside you."}
+  ]
+}
