@@ -1,0 +1,11 @@
+/Build/WordIQWeb.framework.js.br
+  Content-Encoding: br
+  Content-Type: application/javascript
+
+/Build/WordIQWeb.wasm.br
+  Content-Encoding: br
+  Content-Type: application/wasm
+
+/Build/WordIQWeb.data.br
+  Content-Encoding: br
+  Content-Type: application/octet-stream

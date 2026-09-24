@@ -1,0 +1,9092 @@
+{
+  "schemaVersion": 2,
+  "packId": "wordiq-letters-levels-80-v2",
+  "title": "WordIQ Four Difficulty Levels \u2014 Exactly One Path",
+  "dictionary": {
+    "source": "English Speller Database (ESDB)",
+    "edition": "1e5b7d3a72f47a71da5d28686c1dd4b397178485",
+    "verifiedAgainstDictionary": true
+  },
+  "puzzles": [
+    {
+      "id": "beginner-3-letter-001",
+      "title": "TAR to AXE",
+      "difficulty": "Beginner",
+      "wordLength": 3,
+      "startWord": "TAR",
+      "targetWord": "AXE",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "TAR",
+        "ACT",
+        "ACE",
+        "AXE"
+      ],
+      "nodes": [
+        {
+          "word": "ACE",
+          "nextWords": [
+            "ACT",
+            "AXE"
+          ]
+        },
+        {
+          "word": "ACT",
+          "nextWords": [
+            "ACE",
+            "TAR"
+          ]
+        },
+        {
+          "word": "AIR",
+          "nextWords": [
+            "SIR",
+            "TAR"
+          ]
+        },
+        {
+          "word": "AXE",
+          "nextWords": [
+            "ACE"
+          ]
+        },
+        {
+          "word": "INK",
+          "nextWords": [
+            "SIN"
+          ]
+        },
+        {
+          "word": "NET",
+          "nextWords": [
+            "NEW",
+            "NOT"
+          ]
+        },
+        {
+          "word": "NEW",
+          "nextWords": [
+            "NET"
+          ]
+        },
+        {
+          "word": "NOT",
+          "nextWords": [
+            "NET",
+            "SON"
+          ]
+        },
+        {
+          "word": "SIN",
+          "nextWords": [
+            "INK",
+            "SIR",
+            "SON"
+          ]
+        },
+        {
+          "word": "SIR",
+          "nextWords": [
+            "AIR",
+            "SIN"
+          ]
+        },
+        {
+          "word": "SON",
+          "nextWords": [
+            "NOT",
+            "SIN"
+          ]
+        },
+        {
+          "word": "TAR",
+          "nextWords": [
+            "ACT",
+            "AIR"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-3-letter-002",
+      "title": "BUG to DAD",
+      "difficulty": "Beginner",
+      "wordLength": 3,
+      "startWord": "BUG",
+      "targetWord": "DAD",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "BUG",
+        "DUB",
+        "DAB",
+        "DAD"
+      ],
+      "nodes": [
+        {
+          "word": "BIB",
+          "nextWords": [
+            "BIG"
+          ]
+        },
+        {
+          "word": "BIG",
+          "nextWords": [
+            "BIB",
+            "BUG",
+            "RIG"
+          ]
+        },
+        {
+          "word": "BUG",
+          "nextWords": [
+            "BIG",
+            "DUB"
+          ]
+        },
+        {
+          "word": "BYE",
+          "nextWords": [
+            "DYE"
+          ]
+        },
+        {
+          "word": "DAB",
+          "nextWords": [
+            "DAD",
+            "DUB"
+          ]
+        },
+        {
+          "word": "DAD",
+          "nextWords": [
+            "DAB"
+          ]
+        },
+        {
+          "word": "DUB",
+          "nextWords": [
+            "BUG",
+            "DAB",
+            "DUE"
+          ]
+        },
+        {
+          "word": "DUE",
+          "nextWords": [
+            "DUB",
+            "DYE"
+          ]
+        },
+        {
+          "word": "DYE",
+          "nextWords": [
+            "BYE",
+            "DUE"
+          ]
+        },
+        {
+          "word": "PIT",
+          "nextWords": [
+            "RIP"
+          ]
+        },
+        {
+          "word": "RIG",
+          "nextWords": [
+            "BIG",
+            "RIP"
+          ]
+        },
+        {
+          "word": "RIP",
+          "nextWords": [
+            "PIT",
+            "RIG"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-3-letter-003",
+      "title": "BAG to PAD",
+      "difficulty": "Beginner",
+      "wordLength": 3,
+      "startWord": "BAG",
+      "targetWord": "PAD",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "BAG",
+        "NAB",
+        "PAN",
+        "PAD"
+      ],
+      "nodes": [
+        {
+          "word": "BAG",
+          "nextWords": [
+            "GAG",
+            "NAB"
+          ]
+        },
+        {
+          "word": "EGG",
+          "nextWords": [
+            "EGO",
+            "GAG"
+          ]
+        },
+        {
+          "word": "EGO",
+          "nextWords": [
+            "EGG",
+            "HOG"
+          ]
+        },
+        {
+          "word": "GAG",
+          "nextWords": [
+            "BAG",
+            "EGG"
+          ]
+        },
+        {
+          "word": "HOG",
+          "nextWords": [
+            "EGO",
+            "HOW"
+          ]
+        },
+        {
+          "word": "HOW",
+          "nextWords": [
+            "HOG",
+            "SOW"
+          ]
+        },
+        {
+          "word": "NAB",
+          "nextWords": [
+            "BAG",
+            "PAN"
+          ]
+        },
+        {
+          "word": "PAD",
+          "nextWords": [
+            "PAN"
+          ]
+        },
+        {
+          "word": "PAN",
+          "nextWords": [
+            "NAB",
+            "PAD"
+          ]
+        },
+        {
+          "word": "SEW",
+          "nextWords": [
+            "SOW"
+          ]
+        },
+        {
+          "word": "SOD",
+          "nextWords": [
+            "SOW"
+          ]
+        },
+        {
+          "word": "SOW",
+          "nextWords": [
+            "HOW",
+            "SEW",
+            "SOD"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-3-letter-004",
+      "title": "BUD to OUR",
+      "difficulty": "Beginner",
+      "wordLength": 3,
+      "startWord": "BUD",
+      "targetWord": "OUR",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "BUD",
+        "BUT",
+        "RUT",
+        "OUR"
+      ],
+      "nodes": [
+        {
+          "word": "ACT",
+          "nextWords": [
+            "ART",
+            "CAP"
+          ]
+        },
+        {
+          "word": "AGE",
+          "nextWords": [
+            "ARE"
+          ]
+        },
+        {
+          "word": "ARE",
+          "nextWords": [
+            "AGE",
+            "ART"
+          ]
+        },
+        {
+          "word": "ART",
+          "nextWords": [
+            "ACT",
+            "ARE",
+            "RUT"
+          ]
+        },
+        {
+          "word": "BUD",
+          "nextWords": [
+            "BUT"
+          ]
+        },
+        {
+          "word": "BUT",
+          "nextWords": [
+            "BUD",
+            "RUT"
+          ]
+        },
+        {
+          "word": "CAP",
+          "nextWords": [
+            "ACT",
+            "SPA"
+          ]
+        },
+        {
+          "word": "OUR",
+          "nextWords": [
+            "RUT"
+          ]
+        },
+        {
+          "word": "RIP",
+          "nextWords": [
+            "SIP"
+          ]
+        },
+        {
+          "word": "RUT",
+          "nextWords": [
+            "ART",
+            "BUT",
+            "OUR"
+          ]
+        },
+        {
+          "word": "SIP",
+          "nextWords": [
+            "RIP",
+            "SPA"
+          ]
+        },
+        {
+          "word": "SPA",
+          "nextWords": [
+            "CAP",
+            "SIP"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-3-letter-005",
+      "title": "BAD to CUE",
+      "difficulty": "Beginner",
+      "wordLength": 3,
+      "startWord": "BAD",
+      "targetWord": "CUE",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "BAD",
+        "CAB",
+        "CUB",
+        "CUE"
+      ],
+      "nodes": [
+        {
+          "word": "BAD",
+          "nextWords": [
+            "CAB"
+          ]
+        },
+        {
+          "word": "CAB",
+          "nextWords": [
+            "BAD",
+            "CUB"
+          ]
+        },
+        {
+          "word": "CUB",
+          "nextWords": [
+            "CAB",
+            "CUE",
+            "RUB"
+          ]
+        },
+        {
+          "word": "CUE",
+          "nextWords": [
+            "CUB"
+          ]
+        },
+        {
+          "word": "NUN",
+          "nextWords": [
+            "PUN"
+          ]
+        },
+        {
+          "word": "PIT",
+          "nextWords": [
+            "PUT"
+          ]
+        },
+        {
+          "word": "PUN",
+          "nextWords": [
+            "NUN",
+            "PUT"
+          ]
+        },
+        {
+          "word": "PUT",
+          "nextWords": [
+            "PIT",
+            "PUN",
+            "RUT"
+          ]
+        },
+        {
+          "word": "RIB",
+          "nextWords": [
+            "RIM",
+            "RUB"
+          ]
+        },
+        {
+          "word": "RIM",
+          "nextWords": [
+            "RIB"
+          ]
+        },
+        {
+          "word": "RUB",
+          "nextWords": [
+            "CUB",
+            "RIB",
+            "RUT"
+          ]
+        },
+        {
+          "word": "RUT",
+          "nextWords": [
+            "PUT",
+            "RUB"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-3-letter-006",
+      "title": "RYE to SET",
+      "difficulty": "Beginner",
+      "wordLength": 3,
+      "startWord": "RYE",
+      "targetWord": "SET",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "RYE",
+        "HEY",
+        "SHE",
+        "SET"
+      ],
+      "nodes": [
+        {
+          "word": "BED",
+          "nextWords": [
+            "BEG"
+          ]
+        },
+        {
+          "word": "BEG",
+          "nextWords": [
+            "BED",
+            "BOG"
+          ]
+        },
+        {
+          "word": "BOG",
+          "nextWords": [
+            "BEG",
+            "BOW"
+          ]
+        },
+        {
+          "word": "BOW",
+          "nextWords": [
+            "BOG",
+            "OWE"
+          ]
+        },
+        {
+          "word": "EWE",
+          "nextWords": [
+            "OWE"
+          ]
+        },
+        {
+          "word": "HEY",
+          "nextWords": [
+            "RYE",
+            "SHE"
+          ]
+        },
+        {
+          "word": "ORE",
+          "nextWords": [
+            "OWE",
+            "RYE"
+          ]
+        },
+        {
+          "word": "OWE",
+          "nextWords": [
+            "BOW",
+            "EWE",
+            "ORE"
+          ]
+        },
+        {
+          "word": "RYE",
+          "nextWords": [
+            "HEY",
+            "ORE",
+            "WRY"
+          ]
+        },
+        {
+          "word": "SET",
+          "nextWords": [
+            "SHE"
+          ]
+        },
+        {
+          "word": "SHE",
+          "nextWords": [
+            "HEY",
+            "SET"
+          ]
+        },
+        {
+          "word": "WRY",
+          "nextWords": [
+            "RYE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-3-letter-007",
+      "title": "NOD to WIG",
+      "difficulty": "Beginner",
+      "wordLength": 3,
+      "startWord": "NOD",
+      "targetWord": "WIG",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "NOD",
+        "ION",
+        "WIN",
+        "WIG"
+      ],
+      "nodes": [
+        {
+          "word": "ADD",
+          "nextWords": [
+            "AND"
+          ]
+        },
+        {
+          "word": "AND",
+          "nextWords": [
+            "ADD",
+            "ANY",
+            "NOD"
+          ]
+        },
+        {
+          "word": "ANY",
+          "nextWords": [
+            "AND"
+          ]
+        },
+        {
+          "word": "DOT",
+          "nextWords": [
+            "HOT",
+            "NOD"
+          ]
+        },
+        {
+          "word": "GUT",
+          "nextWords": [
+            "HUT"
+          ]
+        },
+        {
+          "word": "HOP",
+          "nextWords": [
+            "HOT"
+          ]
+        },
+        {
+          "word": "HOT",
+          "nextWords": [
+            "DOT",
+            "HOP",
+            "HUT"
+          ]
+        },
+        {
+          "word": "HUT",
+          "nextWords": [
+            "GUT",
+            "HOT"
+          ]
+        },
+        {
+          "word": "ION",
+          "nextWords": [
+            "NOD",
+            "WIN"
+          ]
+        },
+        {
+          "word": "NOD",
+          "nextWords": [
+            "AND",
+            "DOT",
+            "ION"
+          ]
+        },
+        {
+          "word": "WIG",
+          "nextWords": [
+            "WIN"
+          ]
+        },
+        {
+          "word": "WIN",
+          "nextWords": [
+            "ION",
+            "WIG"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-3-letter-008",
+      "title": "DAB to RIP",
+      "difficulty": "Beginner",
+      "wordLength": 3,
+      "startWord": "DAB",
+      "targetWord": "RIP",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "DAB",
+        "BAR",
+        "RIB",
+        "RIP"
+      ],
+      "nodes": [
+        {
+          "word": "BAR",
+          "nextWords": [
+            "DAB",
+            "RIB"
+          ]
+        },
+        {
+          "word": "BED",
+          "nextWords": [
+            "BEG",
+            "DAB"
+          ]
+        },
+        {
+          "word": "BEG",
+          "nextWords": [
+            "BED",
+            "BOG"
+          ]
+        },
+        {
+          "word": "BOG",
+          "nextWords": [
+            "BEG",
+            "BOO"
+          ]
+        },
+        {
+          "word": "BOO",
+          "nextWords": [
+            "BOG"
+          ]
+        },
+        {
+          "word": "DAB",
+          "nextWords": [
+            "BAR",
+            "BED",
+            "MAD"
+          ]
+        },
+        {
+          "word": "FIB",
+          "nextWords": [
+            "FIX",
+            "RIB"
+          ]
+        },
+        {
+          "word": "FIX",
+          "nextWords": [
+            "FIB"
+          ]
+        },
+        {
+          "word": "MAD",
+          "nextWords": [
+            "DAB",
+            "MAY"
+          ]
+        },
+        {
+          "word": "MAY",
+          "nextWords": [
+            "MAD"
+          ]
+        },
+        {
+          "word": "RIB",
+          "nextWords": [
+            "BAR",
+            "FIB",
+            "RIP"
+          ]
+        },
+        {
+          "word": "RIP",
+          "nextWords": [
+            "RIB"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-3-letter-009",
+      "title": "TEE to AXE",
+      "difficulty": "Beginner",
+      "wordLength": 3,
+      "startWord": "TEE",
+      "targetWord": "AXE",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "TEE",
+        "EVE",
+        "VEX",
+        "AXE"
+      ],
+      "nodes": [
+        {
+          "word": "AXE",
+          "nextWords": [
+            "VEX"
+          ]
+        },
+        {
+          "word": "DIN",
+          "nextWords": [
+            "DIP",
+            "TIN"
+          ]
+        },
+        {
+          "word": "DIP",
+          "nextWords": [
+            "DIN",
+            "PAD"
+          ]
+        },
+        {
+          "word": "EVE",
+          "nextWords": [
+            "TEE",
+            "VEX"
+          ]
+        },
+        {
+          "word": "MAP",
+          "nextWords": [
+            "MAT",
+            "PAD"
+          ]
+        },
+        {
+          "word": "MAT",
+          "nextWords": [
+            "MAP"
+          ]
+        },
+        {
+          "word": "MEN",
+          "nextWords": [
+            "TEN"
+          ]
+        },
+        {
+          "word": "PAD",
+          "nextWords": [
+            "DIP",
+            "MAP"
+          ]
+        },
+        {
+          "word": "TEE",
+          "nextWords": [
+            "EVE",
+            "TEN"
+          ]
+        },
+        {
+          "word": "TEN",
+          "nextWords": [
+            "MEN",
+            "TEE",
+            "TIN"
+          ]
+        },
+        {
+          "word": "TIN",
+          "nextWords": [
+            "DIN",
+            "TEN"
+          ]
+        },
+        {
+          "word": "VEX",
+          "nextWords": [
+            "AXE",
+            "EVE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-3-letter-010",
+      "title": "KEY to SEA",
+      "difficulty": "Beginner",
+      "wordLength": 3,
+      "startWord": "KEY",
+      "targetWord": "SEA",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "KEY",
+        "SKY",
+        "SAY",
+        "SEA"
+      ],
+      "nodes": [
+        {
+          "word": "AID",
+          "nextWords": [
+            "AND",
+            "KID"
+          ]
+        },
+        {
+          "word": "AND",
+          "nextWords": [
+            "AID",
+            "ANY"
+          ]
+        },
+        {
+          "word": "ANY",
+          "nextWords": [
+            "AND",
+            "SAY"
+          ]
+        },
+        {
+          "word": "BIN",
+          "nextWords": [
+            "KIN"
+          ]
+        },
+        {
+          "word": "ELF",
+          "nextWords": [
+            "LYE"
+          ]
+        },
+        {
+          "word": "KEY",
+          "nextWords": [
+            "LYE",
+            "SKY"
+          ]
+        },
+        {
+          "word": "KID",
+          "nextWords": [
+            "AID",
+            "KIN"
+          ]
+        },
+        {
+          "word": "KIN",
+          "nextWords": [
+            "BIN",
+            "KID"
+          ]
+        },
+        {
+          "word": "LYE",
+          "nextWords": [
+            "ELF",
+            "KEY"
+          ]
+        },
+        {
+          "word": "SAY",
+          "nextWords": [
+            "ANY",
+            "SEA",
+            "SKY"
+          ]
+        },
+        {
+          "word": "SEA",
+          "nextWords": [
+            "SAY"
+          ]
+        },
+        {
+          "word": "SKY",
+          "nextWords": [
+            "KEY",
+            "SAY"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-3-letter-001",
+      "title": "NAY to GIG",
+      "difficulty": "Intermediate",
+      "wordLength": 3,
+      "startWord": "NAY",
+      "targetWord": "GIG",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "NAY",
+        "YAP",
+        "GAP",
+        "GAG",
+        "GIG"
+      ],
+      "nodes": [
+        {
+          "word": "AND",
+          "nextWords": [
+            "DIN",
+            "NAY"
+          ]
+        },
+        {
+          "word": "DIN",
+          "nextWords": [
+            "AND"
+          ]
+        },
+        {
+          "word": "FEW",
+          "nextWords": [
+            "FEZ",
+            "OWE"
+          ]
+        },
+        {
+          "word": "FEZ",
+          "nextWords": [
+            "FEW"
+          ]
+        },
+        {
+          "word": "GAG",
+          "nextWords": [
+            "GAP",
+            "GIG"
+          ]
+        },
+        {
+          "word": "GAP",
+          "nextWords": [
+            "GAG",
+            "YAP"
+          ]
+        },
+        {
+          "word": "GIG",
+          "nextWords": [
+            "GAG"
+          ]
+        },
+        {
+          "word": "NAY",
+          "nextWords": [
+            "AND",
+            "YAP",
+            "YEN"
+          ]
+        },
+        {
+          "word": "ONE",
+          "nextWords": [
+            "OWE",
+            "YEN"
+          ]
+        },
+        {
+          "word": "OWE",
+          "nextWords": [
+            "FEW",
+            "ONE"
+          ]
+        },
+        {
+          "word": "YAP",
+          "nextWords": [
+            "GAP",
+            "NAY"
+          ]
+        },
+        {
+          "word": "YEN",
+          "nextWords": [
+            "NAY",
+            "ONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-3-letter-002",
+      "title": "DAD to FIR",
+      "difficulty": "Intermediate",
+      "wordLength": 3,
+      "startWord": "DAD",
+      "targetWord": "FIR",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "DAD",
+        "DAY",
+        "DRY",
+        "FRY",
+        "FIR"
+      ],
+      "nodes": [
+        {
+          "word": "BAR",
+          "nextWords": [
+            "BOA",
+            "RAM"
+          ]
+        },
+        {
+          "word": "BOA",
+          "nextWords": [
+            "BAR",
+            "BOB"
+          ]
+        },
+        {
+          "word": "BOB",
+          "nextWords": [
+            "BOA"
+          ]
+        },
+        {
+          "word": "DAD",
+          "nextWords": [
+            "DAY"
+          ]
+        },
+        {
+          "word": "DAY",
+          "nextWords": [
+            "DAD",
+            "DRY",
+            "MAY"
+          ]
+        },
+        {
+          "word": "DRY",
+          "nextWords": [
+            "DAY",
+            "FRY"
+          ]
+        },
+        {
+          "word": "FIR",
+          "nextWords": [
+            "FRY"
+          ]
+        },
+        {
+          "word": "FRY",
+          "nextWords": [
+            "DRY",
+            "FIR"
+          ]
+        },
+        {
+          "word": "GUM",
+          "nextWords": [
+            "GYM"
+          ]
+        },
+        {
+          "word": "GYM",
+          "nextWords": [
+            "GUM",
+            "MAY"
+          ]
+        },
+        {
+          "word": "MAY",
+          "nextWords": [
+            "DAY",
+            "GYM",
+            "RAM"
+          ]
+        },
+        {
+          "word": "RAM",
+          "nextWords": [
+            "BAR",
+            "MAY"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-3-letter-003",
+      "title": "NAG to EGO",
+      "difficulty": "Intermediate",
+      "wordLength": 3,
+      "startWord": "NAG",
+      "targetWord": "EGO",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "NAG",
+        "GIN",
+        "GIG",
+        "EGG",
+        "EGO"
+      ],
+      "nodes": [
+        {
+          "word": "CAB",
+          "nextWords": [
+            "GAB"
+          ]
+        },
+        {
+          "word": "EGG",
+          "nextWords": [
+            "EGO",
+            "GIG"
+          ]
+        },
+        {
+          "word": "EGO",
+          "nextWords": [
+            "EGG"
+          ]
+        },
+        {
+          "word": "GAB",
+          "nextWords": [
+            "CAB",
+            "NAG"
+          ]
+        },
+        {
+          "word": "GIG",
+          "nextWords": [
+            "EGG",
+            "GIN"
+          ]
+        },
+        {
+          "word": "GIN",
+          "nextWords": [
+            "GIG",
+            "NAG"
+          ]
+        },
+        {
+          "word": "NAG",
+          "nextWords": [
+            "GAB",
+            "GIN",
+            "RAN"
+          ]
+        },
+        {
+          "word": "RAN",
+          "nextWords": [
+            "NAG",
+            "RUN",
+            "WAR"
+          ]
+        },
+        {
+          "word": "RUM",
+          "nextWords": [
+            "RUN"
+          ]
+        },
+        {
+          "word": "RUN",
+          "nextWords": [
+            "RAN",
+            "RUM"
+          ]
+        },
+        {
+          "word": "WAR",
+          "nextWords": [
+            "RAN",
+            "WAS"
+          ]
+        },
+        {
+          "word": "WAS",
+          "nextWords": [
+            "WAR"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-3-letter-004",
+      "title": "TAX to PEP",
+      "difficulty": "Intermediate",
+      "wordLength": 3,
+      "startWord": "TAX",
+      "targetWord": "PEP",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "TAX",
+        "PAT",
+        "POT",
+        "POP",
+        "PEP"
+      ],
+      "nodes": [
+        {
+          "word": "OWL",
+          "nextWords": [
+            "OWN"
+          ]
+        },
+        {
+          "word": "OWN",
+          "nextWords": [
+            "OWL",
+            "TON"
+          ]
+        },
+        {
+          "word": "PAT",
+          "nextWords": [
+            "POT",
+            "RAP",
+            "TAX"
+          ]
+        },
+        {
+          "word": "PEP",
+          "nextWords": [
+            "POP"
+          ]
+        },
+        {
+          "word": "POP",
+          "nextWords": [
+            "PEP",
+            "POT"
+          ]
+        },
+        {
+          "word": "POT",
+          "nextWords": [
+            "PAT",
+            "POP",
+            "TON"
+          ]
+        },
+        {
+          "word": "RAP",
+          "nextWords": [
+            "PAT",
+            "RAW"
+          ]
+        },
+        {
+          "word": "RAW",
+          "nextWords": [
+            "RAP",
+            "WAG"
+          ]
+        },
+        {
+          "word": "TAX",
+          "nextWords": [
+            "PAT"
+          ]
+        },
+        {
+          "word": "TEN",
+          "nextWords": [
+            "TON"
+          ]
+        },
+        {
+          "word": "TON",
+          "nextWords": [
+            "OWN",
+            "POT",
+            "TEN"
+          ]
+        },
+        {
+          "word": "WAG",
+          "nextWords": [
+            "RAW"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-3-letter-005",
+      "title": "TEA to DOE",
+      "difficulty": "Intermediate",
+      "wordLength": 3,
+      "startWord": "TEA",
+      "targetWord": "DOE",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "TEA",
+        "GET",
+        "GOT",
+        "DOG",
+        "DOE"
+      ],
+      "nodes": [
+        {
+          "word": "DID",
+          "nextWords": [
+            "DIG"
+          ]
+        },
+        {
+          "word": "DIG",
+          "nextWords": [
+            "DID",
+            "DOG",
+            "RIG"
+          ]
+        },
+        {
+          "word": "DOE",
+          "nextWords": [
+            "DOG"
+          ]
+        },
+        {
+          "word": "DOG",
+          "nextWords": [
+            "DIG",
+            "DOE",
+            "GOT"
+          ]
+        },
+        {
+          "word": "GET",
+          "nextWords": [
+            "GOT",
+            "TEA"
+          ]
+        },
+        {
+          "word": "GOT",
+          "nextWords": [
+            "DOG",
+            "GET"
+          ]
+        },
+        {
+          "word": "IMP",
+          "nextWords": [
+            "RIP"
+          ]
+        },
+        {
+          "word": "PER",
+          "nextWords": [
+            "PEW",
+            "RIP"
+          ]
+        },
+        {
+          "word": "PEW",
+          "nextWords": [
+            "PER"
+          ]
+        },
+        {
+          "word": "RIG",
+          "nextWords": [
+            "DIG",
+            "RIP"
+          ]
+        },
+        {
+          "word": "RIP",
+          "nextWords": [
+            "IMP",
+            "PER",
+            "RIG"
+          ]
+        },
+        {
+          "word": "TEA",
+          "nextWords": [
+            "GET"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-3-letter-006",
+      "title": "TOE to RAP",
+      "difficulty": "Intermediate",
+      "wordLength": 3,
+      "startWord": "TOE",
+      "targetWord": "RAP",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "TOE",
+        "ROT",
+        "ROW",
+        "WAR",
+        "RAP"
+      ],
+      "nodes": [
+        {
+          "word": "ACE",
+          "nextWords": [
+            "AWE"
+          ]
+        },
+        {
+          "word": "AWE",
+          "nextWords": [
+            "ACE",
+            "WAR"
+          ]
+        },
+        {
+          "word": "BOG",
+          "nextWords": [
+            "BOW",
+            "GOO"
+          ]
+        },
+        {
+          "word": "BOW",
+          "nextWords": [
+            "BOG",
+            "ROW"
+          ]
+        },
+        {
+          "word": "GOO",
+          "nextWords": [
+            "BOG"
+          ]
+        },
+        {
+          "word": "RAP",
+          "nextWords": [
+            "WAR"
+          ]
+        },
+        {
+          "word": "ROT",
+          "nextWords": [
+            "ROW",
+            "RUT",
+            "TOE"
+          ]
+        },
+        {
+          "word": "ROW",
+          "nextWords": [
+            "BOW",
+            "ROT",
+            "WAR"
+          ]
+        },
+        {
+          "word": "RUG",
+          "nextWords": [
+            "RUT"
+          ]
+        },
+        {
+          "word": "RUT",
+          "nextWords": [
+            "ROT",
+            "RUG"
+          ]
+        },
+        {
+          "word": "TOE",
+          "nextWords": [
+            "ROT"
+          ]
+        },
+        {
+          "word": "WAR",
+          "nextWords": [
+            "AWE",
+            "RAP",
+            "ROW"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-3-letter-007",
+      "title": "BUN to HOP",
+      "difficulty": "Intermediate",
+      "wordLength": 3,
+      "startWord": "BUN",
+      "targetWord": "HOP",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "BUN",
+        "NUT",
+        "NOT",
+        "HOT",
+        "HOP"
+      ],
+      "nodes": [
+        {
+          "word": "BUN",
+          "nextWords": [
+            "BUY",
+            "NUT"
+          ]
+        },
+        {
+          "word": "BUY",
+          "nextWords": [
+            "BUN"
+          ]
+        },
+        {
+          "word": "HOP",
+          "nextWords": [
+            "HOT"
+          ]
+        },
+        {
+          "word": "HOT",
+          "nextWords": [
+            "HOP",
+            "NOT"
+          ]
+        },
+        {
+          "word": "NOT",
+          "nextWords": [
+            "HOT",
+            "NUT",
+            "OWN"
+          ]
+        },
+        {
+          "word": "NUT",
+          "nextWords": [
+            "BUN",
+            "NOT",
+            "PUT"
+          ]
+        },
+        {
+          "word": "OWL",
+          "nextWords": [
+            "OWN"
+          ]
+        },
+        {
+          "word": "OWN",
+          "nextWords": [
+            "NOT",
+            "OWL"
+          ]
+        },
+        {
+          "word": "PET",
+          "nextWords": [
+            "PEW",
+            "PUT"
+          ]
+        },
+        {
+          "word": "PEW",
+          "nextWords": [
+            "PET"
+          ]
+        },
+        {
+          "word": "PUP",
+          "nextWords": [
+            "PUT"
+          ]
+        },
+        {
+          "word": "PUT",
+          "nextWords": [
+            "NUT",
+            "PET",
+            "PUP"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-3-letter-008",
+      "title": "BAN to DAD",
+      "difficulty": "Intermediate",
+      "wordLength": 3,
+      "startWord": "BAN",
+      "targetWord": "DAD",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "BAN",
+        "JAB",
+        "JAM",
+        "DAM",
+        "DAD"
+      ],
+      "nodes": [
+        {
+          "word": "ANY",
+          "nextWords": [
+            "BAN",
+            "HAY",
+            "YEN"
+          ]
+        },
+        {
+          "word": "BAN",
+          "nextWords": [
+            "ANY",
+            "BUN",
+            "JAB"
+          ]
+        },
+        {
+          "word": "BUN",
+          "nextWords": [
+            "BAN",
+            "BUY"
+          ]
+        },
+        {
+          "word": "BUY",
+          "nextWords": [
+            "BUN"
+          ]
+        },
+        {
+          "word": "DAD",
+          "nextWords": [
+            "DAM"
+          ]
+        },
+        {
+          "word": "DAM",
+          "nextWords": [
+            "DAD",
+            "JAM"
+          ]
+        },
+        {
+          "word": "HAY",
+          "nextWords": [
+            "ANY",
+            "WHY"
+          ]
+        },
+        {
+          "word": "JAB",
+          "nextWords": [
+            "BAN",
+            "JAM"
+          ]
+        },
+        {
+          "word": "JAM",
+          "nextWords": [
+            "DAM",
+            "JAB"
+          ]
+        },
+        {
+          "word": "KEY",
+          "nextWords": [
+            "YEN"
+          ]
+        },
+        {
+          "word": "WHY",
+          "nextWords": [
+            "HAY"
+          ]
+        },
+        {
+          "word": "YEN",
+          "nextWords": [
+            "ANY",
+            "KEY"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-3-letter-009",
+      "title": "DEW to HUG",
+      "difficulty": "Intermediate",
+      "wordLength": 3,
+      "startWord": "DEW",
+      "targetWord": "HUG",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "DEW",
+        "WOE",
+        "HOE",
+        "HOG",
+        "HUG"
+      ],
+      "nodes": [
+        {
+          "word": "BID",
+          "nextWords": [
+            "BIG",
+            "DIE"
+          ]
+        },
+        {
+          "word": "BIG",
+          "nextWords": [
+            "BID",
+            "WIG"
+          ]
+        },
+        {
+          "word": "DEW",
+          "nextWords": [
+            "DIE",
+            "WOE"
+          ]
+        },
+        {
+          "word": "DIE",
+          "nextWords": [
+            "BID",
+            "DEW"
+          ]
+        },
+        {
+          "word": "HEM",
+          "nextWords": [
+            "HOE"
+          ]
+        },
+        {
+          "word": "HOE",
+          "nextWords": [
+            "HEM",
+            "HOG",
+            "WOE"
+          ]
+        },
+        {
+          "word": "HOG",
+          "nextWords": [
+            "HOE",
+            "HUG"
+          ]
+        },
+        {
+          "word": "HUG",
+          "nextWords": [
+            "HOG"
+          ]
+        },
+        {
+          "word": "TON",
+          "nextWords": [
+            "TOW"
+          ]
+        },
+        {
+          "word": "TOW",
+          "nextWords": [
+            "TON",
+            "WOE"
+          ]
+        },
+        {
+          "word": "WIG",
+          "nextWords": [
+            "BIG"
+          ]
+        },
+        {
+          "word": "WOE",
+          "nextWords": [
+            "DEW",
+            "HOE",
+            "TOW"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-3-letter-010",
+      "title": "NAB to PEG",
+      "difficulty": "Intermediate",
+      "wordLength": 3,
+      "startWord": "NAB",
+      "targetWord": "PEG",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "NAB",
+        "NAG",
+        "GAG",
+        "EGG",
+        "PEG"
+      ],
+      "nodes": [
+        {
+          "word": "BUN",
+          "nextWords": [
+            "HUB",
+            "NAB"
+          ]
+        },
+        {
+          "word": "DYE",
+          "nextWords": [
+            "HEY"
+          ]
+        },
+        {
+          "word": "EGG",
+          "nextWords": [
+            "GAG",
+            "PEG"
+          ]
+        },
+        {
+          "word": "GAG",
+          "nextWords": [
+            "EGG",
+            "NAG"
+          ]
+        },
+        {
+          "word": "HEY",
+          "nextWords": [
+            "DYE",
+            "HOE"
+          ]
+        },
+        {
+          "word": "HOE",
+          "nextWords": [
+            "HEY",
+            "HOG"
+          ]
+        },
+        {
+          "word": "HOG",
+          "nextWords": [
+            "HOE",
+            "HUG"
+          ]
+        },
+        {
+          "word": "HUB",
+          "nextWords": [
+            "BUN",
+            "HUG"
+          ]
+        },
+        {
+          "word": "HUG",
+          "nextWords": [
+            "HOG",
+            "HUB"
+          ]
+        },
+        {
+          "word": "NAB",
+          "nextWords": [
+            "BUN",
+            "NAG"
+          ]
+        },
+        {
+          "word": "NAG",
+          "nextWords": [
+            "GAG",
+            "NAB"
+          ]
+        },
+        {
+          "word": "PEG",
+          "nextWords": [
+            "EGG"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-3-letter-001",
+      "title": "DOT to BOY",
+      "difficulty": "Advanced",
+      "wordLength": 3,
+      "startWord": "DOT",
+      "targetWord": "BOY",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "DOT",
+        "TWO",
+        "MOW",
+        "MOP",
+        "BOP",
+        "BOY"
+      ],
+      "nodes": [
+        {
+          "word": "BOP",
+          "nextWords": [
+            "BOY",
+            "MOP"
+          ]
+        },
+        {
+          "word": "BOY",
+          "nextWords": [
+            "BOP"
+          ]
+        },
+        {
+          "word": "DOT",
+          "nextWords": [
+            "SOD",
+            "TWO"
+          ]
+        },
+        {
+          "word": "GNU",
+          "nextWords": [
+            "GUT",
+            "SUN"
+          ]
+        },
+        {
+          "word": "GUT",
+          "nextWords": [
+            "GNU"
+          ]
+        },
+        {
+          "word": "MOP",
+          "nextWords": [
+            "BOP",
+            "MOW"
+          ]
+        },
+        {
+          "word": "MOW",
+          "nextWords": [
+            "MOP",
+            "TWO"
+          ]
+        },
+        {
+          "word": "SOD",
+          "nextWords": [
+            "DOT",
+            "SON"
+          ]
+        },
+        {
+          "word": "SON",
+          "nextWords": [
+            "SOD",
+            "SUN"
+          ]
+        },
+        {
+          "word": "SUM",
+          "nextWords": [
+            "SUN"
+          ]
+        },
+        {
+          "word": "SUN",
+          "nextWords": [
+            "GNU",
+            "SON",
+            "SUM"
+          ]
+        },
+        {
+          "word": "TWO",
+          "nextWords": [
+            "DOT",
+            "MOW"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-3-letter-002",
+      "title": "GYM to PAR",
+      "difficulty": "Advanced",
+      "wordLength": 3,
+      "startWord": "GYM",
+      "targetWord": "PAR",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "GYM",
+        "MAY",
+        "DAM",
+        "FAD",
+        "FAR",
+        "PAR"
+      ],
+      "nodes": [
+        {
+          "word": "ANT",
+          "nextWords": [
+            "ANY",
+            "NET"
+          ]
+        },
+        {
+          "word": "ANY",
+          "nextWords": [
+            "ANT",
+            "MAY"
+          ]
+        },
+        {
+          "word": "DAM",
+          "nextWords": [
+            "FAD",
+            "MAY"
+          ]
+        },
+        {
+          "word": "ELF",
+          "nextWords": [
+            "LET"
+          ]
+        },
+        {
+          "word": "FAD",
+          "nextWords": [
+            "DAM",
+            "FAR"
+          ]
+        },
+        {
+          "word": "FAR",
+          "nextWords": [
+            "FAD",
+            "PAR"
+          ]
+        },
+        {
+          "word": "GYM",
+          "nextWords": [
+            "MAY"
+          ]
+        },
+        {
+          "word": "LET",
+          "nextWords": [
+            "ELF",
+            "NET"
+          ]
+        },
+        {
+          "word": "MAY",
+          "nextWords": [
+            "ANY",
+            "DAM",
+            "GYM"
+          ]
+        },
+        {
+          "word": "NET",
+          "nextWords": [
+            "ANT",
+            "LET",
+            "NEW"
+          ]
+        },
+        {
+          "word": "NEW",
+          "nextWords": [
+            "NET"
+          ]
+        },
+        {
+          "word": "PAR",
+          "nextWords": [
+            "FAR"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-3-letter-003",
+      "title": "TOY to MUG",
+      "difficulty": "Advanced",
+      "wordLength": 3,
+      "startWord": "TOY",
+      "targetWord": "MUG",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "TOY",
+        "OUT",
+        "BUT",
+        "HUB",
+        "HUG",
+        "MUG"
+      ],
+      "nodes": [
+        {
+          "word": "BUT",
+          "nextWords": [
+            "HUB",
+            "OUT"
+          ]
+        },
+        {
+          "word": "DIE",
+          "nextWords": [
+            "DYE",
+            "HID"
+          ]
+        },
+        {
+          "word": "DYE",
+          "nextWords": [
+            "DIE",
+            "HEY"
+          ]
+        },
+        {
+          "word": "HEY",
+          "nextWords": [
+            "DYE",
+            "HOE"
+          ]
+        },
+        {
+          "word": "HID",
+          "nextWords": [
+            "DIE"
+          ]
+        },
+        {
+          "word": "HOE",
+          "nextWords": [
+            "HEY",
+            "HOG"
+          ]
+        },
+        {
+          "word": "HOG",
+          "nextWords": [
+            "HOE",
+            "HUG"
+          ]
+        },
+        {
+          "word": "HUB",
+          "nextWords": [
+            "BUT",
+            "HUG"
+          ]
+        },
+        {
+          "word": "HUG",
+          "nextWords": [
+            "HOG",
+            "HUB",
+            "MUG"
+          ]
+        },
+        {
+          "word": "MUG",
+          "nextWords": [
+            "HUG"
+          ]
+        },
+        {
+          "word": "OUT",
+          "nextWords": [
+            "BUT",
+            "TOY"
+          ]
+        },
+        {
+          "word": "TOY",
+          "nextWords": [
+            "OUT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-3-letter-004",
+      "title": "BAR to EGG",
+      "difficulty": "Advanced",
+      "wordLength": 3,
+      "startWord": "BAR",
+      "targetWord": "EGG",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "BAR",
+        "BOA",
+        "BOB",
+        "EBB",
+        "BEG",
+        "EGG"
+      ],
+      "nodes": [
+        {
+          "word": "AID",
+          "nextWords": [
+            "LID",
+            "PAD"
+          ]
+        },
+        {
+          "word": "BAR",
+          "nextWords": [
+            "BOA",
+            "RAP"
+          ]
+        },
+        {
+          "word": "BEG",
+          "nextWords": [
+            "EBB",
+            "EGG"
+          ]
+        },
+        {
+          "word": "BOA",
+          "nextWords": [
+            "BAR",
+            "BOB"
+          ]
+        },
+        {
+          "word": "BOB",
+          "nextWords": [
+            "BOA",
+            "EBB"
+          ]
+        },
+        {
+          "word": "EBB",
+          "nextWords": [
+            "BEG",
+            "BOB"
+          ]
+        },
+        {
+          "word": "EGG",
+          "nextWords": [
+            "BEG"
+          ]
+        },
+        {
+          "word": "LID",
+          "nextWords": [
+            "AID",
+            "LIE"
+          ]
+        },
+        {
+          "word": "LIE",
+          "nextWords": [
+            "LID"
+          ]
+        },
+        {
+          "word": "PAD",
+          "nextWords": [
+            "AID",
+            "POD",
+            "RAP"
+          ]
+        },
+        {
+          "word": "POD",
+          "nextWords": [
+            "PAD"
+          ]
+        },
+        {
+          "word": "RAP",
+          "nextWords": [
+            "BAR",
+            "PAD"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-3-letter-005",
+      "title": "GAB to OUT",
+      "difficulty": "Advanced",
+      "wordLength": 3,
+      "startWord": "GAB",
+      "targetWord": "OUT",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "GAB",
+        "JAB",
+        "JAY",
+        "JOY",
+        "JOT",
+        "OUT"
+      ],
+      "nodes": [
+        {
+          "word": "AXE",
+          "nextWords": [
+            "WAX"
+          ]
+        },
+        {
+          "word": "GAB",
+          "nextWords": [
+            "JAB",
+            "RAG"
+          ]
+        },
+        {
+          "word": "JAB",
+          "nextWords": [
+            "GAB",
+            "JAY"
+          ]
+        },
+        {
+          "word": "JAY",
+          "nextWords": [
+            "JAB",
+            "JOY",
+            "WAY"
+          ]
+        },
+        {
+          "word": "JOT",
+          "nextWords": [
+            "JOY",
+            "OUT"
+          ]
+        },
+        {
+          "word": "JOY",
+          "nextWords": [
+            "JAY",
+            "JOT"
+          ]
+        },
+        {
+          "word": "OUT",
+          "nextWords": [
+            "JOT"
+          ]
+        },
+        {
+          "word": "RAG",
+          "nextWords": [
+            "GAB",
+            "RAM"
+          ]
+        },
+        {
+          "word": "RAM",
+          "nextWords": [
+            "RAG"
+          ]
+        },
+        {
+          "word": "WAX",
+          "nextWords": [
+            "AXE",
+            "WAY"
+          ]
+        },
+        {
+          "word": "WAY",
+          "nextWords": [
+            "JAY",
+            "WAX",
+            "WRY"
+          ]
+        },
+        {
+          "word": "WRY",
+          "nextWords": [
+            "WAY"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-3-letter-006",
+      "title": "DAM to SAG",
+      "difficulty": "Advanced",
+      "wordLength": 3,
+      "startWord": "DAM",
+      "targetWord": "SAG",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "DAM",
+        "AND",
+        "ANY",
+        "AYE",
+        "AGE",
+        "SAG"
+      ],
+      "nodes": [
+        {
+          "word": "AGE",
+          "nextWords": [
+            "AYE",
+            "KEG",
+            "SAG"
+          ]
+        },
+        {
+          "word": "AND",
+          "nextWords": [
+            "ANY",
+            "DAM"
+          ]
+        },
+        {
+          "word": "ANY",
+          "nextWords": [
+            "AND",
+            "AYE"
+          ]
+        },
+        {
+          "word": "AYE",
+          "nextWords": [
+            "AGE",
+            "ANY"
+          ]
+        },
+        {
+          "word": "DAM",
+          "nextWords": [
+            "AND",
+            "RAM"
+          ]
+        },
+        {
+          "word": "KEG",
+          "nextWords": [
+            "AGE"
+          ]
+        },
+        {
+          "word": "RAM",
+          "nextWords": [
+            "DAM",
+            "TAR"
+          ]
+        },
+        {
+          "word": "SAG",
+          "nextWords": [
+            "AGE"
+          ]
+        },
+        {
+          "word": "TAR",
+          "nextWords": [
+            "RAM",
+            "TRY"
+          ]
+        },
+        {
+          "word": "TOT",
+          "nextWords": [
+            "TOY"
+          ]
+        },
+        {
+          "word": "TOY",
+          "nextWords": [
+            "TOT",
+            "TRY"
+          ]
+        },
+        {
+          "word": "TRY",
+          "nextWords": [
+            "TAR",
+            "TOY"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-3-letter-007",
+      "title": "TIP to SEE",
+      "difficulty": "Advanced",
+      "wordLength": 3,
+      "startWord": "TIP",
+      "targetWord": "SEE",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "TIP",
+        "FIT",
+        "FAT",
+        "ATE",
+        "SEA",
+        "SEE"
+      ],
+      "nodes": [
+        {
+          "word": "ATE",
+          "nextWords": [
+            "FAT",
+            "SEA"
+          ]
+        },
+        {
+          "word": "DAY",
+          "nextWords": [
+            "PAD"
+          ]
+        },
+        {
+          "word": "FAT",
+          "nextWords": [
+            "ATE",
+            "FIT"
+          ]
+        },
+        {
+          "word": "FIT",
+          "nextWords": [
+            "FAT",
+            "TIP"
+          ]
+        },
+        {
+          "word": "HAS",
+          "nextWords": [
+            "SEA"
+          ]
+        },
+        {
+          "word": "PAD",
+          "nextWords": [
+            "DAY",
+            "POD"
+          ]
+        },
+        {
+          "word": "POD",
+          "nextWords": [
+            "PAD",
+            "TOP"
+          ]
+        },
+        {
+          "word": "SEA",
+          "nextWords": [
+            "ATE",
+            "HAS",
+            "SEE"
+          ]
+        },
+        {
+          "word": "SEE",
+          "nextWords": [
+            "SEA"
+          ]
+        },
+        {
+          "word": "TIP",
+          "nextWords": [
+            "FIT",
+            "TOP"
+          ]
+        },
+        {
+          "word": "TON",
+          "nextWords": [
+            "TOP"
+          ]
+        },
+        {
+          "word": "TOP",
+          "nextWords": [
+            "POD",
+            "TIP",
+            "TON"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-3-letter-008",
+      "title": "DEN to EYE",
+      "difficulty": "Advanced",
+      "wordLength": 3,
+      "startWord": "DEN",
+      "targetWord": "EYE",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "DEN",
+        "LED",
+        "LEG",
+        "BEG",
+        "BEE",
+        "EYE"
+      ],
+      "nodes": [
+        {
+          "word": "BEE",
+          "nextWords": [
+            "BEG",
+            "EYE"
+          ]
+        },
+        {
+          "word": "BEG",
+          "nextWords": [
+            "BEE",
+            "BUG",
+            "LEG"
+          ]
+        },
+        {
+          "word": "BUD",
+          "nextWords": [
+            "BUG"
+          ]
+        },
+        {
+          "word": "BUG",
+          "nextWords": [
+            "BEG",
+            "BUD",
+            "TUG"
+          ]
+        },
+        {
+          "word": "DEN",
+          "nextWords": [
+            "LED"
+          ]
+        },
+        {
+          "word": "EYE",
+          "nextWords": [
+            "BEE"
+          ]
+        },
+        {
+          "word": "LED",
+          "nextWords": [
+            "DEN",
+            "LEG",
+            "OLD"
+          ]
+        },
+        {
+          "word": "LEG",
+          "nextWords": [
+            "BEG",
+            "LED"
+          ]
+        },
+        {
+          "word": "OLD",
+          "nextWords": [
+            "LED",
+            "ROD"
+          ]
+        },
+        {
+          "word": "ROD",
+          "nextWords": [
+            "OLD",
+            "ROW"
+          ]
+        },
+        {
+          "word": "ROW",
+          "nextWords": [
+            "ROD"
+          ]
+        },
+        {
+          "word": "TUG",
+          "nextWords": [
+            "BUG"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-3-letter-009",
+      "title": "ION to LAG",
+      "difficulty": "Advanced",
+      "wordLength": 3,
+      "startWord": "ION",
+      "targetWord": "LAG",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "ION",
+        "NOR",
+        "URN",
+        "GNU",
+        "NAG",
+        "LAG"
+      ],
+      "nodes": [
+        {
+          "word": "FAR",
+          "nextWords": [
+            "FOR",
+            "TAR"
+          ]
+        },
+        {
+          "word": "FOR",
+          "nextWords": [
+            "FAR",
+            "NOR"
+          ]
+        },
+        {
+          "word": "GNU",
+          "nextWords": [
+            "NAG",
+            "URN"
+          ]
+        },
+        {
+          "word": "ION",
+          "nextWords": [
+            "NOR"
+          ]
+        },
+        {
+          "word": "LAG",
+          "nextWords": [
+            "NAG"
+          ]
+        },
+        {
+          "word": "NAG",
+          "nextWords": [
+            "GNU",
+            "LAG"
+          ]
+        },
+        {
+          "word": "NOR",
+          "nextWords": [
+            "FOR",
+            "ION",
+            "URN"
+          ]
+        },
+        {
+          "word": "SAP",
+          "nextWords": [
+            "SIP",
+            "TAP"
+          ]
+        },
+        {
+          "word": "SIP",
+          "nextWords": [
+            "SAP"
+          ]
+        },
+        {
+          "word": "TAP",
+          "nextWords": [
+            "SAP",
+            "TAR"
+          ]
+        },
+        {
+          "word": "TAR",
+          "nextWords": [
+            "FAR",
+            "TAP"
+          ]
+        },
+        {
+          "word": "URN",
+          "nextWords": [
+            "GNU",
+            "NOR"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-3-letter-010",
+      "title": "GAG to ANY",
+      "difficulty": "Advanced",
+      "wordLength": 3,
+      "startWord": "GAG",
+      "targetWord": "ANY",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "GAG",
+        "EGG",
+        "KEG",
+        "KEY",
+        "AYE",
+        "ANY"
+      ],
+      "nodes": [
+        {
+          "word": "ANY",
+          "nextWords": [
+            "AYE"
+          ]
+        },
+        {
+          "word": "ARC",
+          "nextWords": [
+            "ARE"
+          ]
+        },
+        {
+          "word": "ARE",
+          "nextWords": [
+            "ARC",
+            "AYE",
+            "HER"
+          ]
+        },
+        {
+          "word": "AYE",
+          "nextWords": [
+            "ANY",
+            "ARE",
+            "KEY"
+          ]
+        },
+        {
+          "word": "EGG",
+          "nextWords": [
+            "GAG",
+            "KEG"
+          ]
+        },
+        {
+          "word": "GAG",
+          "nextWords": [
+            "EGG"
+          ]
+        },
+        {
+          "word": "HER",
+          "nextWords": [
+            "ARE",
+            "HUE"
+          ]
+        },
+        {
+          "word": "HUE",
+          "nextWords": [
+            "HER",
+            "UGH",
+            "USE"
+          ]
+        },
+        {
+          "word": "KEG",
+          "nextWords": [
+            "EGG",
+            "KEY"
+          ]
+        },
+        {
+          "word": "KEY",
+          "nextWords": [
+            "AYE",
+            "KEG"
+          ]
+        },
+        {
+          "word": "UGH",
+          "nextWords": [
+            "HUE"
+          ]
+        },
+        {
+          "word": "USE",
+          "nextWords": [
+            "HUE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-3-letter-001",
+      "title": "BUT to NAB",
+      "difficulty": "Expert",
+      "wordLength": 3,
+      "startWord": "BUT",
+      "targetWord": "NAB",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "BUT",
+        "DUB",
+        "DUD",
+        "ADD",
+        "DAY",
+        "NAY",
+        "NAB"
+      ],
+      "nodes": [
+        {
+          "word": "ADD",
+          "nextWords": [
+            "DAY",
+            "DUD"
+          ]
+        },
+        {
+          "word": "BUT",
+          "nextWords": [
+            "CUT",
+            "DUB"
+          ]
+        },
+        {
+          "word": "CUE",
+          "nextWords": [
+            "CUT"
+          ]
+        },
+        {
+          "word": "CUT",
+          "nextWords": [
+            "BUT",
+            "CUE"
+          ]
+        },
+        {
+          "word": "DAY",
+          "nextWords": [
+            "ADD",
+            "DYE",
+            "NAY"
+          ]
+        },
+        {
+          "word": "DUB",
+          "nextWords": [
+            "BUT",
+            "DUD"
+          ]
+        },
+        {
+          "word": "DUD",
+          "nextWords": [
+            "ADD",
+            "DUB"
+          ]
+        },
+        {
+          "word": "DYE",
+          "nextWords": [
+            "DAY",
+            "ODE"
+          ]
+        },
+        {
+          "word": "FOE",
+          "nextWords": [
+            "ODE"
+          ]
+        },
+        {
+          "word": "NAB",
+          "nextWords": [
+            "NAY"
+          ]
+        },
+        {
+          "word": "NAY",
+          "nextWords": [
+            "DAY",
+            "NAB"
+          ]
+        },
+        {
+          "word": "ODE",
+          "nextWords": [
+            "DYE",
+            "FOE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-3-letter-002",
+      "title": "BAT to MOM",
+      "difficulty": "Expert",
+      "wordLength": 3,
+      "startWord": "BAT",
+      "targetWord": "MOM",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "BAT",
+        "TUB",
+        "TUG",
+        "HUG",
+        "HUM",
+        "MUM",
+        "MOM"
+      ],
+      "nodes": [
+        {
+          "word": "ATE",
+          "nextWords": [
+            "BAT",
+            "EAR",
+            "WET"
+          ]
+        },
+        {
+          "word": "BAT",
+          "nextWords": [
+            "ATE",
+            "TUB"
+          ]
+        },
+        {
+          "word": "EAR",
+          "nextWords": [
+            "ATE",
+            "RYE"
+          ]
+        },
+        {
+          "word": "HUG",
+          "nextWords": [
+            "HUM",
+            "TUG"
+          ]
+        },
+        {
+          "word": "HUM",
+          "nextWords": [
+            "HUG",
+            "MUM"
+          ]
+        },
+        {
+          "word": "MOM",
+          "nextWords": [
+            "MUM"
+          ]
+        },
+        {
+          "word": "MUM",
+          "nextWords": [
+            "HUM",
+            "MOM"
+          ]
+        },
+        {
+          "word": "RYE",
+          "nextWords": [
+            "EAR"
+          ]
+        },
+        {
+          "word": "TUB",
+          "nextWords": [
+            "BAT",
+            "TUG"
+          ]
+        },
+        {
+          "word": "TUG",
+          "nextWords": [
+            "HUG",
+            "TUB"
+          ]
+        },
+        {
+          "word": "WET",
+          "nextWords": [
+            "ATE",
+            "WIT"
+          ]
+        },
+        {
+          "word": "WIT",
+          "nextWords": [
+            "WET"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-3-letter-003",
+      "title": "TOP to NOW",
+      "difficulty": "Expert",
+      "wordLength": 3,
+      "startWord": "TOP",
+      "targetWord": "NOW",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "TOP",
+        "TOE",
+        "THE",
+        "HEY",
+        "WHY",
+        "WHO",
+        "NOW"
+      ],
+      "nodes": [
+        {
+          "word": "APT",
+          "nextWords": [
+            "SPA",
+            "TOP"
+          ]
+        },
+        {
+          "word": "HEY",
+          "nextWords": [
+            "THE",
+            "WHY"
+          ]
+        },
+        {
+          "word": "NOW",
+          "nextWords": [
+            "WHO"
+          ]
+        },
+        {
+          "word": "RAN",
+          "nextWords": [
+            "WAR"
+          ]
+        },
+        {
+          "word": "SPA",
+          "nextWords": [
+            "APT",
+            "WAS"
+          ]
+        },
+        {
+          "word": "THE",
+          "nextWords": [
+            "HEY",
+            "TOE"
+          ]
+        },
+        {
+          "word": "TOE",
+          "nextWords": [
+            "THE",
+            "TOP"
+          ]
+        },
+        {
+          "word": "TOP",
+          "nextWords": [
+            "APT",
+            "TOE"
+          ]
+        },
+        {
+          "word": "WAR",
+          "nextWords": [
+            "RAN",
+            "WAS"
+          ]
+        },
+        {
+          "word": "WAS",
+          "nextWords": [
+            "SPA",
+            "WAR"
+          ]
+        },
+        {
+          "word": "WHO",
+          "nextWords": [
+            "NOW",
+            "WHY"
+          ]
+        },
+        {
+          "word": "WHY",
+          "nextWords": [
+            "HEY",
+            "WHO"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-3-letter-004",
+      "title": "MAD to PUB",
+      "difficulty": "Expert",
+      "wordLength": 3,
+      "startWord": "MAD",
+      "targetWord": "PUB",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "MAD",
+        "RAM",
+        "RAN",
+        "BAN",
+        "BAY",
+        "BUY",
+        "PUB"
+      ],
+      "nodes": [
+        {
+          "word": "BAN",
+          "nextWords": [
+            "BAY",
+            "RAN"
+          ]
+        },
+        {
+          "word": "BAY",
+          "nextWords": [
+            "BAN",
+            "BUY",
+            "LAY"
+          ]
+        },
+        {
+          "word": "BUY",
+          "nextWords": [
+            "BAY",
+            "PUB"
+          ]
+        },
+        {
+          "word": "LAY",
+          "nextWords": [
+            "BAY",
+            "SLY"
+          ]
+        },
+        {
+          "word": "MAD",
+          "nextWords": [
+            "RAM",
+            "WAD"
+          ]
+        },
+        {
+          "word": "PUB",
+          "nextWords": [
+            "BUY"
+          ]
+        },
+        {
+          "word": "RAM",
+          "nextWords": [
+            "MAD",
+            "RAN"
+          ]
+        },
+        {
+          "word": "RAN",
+          "nextWords": [
+            "BAN",
+            "RAM"
+          ]
+        },
+        {
+          "word": "SAP",
+          "nextWords": [
+            "WAS"
+          ]
+        },
+        {
+          "word": "SLY",
+          "nextWords": [
+            "LAY"
+          ]
+        },
+        {
+          "word": "WAD",
+          "nextWords": [
+            "MAD",
+            "WAS"
+          ]
+        },
+        {
+          "word": "WAS",
+          "nextWords": [
+            "SAP",
+            "WAD"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-3-letter-005",
+      "title": "BUS to HEN",
+      "difficulty": "Expert",
+      "wordLength": 3,
+      "startWord": "BUS",
+      "targetWord": "HEN",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "BUS",
+        "SUE",
+        "SEW",
+        "SOW",
+        "SON",
+        "ONE",
+        "HEN"
+      ],
+      "nodes": [
+        {
+          "word": "BUS",
+          "nextWords": [
+            "SUE"
+          ]
+        },
+        {
+          "word": "COP",
+          "nextWords": [
+            "POT"
+          ]
+        },
+        {
+          "word": "HEN",
+          "nextWords": [
+            "ONE"
+          ]
+        },
+        {
+          "word": "ONE",
+          "nextWords": [
+            "HEN",
+            "SON",
+            "TOE"
+          ]
+        },
+        {
+          "word": "PEW",
+          "nextWords": [
+            "SEW"
+          ]
+        },
+        {
+          "word": "POT",
+          "nextWords": [
+            "COP",
+            "PUT",
+            "TOE"
+          ]
+        },
+        {
+          "word": "PUT",
+          "nextWords": [
+            "POT"
+          ]
+        },
+        {
+          "word": "SEW",
+          "nextWords": [
+            "PEW",
+            "SOW",
+            "SUE"
+          ]
+        },
+        {
+          "word": "SON",
+          "nextWords": [
+            "ONE",
+            "SOW"
+          ]
+        },
+        {
+          "word": "SOW",
+          "nextWords": [
+            "SEW",
+            "SON"
+          ]
+        },
+        {
+          "word": "SUE",
+          "nextWords": [
+            "BUS",
+            "SEW"
+          ]
+        },
+        {
+          "word": "TOE",
+          "nextWords": [
+            "ONE",
+            "POT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-3-letter-006",
+      "title": "TOW to ARC",
+      "difficulty": "Expert",
+      "wordLength": 3,
+      "startWord": "TOW",
+      "targetWord": "ARC",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "TOW",
+        "JOT",
+        "JOB",
+        "ROB",
+        "ORE",
+        "ARE",
+        "ARC"
+      ],
+      "nodes": [
+        {
+          "word": "ARC",
+          "nextWords": [
+            "ARE"
+          ]
+        },
+        {
+          "word": "ARE",
+          "nextWords": [
+            "ARC",
+            "ORE",
+            "TEA"
+          ]
+        },
+        {
+          "word": "EEL",
+          "nextWords": [
+            "ELK",
+            "TEE"
+          ]
+        },
+        {
+          "word": "ELK",
+          "nextWords": [
+            "EEL"
+          ]
+        },
+        {
+          "word": "JOB",
+          "nextWords": [
+            "JOT",
+            "ROB"
+          ]
+        },
+        {
+          "word": "JOT",
+          "nextWords": [
+            "JOB",
+            "TOW"
+          ]
+        },
+        {
+          "word": "NOW",
+          "nextWords": [
+            "TOW"
+          ]
+        },
+        {
+          "word": "ORE",
+          "nextWords": [
+            "ARE",
+            "ROB"
+          ]
+        },
+        {
+          "word": "ROB",
+          "nextWords": [
+            "JOB",
+            "ORE"
+          ]
+        },
+        {
+          "word": "TEA",
+          "nextWords": [
+            "ARE",
+            "TEE"
+          ]
+        },
+        {
+          "word": "TEE",
+          "nextWords": [
+            "EEL",
+            "TEA"
+          ]
+        },
+        {
+          "word": "TOW",
+          "nextWords": [
+            "JOT",
+            "NOW"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-3-letter-007",
+      "title": "TOT to WET",
+      "difficulty": "Expert",
+      "wordLength": 3,
+      "startWord": "TOT",
+      "targetWord": "WET",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "TOT",
+        "ROT",
+        "ROW",
+        "WON",
+        "EON",
+        "NET",
+        "WET"
+      ],
+      "nodes": [
+        {
+          "word": "DAY",
+          "nextWords": [
+            "RAY"
+          ]
+        },
+        {
+          "word": "EON",
+          "nextWords": [
+            "FOE",
+            "NET",
+            "WON"
+          ]
+        },
+        {
+          "word": "FOE",
+          "nextWords": [
+            "EON",
+            "FOG"
+          ]
+        },
+        {
+          "word": "FOG",
+          "nextWords": [
+            "FOE"
+          ]
+        },
+        {
+          "word": "NET",
+          "nextWords": [
+            "EON",
+            "WET"
+          ]
+        },
+        {
+          "word": "RAT",
+          "nextWords": [
+            "RAY",
+            "ROT"
+          ]
+        },
+        {
+          "word": "RAY",
+          "nextWords": [
+            "DAY",
+            "RAT"
+          ]
+        },
+        {
+          "word": "ROT",
+          "nextWords": [
+            "RAT",
+            "ROW",
+            "TOT"
+          ]
+        },
+        {
+          "word": "ROW",
+          "nextWords": [
+            "ROT",
+            "WON"
+          ]
+        },
+        {
+          "word": "TOT",
+          "nextWords": [
+            "ROT"
+          ]
+        },
+        {
+          "word": "WET",
+          "nextWords": [
+            "NET"
+          ]
+        },
+        {
+          "word": "WON",
+          "nextWords": [
+            "EON",
+            "ROW"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-3-letter-008",
+      "title": "BAY to MIX",
+      "difficulty": "Expert",
+      "wordLength": 3,
+      "startWord": "BAY",
+      "targetWord": "MIX",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "BAY",
+        "HAY",
+        "HAT",
+        "HIT",
+        "SIT",
+        "SIX",
+        "MIX"
+      ],
+      "nodes": [
+        {
+          "word": "BAY",
+          "nextWords": [
+            "BOA",
+            "HAY"
+          ]
+        },
+        {
+          "word": "BOA",
+          "nextWords": [
+            "BAY"
+          ]
+        },
+        {
+          "word": "HAT",
+          "nextWords": [
+            "HAY",
+            "HIT",
+            "VAT"
+          ]
+        },
+        {
+          "word": "HAY",
+          "nextWords": [
+            "BAY",
+            "HAT"
+          ]
+        },
+        {
+          "word": "HIT",
+          "nextWords": [
+            "HAT",
+            "SIT"
+          ]
+        },
+        {
+          "word": "MIX",
+          "nextWords": [
+            "SIX"
+          ]
+        },
+        {
+          "word": "RAG",
+          "nextWords": [
+            "RAN"
+          ]
+        },
+        {
+          "word": "RAN",
+          "nextWords": [
+            "RAG",
+            "VAN"
+          ]
+        },
+        {
+          "word": "SIT",
+          "nextWords": [
+            "HIT",
+            "SIX"
+          ]
+        },
+        {
+          "word": "SIX",
+          "nextWords": [
+            "MIX",
+            "SIT"
+          ]
+        },
+        {
+          "word": "VAN",
+          "nextWords": [
+            "RAN",
+            "VAT"
+          ]
+        },
+        {
+          "word": "VAT",
+          "nextWords": [
+            "HAT",
+            "VAN"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-3-letter-009",
+      "title": "DOG to ADD",
+      "difficulty": "Expert",
+      "wordLength": 3,
+      "startWord": "DOG",
+      "targetWord": "ADD",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "DOG",
+        "OLD",
+        "OIL",
+        "LIE",
+        "DIE",
+        "DID",
+        "ADD"
+      ],
+      "nodes": [
+        {
+          "word": "ADD",
+          "nextWords": [
+            "DID"
+          ]
+        },
+        {
+          "word": "BAY",
+          "nextWords": [
+            "BOY"
+          ]
+        },
+        {
+          "word": "BED",
+          "nextWords": [
+            "BEE",
+            "DIE"
+          ]
+        },
+        {
+          "word": "BEE",
+          "nextWords": [
+            "BED"
+          ]
+        },
+        {
+          "word": "BOG",
+          "nextWords": [
+            "BOY",
+            "DOG"
+          ]
+        },
+        {
+          "word": "BOY",
+          "nextWords": [
+            "BAY",
+            "BOG"
+          ]
+        },
+        {
+          "word": "DID",
+          "nextWords": [
+            "ADD",
+            "DIE"
+          ]
+        },
+        {
+          "word": "DIE",
+          "nextWords": [
+            "BED",
+            "DID",
+            "LIE"
+          ]
+        },
+        {
+          "word": "DOG",
+          "nextWords": [
+            "BOG",
+            "OLD"
+          ]
+        },
+        {
+          "word": "LIE",
+          "nextWords": [
+            "DIE",
+            "OIL"
+          ]
+        },
+        {
+          "word": "OIL",
+          "nextWords": [
+            "LIE",
+            "OLD"
+          ]
+        },
+        {
+          "word": "OLD",
+          "nextWords": [
+            "DOG",
+            "OIL"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-3-letter-010",
+      "title": "DOE to ICY",
+      "difficulty": "Expert",
+      "wordLength": 3,
+      "startWord": "DOE",
+      "targetWord": "ICY",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "DOE",
+        "BED",
+        "BEE",
+        "EVE",
+        "VIE",
+        "IVY",
+        "ICY"
+      ],
+      "nodes": [
+        {
+          "word": "BED",
+          "nextWords": [
+            "BEE",
+            "DAB",
+            "DOE"
+          ]
+        },
+        {
+          "word": "BEE",
+          "nextWords": [
+            "BED",
+            "EVE"
+          ]
+        },
+        {
+          "word": "DAB",
+          "nextWords": [
+            "BED"
+          ]
+        },
+        {
+          "word": "DOE",
+          "nextWords": [
+            "BED",
+            "OWE"
+          ]
+        },
+        {
+          "word": "EVE",
+          "nextWords": [
+            "BEE",
+            "VIE"
+          ]
+        },
+        {
+          "word": "FEW",
+          "nextWords": [
+            "FEZ",
+            "OWE"
+          ]
+        },
+        {
+          "word": "FEZ",
+          "nextWords": [
+            "FEW"
+          ]
+        },
+        {
+          "word": "ICY",
+          "nextWords": [
+            "IVY"
+          ]
+        },
+        {
+          "word": "IVY",
+          "nextWords": [
+            "ICY",
+            "VIE"
+          ]
+        },
+        {
+          "word": "OWE",
+          "nextWords": [
+            "DOE",
+            "FEW",
+            "OWL"
+          ]
+        },
+        {
+          "word": "OWL",
+          "nextWords": [
+            "OWE"
+          ]
+        },
+        {
+          "word": "VIE",
+          "nextWords": [
+            "EVE",
+            "IVY"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-4-letter-001",
+      "title": "BOLT to FEET",
+      "difficulty": "Beginner",
+      "wordLength": 4,
+      "startWord": "BOLT",
+      "targetWord": "FEET",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "BOLT",
+        "LOFT",
+        "FELT",
+        "FEET"
+      ],
+      "nodes": [
+        {
+          "word": "BLOB",
+          "nextWords": [
+            "BOLT"
+          ]
+        },
+        {
+          "word": "BOLT",
+          "nextWords": [
+            "BLOB",
+            "LOFT"
+          ]
+        },
+        {
+          "word": "DOOM",
+          "nextWords": [
+            "DOOR"
+          ]
+        },
+        {
+          "word": "DOOR",
+          "nextWords": [
+            "DOOM",
+            "POOR"
+          ]
+        },
+        {
+          "word": "FEET",
+          "nextWords": [
+            "FELT"
+          ]
+        },
+        {
+          "word": "FELT",
+          "nextWords": [
+            "FEET",
+            "LOFT"
+          ]
+        },
+        {
+          "word": "FLIP",
+          "nextWords": [
+            "FLOP"
+          ]
+        },
+        {
+          "word": "FLOP",
+          "nextWords": [
+            "FLIP",
+            "LOFT",
+            "LOOP"
+          ]
+        },
+        {
+          "word": "LOFT",
+          "nextWords": [
+            "BOLT",
+            "FELT",
+            "FLOP"
+          ]
+        },
+        {
+          "word": "LOOP",
+          "nextWords": [
+            "FLOP",
+            "POOR"
+          ]
+        },
+        {
+          "word": "POOR",
+          "nextWords": [
+            "DOOR",
+            "LOOP",
+            "PROP"
+          ]
+        },
+        {
+          "word": "PROP",
+          "nextWords": [
+            "POOR"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-4-letter-002",
+      "title": "PAIL to KICK",
+      "difficulty": "Beginner",
+      "wordLength": 4,
+      "startWord": "PAIL",
+      "targetWord": "KICK",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "PAIL",
+        "CLIP",
+        "PICK",
+        "KICK"
+      ],
+      "nodes": [
+        {
+          "word": "ARID",
+          "nextWords": [
+            "DEAR",
+            "PAID"
+          ]
+        },
+        {
+          "word": "CLIP",
+          "nextWords": [
+            "PAIL",
+            "PICK"
+          ]
+        },
+        {
+          "word": "DEAF",
+          "nextWords": [
+            "DEAR",
+            "FLED"
+          ]
+        },
+        {
+          "word": "DEAR",
+          "nextWords": [
+            "ARID",
+            "DEAF"
+          ]
+        },
+        {
+          "word": "FLAG",
+          "nextWords": [
+            "HALF"
+          ]
+        },
+        {
+          "word": "FLED",
+          "nextWords": [
+            "DEAF"
+          ]
+        },
+        {
+          "word": "HAIL",
+          "nextWords": [
+            "HALF",
+            "PAIL"
+          ]
+        },
+        {
+          "word": "HALF",
+          "nextWords": [
+            "FLAG",
+            "HAIL"
+          ]
+        },
+        {
+          "word": "KICK",
+          "nextWords": [
+            "PICK"
+          ]
+        },
+        {
+          "word": "PAID",
+          "nextWords": [
+            "ARID",
+            "PAIL"
+          ]
+        },
+        {
+          "word": "PAIL",
+          "nextWords": [
+            "CLIP",
+            "HAIL",
+            "PAID"
+          ]
+        },
+        {
+          "word": "PICK",
+          "nextWords": [
+            "CLIP",
+            "KICK"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-4-letter-003",
+      "title": "DEAD to DINE",
+      "difficulty": "Beginner",
+      "wordLength": 4,
+      "startWord": "DEAD",
+      "targetWord": "DINE",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "DEAD",
+        "DEED",
+        "NEED",
+        "DINE"
+      ],
+      "nodes": [
+        {
+          "word": "DEAD",
+          "nextWords": [
+            "DEED",
+            "LEAD"
+          ]
+        },
+        {
+          "word": "DEED",
+          "nextWords": [
+            "DEAD",
+            "NEED"
+          ]
+        },
+        {
+          "word": "DINE",
+          "nextWords": [
+            "NEED"
+          ]
+        },
+        {
+          "word": "DUAL",
+          "nextWords": [
+            "DULY",
+            "LEAD"
+          ]
+        },
+        {
+          "word": "DUET",
+          "nextWords": [
+            "DUTY"
+          ]
+        },
+        {
+          "word": "DULY",
+          "nextWords": [
+            "DUAL",
+            "DUTY"
+          ]
+        },
+        {
+          "word": "DUTY",
+          "nextWords": [
+            "DUET",
+            "DULY"
+          ]
+        },
+        {
+          "word": "EAST",
+          "nextWords": [
+            "TAKE"
+          ]
+        },
+        {
+          "word": "LEAD",
+          "nextWords": [
+            "DEAD",
+            "DUAL",
+            "LEAK"
+          ]
+        },
+        {
+          "word": "LEAK",
+          "nextWords": [
+            "LEAD",
+            "TAKE"
+          ]
+        },
+        {
+          "word": "NEED",
+          "nextWords": [
+            "DEED",
+            "DINE"
+          ]
+        },
+        {
+          "word": "TAKE",
+          "nextWords": [
+            "EAST",
+            "LEAK"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-4-letter-004",
+      "title": "TEAR to PLAY",
+      "difficulty": "Beginner",
+      "wordLength": 4,
+      "startWord": "TEAR",
+      "targetWord": "PLAY",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "TEAR",
+        "PEAT",
+        "PLEA",
+        "PLAY"
+      ],
+      "nodes": [
+        {
+          "word": "GONE",
+          "nextWords": [
+            "GONG",
+            "TONE"
+          ]
+        },
+        {
+          "word": "GONG",
+          "nextWords": [
+            "GONE"
+          ]
+        },
+        {
+          "word": "INTO",
+          "nextWords": [
+            "TONE"
+          ]
+        },
+        {
+          "word": "PATH",
+          "nextWords": [
+            "PEAT"
+          ]
+        },
+        {
+          "word": "PEAT",
+          "nextWords": [
+            "PATH",
+            "PLEA",
+            "TEAR"
+          ]
+        },
+        {
+          "word": "PLAY",
+          "nextWords": [
+            "PLEA"
+          ]
+        },
+        {
+          "word": "PLEA",
+          "nextWords": [
+            "PEAT",
+            "PLAY"
+          ]
+        },
+        {
+          "word": "TEAR",
+          "nextWords": [
+            "PEAT",
+            "TORE"
+          ]
+        },
+        {
+          "word": "TONE",
+          "nextWords": [
+            "GONE",
+            "INTO",
+            "TORE"
+          ]
+        },
+        {
+          "word": "TORE",
+          "nextWords": [
+            "TEAR",
+            "TONE",
+            "WORE"
+          ]
+        },
+        {
+          "word": "WORE",
+          "nextWords": [
+            "TORE",
+            "WORK"
+          ]
+        },
+        {
+          "word": "WORK",
+          "nextWords": [
+            "WORE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-4-letter-005",
+      "title": "LINE to WIND",
+      "difficulty": "Beginner",
+      "wordLength": 4,
+      "startWord": "LINE",
+      "targetWord": "WIND",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "LINE",
+        "MINE",
+        "MIND",
+        "WIND"
+      ],
+      "nodes": [
+        {
+          "word": "FLAT",
+          "nextWords": [
+            "FLEA",
+            "TALL"
+          ]
+        },
+        {
+          "word": "FLEA",
+          "nextWords": [
+            "FLAT",
+            "FLEE"
+          ]
+        },
+        {
+          "word": "FLEE",
+          "nextWords": [
+            "FLEA",
+            "GLEE"
+          ]
+        },
+        {
+          "word": "GLEE",
+          "nextWords": [
+            "FLEE",
+            "GLEN"
+          ]
+        },
+        {
+          "word": "GLEN",
+          "nextWords": [
+            "GLEE",
+            "LINE"
+          ]
+        },
+        {
+          "word": "LINE",
+          "nextWords": [
+            "GLEN",
+            "MINE",
+            "NAIL"
+          ]
+        },
+        {
+          "word": "MIND",
+          "nextWords": [
+            "MINE",
+            "WIND"
+          ]
+        },
+        {
+          "word": "MINE",
+          "nextWords": [
+            "LINE",
+            "MIND"
+          ]
+        },
+        {
+          "word": "NAIL",
+          "nextWords": [
+            "LINE"
+          ]
+        },
+        {
+          "word": "TALL",
+          "nextWords": [
+            "FLAT",
+            "TILL"
+          ]
+        },
+        {
+          "word": "TILL",
+          "nextWords": [
+            "TALL"
+          ]
+        },
+        {
+          "word": "WIND",
+          "nextWords": [
+            "MIND"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-4-letter-006",
+      "title": "PAGE to TRAY",
+      "difficulty": "Beginner",
+      "wordLength": 4,
+      "startWord": "PAGE",
+      "targetWord": "TRAY",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "PAGE",
+        "RAGE",
+        "GRAY",
+        "TRAY"
+      ],
+      "nodes": [
+        {
+          "word": "DATA",
+          "nextWords": [
+            "DATE"
+          ]
+        },
+        {
+          "word": "DATE",
+          "nextWords": [
+            "DATA",
+            "JADE",
+            "NEAT",
+            "TIED"
+          ]
+        },
+        {
+          "word": "GRAY",
+          "nextWords": [
+            "RAGE",
+            "TRAY"
+          ]
+        },
+        {
+          "word": "JADE",
+          "nextWords": [
+            "DATE"
+          ]
+        },
+        {
+          "word": "NEAR",
+          "nextWords": [
+            "NEAT",
+            "RAGE"
+          ]
+        },
+        {
+          "word": "NEAT",
+          "nextWords": [
+            "DATE",
+            "NEAR"
+          ]
+        },
+        {
+          "word": "PAGE",
+          "nextWords": [
+            "RAGE"
+          ]
+        },
+        {
+          "word": "RAGE",
+          "nextWords": [
+            "GRAY",
+            "NEAR",
+            "PAGE"
+          ]
+        },
+        {
+          "word": "TIDY",
+          "nextWords": [
+            "TIED"
+          ]
+        },
+        {
+          "word": "TIED",
+          "nextWords": [
+            "DATE",
+            "TIDY",
+            "TIER"
+          ]
+        },
+        {
+          "word": "TIER",
+          "nextWords": [
+            "TIED"
+          ]
+        },
+        {
+          "word": "TRAY",
+          "nextWords": [
+            "GRAY"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-4-letter-007",
+      "title": "UPON to POOL",
+      "difficulty": "Beginner",
+      "wordLength": 4,
+      "startWord": "UPON",
+      "targetWord": "POOL",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "UPON",
+        "POUR",
+        "POOR",
+        "POOL"
+      ],
+      "nodes": [
+        {
+          "word": "GRIP",
+          "nextWords": [
+            "GRIT",
+            "PIER"
+          ]
+        },
+        {
+          "word": "GRIT",
+          "nextWords": [
+            "GRIP"
+          ]
+        },
+        {
+          "word": "LURE",
+          "nextWords": [
+            "PURE",
+            "REEL"
+          ]
+        },
+        {
+          "word": "PEEL",
+          "nextWords": [
+            "REEL"
+          ]
+        },
+        {
+          "word": "PIER",
+          "nextWords": [
+            "GRIP",
+            "PIPE",
+            "PURE"
+          ]
+        },
+        {
+          "word": "PIPE",
+          "nextWords": [
+            "PIER"
+          ]
+        },
+        {
+          "word": "POOL",
+          "nextWords": [
+            "POOR"
+          ]
+        },
+        {
+          "word": "POOR",
+          "nextWords": [
+            "POOL",
+            "POUR"
+          ]
+        },
+        {
+          "word": "POUR",
+          "nextWords": [
+            "POOR",
+            "PURE",
+            "UPON"
+          ]
+        },
+        {
+          "word": "PURE",
+          "nextWords": [
+            "LURE",
+            "PIER",
+            "POUR"
+          ]
+        },
+        {
+          "word": "REEL",
+          "nextWords": [
+            "LURE",
+            "PEEL"
+          ]
+        },
+        {
+          "word": "UPON",
+          "nextWords": [
+            "POUR"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-4-letter-008",
+      "title": "NEED to WERE",
+      "difficulty": "Beginner",
+      "wordLength": 4,
+      "startWord": "NEED",
+      "targetWord": "WERE",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "NEED",
+        "EVEN",
+        "EVER",
+        "WERE"
+      ],
+      "nodes": [
+        {
+          "word": "EVEN",
+          "nextWords": [
+            "EVER",
+            "NEED"
+          ]
+        },
+        {
+          "word": "EVER",
+          "nextWords": [
+            "EVEN",
+            "WERE"
+          ]
+        },
+        {
+          "word": "HEED",
+          "nextWords": [
+            "HEEL",
+            "NEED"
+          ]
+        },
+        {
+          "word": "HEEL",
+          "nextWords": [
+            "HEED",
+            "HELM",
+            "PEEL"
+          ]
+        },
+        {
+          "word": "HELM",
+          "nextWords": [
+            "HEEL",
+            "MULE"
+          ]
+        },
+        {
+          "word": "LAMP",
+          "nextWords": [
+            "LEAP"
+          ]
+        },
+        {
+          "word": "LEAP",
+          "nextWords": [
+            "LAMP",
+            "PEEL"
+          ]
+        },
+        {
+          "word": "MULE",
+          "nextWords": [
+            "HELM",
+            "MUSE"
+          ]
+        },
+        {
+          "word": "MUSE",
+          "nextWords": [
+            "MULE"
+          ]
+        },
+        {
+          "word": "NEED",
+          "nextWords": [
+            "EVEN",
+            "HEED"
+          ]
+        },
+        {
+          "word": "PEEL",
+          "nextWords": [
+            "HEEL",
+            "LEAP"
+          ]
+        },
+        {
+          "word": "WERE",
+          "nextWords": [
+            "EVER"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-4-letter-009",
+      "title": "COAT to DATE",
+      "difficulty": "Beginner",
+      "wordLength": 4,
+      "startWord": "COAT",
+      "targetWord": "DATE",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "COAT",
+        "GOAT",
+        "GATE",
+        "DATE"
+      ],
+      "nodes": [
+        {
+          "word": "COAT",
+          "nextWords": [
+            "GOAT"
+          ]
+        },
+        {
+          "word": "DATE",
+          "nextWords": [
+            "GATE"
+          ]
+        },
+        {
+          "word": "EACH",
+          "nextWords": [
+            "HAZE",
+            "LACE"
+          ]
+        },
+        {
+          "word": "GATE",
+          "nextWords": [
+            "DATE",
+            "GAZE",
+            "GOAT"
+          ]
+        },
+        {
+          "word": "GAZE",
+          "nextWords": [
+            "GATE",
+            "HAZE"
+          ]
+        },
+        {
+          "word": "GOAT",
+          "nextWords": [
+            "COAT",
+            "GATE",
+            "YOGA"
+          ]
+        },
+        {
+          "word": "HAZE",
+          "nextWords": [
+            "EACH",
+            "GAZE",
+            "HAZY"
+          ]
+        },
+        {
+          "word": "HAZY",
+          "nextWords": [
+            "HAZE"
+          ]
+        },
+        {
+          "word": "LACE",
+          "nextWords": [
+            "EACH",
+            "LANE"
+          ]
+        },
+        {
+          "word": "LAND",
+          "nextWords": [
+            "LANE"
+          ]
+        },
+        {
+          "word": "LANE",
+          "nextWords": [
+            "LACE",
+            "LAND"
+          ]
+        },
+        {
+          "word": "YOGA",
+          "nextWords": [
+            "GOAT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-4-letter-010",
+      "title": "SHOE to SPOT",
+      "difficulty": "Beginner",
+      "wordLength": 4,
+      "startWord": "SHOE",
+      "targetWord": "SPOT",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 3,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 3,
+      "solutionPath": [
+        "SHOE",
+        "SORE",
+        "SORT",
+        "SPOT"
+      ],
+      "nodes": [
+        {
+          "word": "DASH",
+          "nextWords": [
+            "SHED"
+          ]
+        },
+        {
+          "word": "GLUM",
+          "nextWords": [
+            "MULE"
+          ]
+        },
+        {
+          "word": "MULE",
+          "nextWords": [
+            "GLUM",
+            "MUSE"
+          ]
+        },
+        {
+          "word": "MUSE",
+          "nextWords": [
+            "MULE",
+            "SURE"
+          ]
+        },
+        {
+          "word": "SHED",
+          "nextWords": [
+            "DASH",
+            "SHOE"
+          ]
+        },
+        {
+          "word": "SHOE",
+          "nextWords": [
+            "SHED",
+            "SORE"
+          ]
+        },
+        {
+          "word": "SORE",
+          "nextWords": [
+            "SHOE",
+            "SORT",
+            "SURE",
+            "ZERO"
+          ]
+        },
+        {
+          "word": "SORT",
+          "nextWords": [
+            "SORE",
+            "SPOT"
+          ]
+        },
+        {
+          "word": "SPOT",
+          "nextWords": [
+            "SORT"
+          ]
+        },
+        {
+          "word": "SURE",
+          "nextWords": [
+            "MUSE",
+            "SORE",
+            "SURF"
+          ]
+        },
+        {
+          "word": "SURF",
+          "nextWords": [
+            "SURE"
+          ]
+        },
+        {
+          "word": "ZERO",
+          "nextWords": [
+            "SORE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-4-letter-001",
+      "title": "FOLD to HELM",
+      "difficulty": "Intermediate",
+      "wordLength": 4,
+      "startWord": "FOLD",
+      "targetWord": "HELM",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "FOLD",
+        "SOLD",
+        "SOLE",
+        "HOLE",
+        "HELM"
+      ],
+      "nodes": [
+        {
+          "word": "FELL",
+          "nextWords": [
+            "FLED"
+          ]
+        },
+        {
+          "word": "FLED",
+          "nextWords": [
+            "FELL",
+            "FOLD"
+          ]
+        },
+        {
+          "word": "FLOP",
+          "nextWords": [
+            "FOLD",
+            "POLL"
+          ]
+        },
+        {
+          "word": "FOLD",
+          "nextWords": [
+            "FLED",
+            "FLOP",
+            "SOLD"
+          ]
+        },
+        {
+          "word": "HELM",
+          "nextWords": [
+            "HOLE"
+          ]
+        },
+        {
+          "word": "HOLE",
+          "nextWords": [
+            "HELM",
+            "HONE",
+            "SOLE"
+          ]
+        },
+        {
+          "word": "HONE",
+          "nextWords": [
+            "HOLE",
+            "OMEN"
+          ]
+        },
+        {
+          "word": "OMEN",
+          "nextWords": [
+            "HONE"
+          ]
+        },
+        {
+          "word": "POLL",
+          "nextWords": [
+            "FLOP"
+          ]
+        },
+        {
+          "word": "POSE",
+          "nextWords": [
+            "SOLE"
+          ]
+        },
+        {
+          "word": "SOLD",
+          "nextWords": [
+            "FOLD",
+            "SOLE"
+          ]
+        },
+        {
+          "word": "SOLE",
+          "nextWords": [
+            "HOLE",
+            "POSE",
+            "SOLD"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-4-letter-002",
+      "title": "ACID to MILD",
+      "difficulty": "Intermediate",
+      "wordLength": 4,
+      "startWord": "ACID",
+      "targetWord": "MILD",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "ACID",
+        "AVID",
+        "VOID",
+        "IDOL",
+        "MILD"
+      ],
+      "nodes": [
+        {
+          "word": "ACID",
+          "nextWords": [
+            "AVID"
+          ]
+        },
+        {
+          "word": "AVID",
+          "nextWords": [
+            "ACID",
+            "VOID"
+          ]
+        },
+        {
+          "word": "HERB",
+          "nextWords": [
+            "HERO"
+          ]
+        },
+        {
+          "word": "HERO",
+          "nextWords": [
+            "HERB",
+            "SORE"
+          ]
+        },
+        {
+          "word": "IDOL",
+          "nextWords": [
+            "MILD",
+            "SOLD",
+            "VOID"
+          ]
+        },
+        {
+          "word": "MALE",
+          "nextWords": [
+            "MOLE"
+          ]
+        },
+        {
+          "word": "MILD",
+          "nextWords": [
+            "IDOL"
+          ]
+        },
+        {
+          "word": "MOLE",
+          "nextWords": [
+            "MALE",
+            "SOLE"
+          ]
+        },
+        {
+          "word": "SOLD",
+          "nextWords": [
+            "IDOL",
+            "SOLE"
+          ]
+        },
+        {
+          "word": "SOLE",
+          "nextWords": [
+            "MOLE",
+            "SOLD",
+            "SORE"
+          ]
+        },
+        {
+          "word": "SORE",
+          "nextWords": [
+            "HERO",
+            "SOLE"
+          ]
+        },
+        {
+          "word": "VOID",
+          "nextWords": [
+            "AVID",
+            "IDOL"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-4-letter-003",
+      "title": "MELT to FOAL",
+      "difficulty": "Intermediate",
+      "wordLength": 4,
+      "startWord": "MELT",
+      "targetWord": "FOAL",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "MELT",
+        "TALE",
+        "HALT",
+        "HALF",
+        "FOAL"
+      ],
+      "nodes": [
+        {
+          "word": "FOAL",
+          "nextWords": [
+            "HALF"
+          ]
+        },
+        {
+          "word": "HALF",
+          "nextWords": [
+            "FOAL",
+            "HALT"
+          ]
+        },
+        {
+          "word": "HALT",
+          "nextWords": [
+            "HALF",
+            "TALE",
+            "WHAT"
+          ]
+        },
+        {
+          "word": "MANY",
+          "nextWords": [
+            "NAME"
+          ]
+        },
+        {
+          "word": "MELT",
+          "nextWords": [
+            "TALE",
+            "TERM"
+          ]
+        },
+        {
+          "word": "NAME",
+          "nextWords": [
+            "MANY",
+            "NEAT"
+          ]
+        },
+        {
+          "word": "NEAT",
+          "nextWords": [
+            "NAME",
+            "TALE",
+            "WENT"
+          ]
+        },
+        {
+          "word": "TALE",
+          "nextWords": [
+            "HALT",
+            "MELT",
+            "NEAT"
+          ]
+        },
+        {
+          "word": "TERM",
+          "nextWords": [
+            "MELT"
+          ]
+        },
+        {
+          "word": "WENT",
+          "nextWords": [
+            "NEAT",
+            "WEST"
+          ]
+        },
+        {
+          "word": "WEST",
+          "nextWords": [
+            "WENT"
+          ]
+        },
+        {
+          "word": "WHAT",
+          "nextWords": [
+            "HALT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-4-letter-004",
+      "title": "DEAN to GNAT",
+      "difficulty": "Intermediate",
+      "wordLength": 4,
+      "startWord": "DEAN",
+      "targetWord": "GNAT",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "DEAN",
+        "ANEW",
+        "FAWN",
+        "FANG",
+        "GNAT"
+      ],
+      "nodes": [
+        {
+          "word": "ANEW",
+          "nextWords": [
+            "DEAN",
+            "FAWN",
+            "WAGE"
+          ]
+        },
+        {
+          "word": "BAND",
+          "nextWords": [
+            "BANK",
+            "DEAN"
+          ]
+        },
+        {
+          "word": "BANK",
+          "nextWords": [
+            "BAND"
+          ]
+        },
+        {
+          "word": "DEAN",
+          "nextWords": [
+            "ANEW",
+            "BAND",
+            "NODE"
+          ]
+        },
+        {
+          "word": "FANG",
+          "nextWords": [
+            "FAWN",
+            "GNAT"
+          ]
+        },
+        {
+          "word": "FAWN",
+          "nextWords": [
+            "ANEW",
+            "FANG"
+          ]
+        },
+        {
+          "word": "FOND",
+          "nextWords": [
+            "NODE"
+          ]
+        },
+        {
+          "word": "GNAT",
+          "nextWords": [
+            "FANG"
+          ]
+        },
+        {
+          "word": "MODE",
+          "nextWords": [
+            "NODE"
+          ]
+        },
+        {
+          "word": "NODE",
+          "nextWords": [
+            "DEAN",
+            "FOND",
+            "MODE",
+            "NONE"
+          ]
+        },
+        {
+          "word": "NONE",
+          "nextWords": [
+            "NODE"
+          ]
+        },
+        {
+          "word": "WAGE",
+          "nextWords": [
+            "ANEW"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-4-letter-005",
+      "title": "DOOM to KEEP",
+      "difficulty": "Intermediate",
+      "wordLength": 4,
+      "startWord": "DOOM",
+      "targetWord": "KEEP",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "DOOM",
+        "MODE",
+        "DEEM",
+        "DEEP",
+        "KEEP"
+      ],
+      "nodes": [
+        {
+          "word": "CENT",
+          "nextWords": [
+            "NOTE"
+          ]
+        },
+        {
+          "word": "DEEM",
+          "nextWords": [
+            "DEEP",
+            "MODE"
+          ]
+        },
+        {
+          "word": "DEEP",
+          "nextWords": [
+            "DEEM",
+            "KEEP"
+          ]
+        },
+        {
+          "word": "DODO",
+          "nextWords": [
+            "DOOM"
+          ]
+        },
+        {
+          "word": "DONE",
+          "nextWords": [
+            "MODE",
+            "NOTE"
+          ]
+        },
+        {
+          "word": "DOOM",
+          "nextWords": [
+            "DODO",
+            "MODE",
+            "ROOM"
+          ]
+        },
+        {
+          "word": "FROG",
+          "nextWords": [
+            "ROOF"
+          ]
+        },
+        {
+          "word": "KEEP",
+          "nextWords": [
+            "DEEP"
+          ]
+        },
+        {
+          "word": "MODE",
+          "nextWords": [
+            "DEEM",
+            "DONE",
+            "DOOM"
+          ]
+        },
+        {
+          "word": "NOTE",
+          "nextWords": [
+            "CENT",
+            "DONE"
+          ]
+        },
+        {
+          "word": "ROOF",
+          "nextWords": [
+            "FROG",
+            "ROOM"
+          ]
+        },
+        {
+          "word": "ROOM",
+          "nextWords": [
+            "DOOM",
+            "ROOF"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-4-letter-006",
+      "title": "PLUG to SELL",
+      "difficulty": "Intermediate",
+      "wordLength": 4,
+      "startWord": "PLUG",
+      "targetWord": "SELL",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "PLUG",
+        "PLUS",
+        "SOUL",
+        "SOLE",
+        "SELL"
+      ],
+      "nodes": [
+        {
+          "word": "LUNG",
+          "nextWords": [
+            "PLUG",
+            "RUNG"
+          ]
+        },
+        {
+          "word": "NOSE",
+          "nextWords": [
+            "SENT",
+            "SOLE"
+          ]
+        },
+        {
+          "word": "PLUG",
+          "nextWords": [
+            "LUNG",
+            "PLUS"
+          ]
+        },
+        {
+          "word": "PLUS",
+          "nextWords": [
+            "PLUG",
+            "PUSH",
+            "SOUL"
+          ]
+        },
+        {
+          "word": "POLE",
+          "nextWords": [
+            "POLL",
+            "SOLE"
+          ]
+        },
+        {
+          "word": "POLL",
+          "nextWords": [
+            "POLE"
+          ]
+        },
+        {
+          "word": "PUSH",
+          "nextWords": [
+            "PLUS"
+          ]
+        },
+        {
+          "word": "RUNG",
+          "nextWords": [
+            "LUNG"
+          ]
+        },
+        {
+          "word": "SELL",
+          "nextWords": [
+            "SOLE"
+          ]
+        },
+        {
+          "word": "SENT",
+          "nextWords": [
+            "NOSE"
+          ]
+        },
+        {
+          "word": "SOLE",
+          "nextWords": [
+            "NOSE",
+            "POLE",
+            "SELL",
+            "SOUL"
+          ]
+        },
+        {
+          "word": "SOUL",
+          "nextWords": [
+            "PLUS",
+            "SOLE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-4-letter-007",
+      "title": "PANE to GAVE",
+      "difficulty": "Intermediate",
+      "wordLength": 4,
+      "startWord": "PANE",
+      "targetWord": "GAVE",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "PANE",
+        "EARN",
+        "HARE",
+        "HAVE",
+        "GAVE"
+      ],
+      "nodes": [
+        {
+          "word": "DIRE",
+          "nextWords": [
+            "HEIR",
+            "TIDE"
+          ]
+        },
+        {
+          "word": "EARN",
+          "nextWords": [
+            "HARE",
+            "PANE",
+            "RANG"
+          ]
+        },
+        {
+          "word": "GAVE",
+          "nextWords": [
+            "HAVE"
+          ]
+        },
+        {
+          "word": "HARE",
+          "nextWords": [
+            "EARN",
+            "HAVE",
+            "HEIR"
+          ]
+        },
+        {
+          "word": "HAVE",
+          "nextWords": [
+            "GAVE",
+            "HARE"
+          ]
+        },
+        {
+          "word": "HEIR",
+          "nextWords": [
+            "DIRE",
+            "HARE"
+          ]
+        },
+        {
+          "word": "ITEM",
+          "nextWords": [
+            "TIDE"
+          ]
+        },
+        {
+          "word": "PANE",
+          "nextWords": [
+            "EARN"
+          ]
+        },
+        {
+          "word": "RANG",
+          "nextWords": [
+            "EARN"
+          ]
+        },
+        {
+          "word": "TIDE",
+          "nextWords": [
+            "DIRE",
+            "ITEM",
+            "TIDY"
+          ]
+        },
+        {
+          "word": "TIDY",
+          "nextWords": [
+            "TIDE",
+            "TINY"
+          ]
+        },
+        {
+          "word": "TINY",
+          "nextWords": [
+            "TIDY"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-4-letter-008",
+      "title": "COST to BOAR",
+      "difficulty": "Intermediate",
+      "wordLength": 4,
+      "startWord": "COST",
+      "targetWord": "BOAR",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "COST",
+        "SHOT",
+        "BOTH",
+        "BOAT",
+        "BOAR"
+      ],
+      "nodes": [
+        {
+          "word": "ACHE",
+          "nextWords": [
+            "CAPE",
+            "CASH",
+            "HAZE"
+          ]
+        },
+        {
+          "word": "BOAR",
+          "nextWords": [
+            "BOAT"
+          ]
+        },
+        {
+          "word": "BOAT",
+          "nextWords": [
+            "BOAR",
+            "BOTH",
+            "GOAT"
+          ]
+        },
+        {
+          "word": "BOTH",
+          "nextWords": [
+            "BOAT",
+            "SHOT"
+          ]
+        },
+        {
+          "word": "CAPE",
+          "nextWords": [
+            "ACHE"
+          ]
+        },
+        {
+          "word": "CASH",
+          "nextWords": [
+            "ACHE",
+            "CAST"
+          ]
+        },
+        {
+          "word": "CAST",
+          "nextWords": [
+            "CASH",
+            "COST"
+          ]
+        },
+        {
+          "word": "COST",
+          "nextWords": [
+            "CAST",
+            "SHOT"
+          ]
+        },
+        {
+          "word": "GOAT",
+          "nextWords": [
+            "BOAT"
+          ]
+        },
+        {
+          "word": "HAZE",
+          "nextWords": [
+            "ACHE",
+            "HAZY"
+          ]
+        },
+        {
+          "word": "HAZY",
+          "nextWords": [
+            "HAZE"
+          ]
+        },
+        {
+          "word": "SHOT",
+          "nextWords": [
+            "BOTH",
+            "COST"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-4-letter-009",
+      "title": "COAX to ROCK",
+      "difficulty": "Intermediate",
+      "wordLength": 4,
+      "startWord": "COAX",
+      "targetWord": "ROCK",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "COAX",
+        "COAL",
+        "COOL",
+        "COOK",
+        "ROCK"
+      ],
+      "nodes": [
+        {
+          "word": "CLAP",
+          "nextWords": [
+            "COAL",
+            "PACE"
+          ]
+        },
+        {
+          "word": "COAL",
+          "nextWords": [
+            "CLAP",
+            "COAX",
+            "COOL",
+            "LOAD"
+          ]
+        },
+        {
+          "word": "COAX",
+          "nextWords": [
+            "COAL"
+          ]
+        },
+        {
+          "word": "COOK",
+          "nextWords": [
+            "COOL",
+            "ROCK"
+          ]
+        },
+        {
+          "word": "COOL",
+          "nextWords": [
+            "COAL",
+            "COOK"
+          ]
+        },
+        {
+          "word": "FACE",
+          "nextWords": [
+            "FARE",
+            "PACE"
+          ]
+        },
+        {
+          "word": "FARE",
+          "nextWords": [
+            "FACE"
+          ]
+        },
+        {
+          "word": "LADY",
+          "nextWords": [
+            "LOAD"
+          ]
+        },
+        {
+          "word": "LOAD",
+          "nextWords": [
+            "COAL",
+            "LADY",
+            "TOAD"
+          ]
+        },
+        {
+          "word": "PACE",
+          "nextWords": [
+            "CLAP",
+            "FACE"
+          ]
+        },
+        {
+          "word": "ROCK",
+          "nextWords": [
+            "COOK"
+          ]
+        },
+        {
+          "word": "TOAD",
+          "nextWords": [
+            "LOAD"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-4-letter-010",
+      "title": "BAND to CAME",
+      "difficulty": "Intermediate",
+      "wordLength": 4,
+      "startWord": "BAND",
+      "targetWord": "CAME",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 4,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 4,
+      "solutionPath": [
+        "BAND",
+        "BALD",
+        "BALM",
+        "MEAL",
+        "CAME"
+      ],
+      "nodes": [
+        {
+          "word": "BALD",
+          "nextWords": [
+            "BALM",
+            "BAND"
+          ]
+        },
+        {
+          "word": "BALM",
+          "nextWords": [
+            "BALD",
+            "MEAL"
+          ]
+        },
+        {
+          "word": "BAND",
+          "nextWords": [
+            "BALD",
+            "BOND"
+          ]
+        },
+        {
+          "word": "BOND",
+          "nextWords": [
+            "BAND",
+            "BONE",
+            "DOWN"
+          ]
+        },
+        {
+          "word": "BONE",
+          "nextWords": [
+            "BOND",
+            "BORE",
+            "OVEN"
+          ]
+        },
+        {
+          "word": "BORE",
+          "nextWords": [
+            "BONE"
+          ]
+        },
+        {
+          "word": "CAME",
+          "nextWords": [
+            "MEAL"
+          ]
+        },
+        {
+          "word": "COVE",
+          "nextWords": [
+            "OVEN"
+          ]
+        },
+        {
+          "word": "DOWN",
+          "nextWords": [
+            "BOND"
+          ]
+        },
+        {
+          "word": "LEAP",
+          "nextWords": [
+            "MEAL"
+          ]
+        },
+        {
+          "word": "MEAL",
+          "nextWords": [
+            "BALM",
+            "CAME",
+            "LEAP"
+          ]
+        },
+        {
+          "word": "OVEN",
+          "nextWords": [
+            "BONE",
+            "COVE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-4-letter-001",
+      "title": "DEAL to SENT",
+      "difficulty": "Advanced",
+      "wordLength": 4,
+      "startWord": "DEAL",
+      "targetWord": "SENT",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "DEAL",
+        "MEAL",
+        "MEAN",
+        "MENU",
+        "TUNE",
+        "SENT"
+      ],
+      "nodes": [
+        {
+          "word": "DAZE",
+          "nextWords": [
+            "DEAL"
+          ]
+        },
+        {
+          "word": "DEAL",
+          "nextWords": [
+            "DAZE",
+            "MEAL"
+          ]
+        },
+        {
+          "word": "EARN",
+          "nextWords": [
+            "MEAN",
+            "WREN"
+          ]
+        },
+        {
+          "word": "MEAL",
+          "nextWords": [
+            "DEAL",
+            "MEAN"
+          ]
+        },
+        {
+          "word": "MEAN",
+          "nextWords": [
+            "EARN",
+            "MEAL",
+            "MENU"
+          ]
+        },
+        {
+          "word": "MENU",
+          "nextWords": [
+            "MEAN",
+            "TUNE"
+          ]
+        },
+        {
+          "word": "SENT",
+          "nextWords": [
+            "TUNE"
+          ]
+        },
+        {
+          "word": "TOUR",
+          "nextWords": [
+            "TROT",
+            "TURN"
+          ]
+        },
+        {
+          "word": "TROT",
+          "nextWords": [
+            "TOUR"
+          ]
+        },
+        {
+          "word": "TUNE",
+          "nextWords": [
+            "MENU",
+            "SENT",
+            "TURN"
+          ]
+        },
+        {
+          "word": "TURN",
+          "nextWords": [
+            "TOUR",
+            "TUNE"
+          ]
+        },
+        {
+          "word": "WREN",
+          "nextWords": [
+            "EARN"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-4-letter-002",
+      "title": "ONCE to TERM",
+      "difficulty": "Advanced",
+      "wordLength": 4,
+      "startWord": "ONCE",
+      "targetWord": "TERM",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "ONCE",
+        "HONE",
+        "HOPE",
+        "ROPE",
+        "MORE",
+        "TERM"
+      ],
+      "nodes": [
+        {
+          "word": "HARP",
+          "nextWords": [
+            "PRAY"
+          ]
+        },
+        {
+          "word": "HONE",
+          "nextWords": [
+            "HOPE",
+            "HORN",
+            "ONCE"
+          ]
+        },
+        {
+          "word": "HOPE",
+          "nextWords": [
+            "HONE",
+            "ROPE"
+          ]
+        },
+        {
+          "word": "HORN",
+          "nextWords": [
+            "HONE",
+            "HOUR"
+          ]
+        },
+        {
+          "word": "HOUR",
+          "nextWords": [
+            "HORN"
+          ]
+        },
+        {
+          "word": "MORE",
+          "nextWords": [
+            "ROPE",
+            "TERM"
+          ]
+        },
+        {
+          "word": "ONCE",
+          "nextWords": [
+            "HONE"
+          ]
+        },
+        {
+          "word": "PRAY",
+          "nextWords": [
+            "HARP",
+            "PREY",
+            "TRAY"
+          ]
+        },
+        {
+          "word": "PREY",
+          "nextWords": [
+            "PRAY",
+            "ROPE"
+          ]
+        },
+        {
+          "word": "ROPE",
+          "nextWords": [
+            "HOPE",
+            "MORE",
+            "PREY"
+          ]
+        },
+        {
+          "word": "TERM",
+          "nextWords": [
+            "MORE"
+          ]
+        },
+        {
+          "word": "TRAY",
+          "nextWords": [
+            "PRAY"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-4-letter-003",
+      "title": "SHED to WING",
+      "difficulty": "Advanced",
+      "wordLength": 4,
+      "startWord": "SHED",
+      "targetWord": "WING",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "SHED",
+        "DISH",
+        "DISK",
+        "SINK",
+        "SING",
+        "WING"
+      ],
+      "nodes": [
+        {
+          "word": "CART",
+          "nextWords": [
+            "CAST"
+          ]
+        },
+        {
+          "word": "CAST",
+          "nextWords": [
+            "CART",
+            "SACK"
+          ]
+        },
+        {
+          "word": "DISH",
+          "nextWords": [
+            "DISK",
+            "SHED",
+            "SHIP"
+          ]
+        },
+        {
+          "word": "DISK",
+          "nextWords": [
+            "DISH",
+            "SINK"
+          ]
+        },
+        {
+          "word": "INKY",
+          "nextWords": [
+            "SINK"
+          ]
+        },
+        {
+          "word": "SACK",
+          "nextWords": [
+            "CAST",
+            "SANK"
+          ]
+        },
+        {
+          "word": "SANK",
+          "nextWords": [
+            "SACK",
+            "SINK"
+          ]
+        },
+        {
+          "word": "SHED",
+          "nextWords": [
+            "DISH"
+          ]
+        },
+        {
+          "word": "SHIP",
+          "nextWords": [
+            "DISH"
+          ]
+        },
+        {
+          "word": "SING",
+          "nextWords": [
+            "SINK",
+            "WING"
+          ]
+        },
+        {
+          "word": "SINK",
+          "nextWords": [
+            "DISK",
+            "INKY",
+            "SANK",
+            "SING"
+          ]
+        },
+        {
+          "word": "WING",
+          "nextWords": [
+            "SING"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-4-letter-004",
+      "title": "COLT to LORD",
+      "difficulty": "Advanced",
+      "wordLength": 4,
+      "startWord": "COLT",
+      "targetWord": "LORD",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "COLT",
+        "COOL",
+        "POOL",
+        "POOR",
+        "DOOR",
+        "LORD"
+      ],
+      "nodes": [
+        {
+          "word": "COLT",
+          "nextWords": [
+            "COOL",
+            "SLOT"
+          ]
+        },
+        {
+          "word": "COOL",
+          "nextWords": [
+            "COLT",
+            "POOL"
+          ]
+        },
+        {
+          "word": "DODO",
+          "nextWords": [
+            "DOOR"
+          ]
+        },
+        {
+          "word": "DOOR",
+          "nextWords": [
+            "DODO",
+            "LORD",
+            "POOR"
+          ]
+        },
+        {
+          "word": "FOAL",
+          "nextWords": [
+            "FOAM",
+            "FOWL"
+          ]
+        },
+        {
+          "word": "FOAM",
+          "nextWords": [
+            "FOAL"
+          ]
+        },
+        {
+          "word": "FOWL",
+          "nextWords": [
+            "FOAL",
+            "SLOW"
+          ]
+        },
+        {
+          "word": "LORD",
+          "nextWords": [
+            "DOOR"
+          ]
+        },
+        {
+          "word": "POOL",
+          "nextWords": [
+            "COOL",
+            "POOR"
+          ]
+        },
+        {
+          "word": "POOR",
+          "nextWords": [
+            "DOOR",
+            "POOL"
+          ]
+        },
+        {
+          "word": "SLOT",
+          "nextWords": [
+            "COLT",
+            "SLOW"
+          ]
+        },
+        {
+          "word": "SLOW",
+          "nextWords": [
+            "FOWL",
+            "SLOT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-4-letter-005",
+      "title": "TEXT to DINE",
+      "difficulty": "Advanced",
+      "wordLength": 4,
+      "startWord": "TEXT",
+      "targetWord": "DINE",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "TEXT",
+        "TEST",
+        "ZEST",
+        "SIZE",
+        "SIDE",
+        "DINE"
+      ],
+      "nodes": [
+        {
+          "word": "DINE",
+          "nextWords": [
+            "SIDE"
+          ]
+        },
+        {
+          "word": "DISK",
+          "nextWords": [
+            "SIDE",
+            "SILK"
+          ]
+        },
+        {
+          "word": "LINK",
+          "nextWords": [
+            "SILK"
+          ]
+        },
+        {
+          "word": "LOSE",
+          "nextWords": [
+            "MOLE",
+            "SILO"
+          ]
+        },
+        {
+          "word": "MOLE",
+          "nextWords": [
+            "LOSE"
+          ]
+        },
+        {
+          "word": "SIDE",
+          "nextWords": [
+            "DINE",
+            "DISK",
+            "SIZE"
+          ]
+        },
+        {
+          "word": "SILK",
+          "nextWords": [
+            "DISK",
+            "LINK",
+            "SILO"
+          ]
+        },
+        {
+          "word": "SILO",
+          "nextWords": [
+            "LOSE",
+            "SILK"
+          ]
+        },
+        {
+          "word": "SIZE",
+          "nextWords": [
+            "SIDE",
+            "ZEST"
+          ]
+        },
+        {
+          "word": "TEST",
+          "nextWords": [
+            "TEXT",
+            "ZEST"
+          ]
+        },
+        {
+          "word": "TEXT",
+          "nextWords": [
+            "TEST"
+          ]
+        },
+        {
+          "word": "ZEST",
+          "nextWords": [
+            "SIZE",
+            "TEST"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-4-letter-006",
+      "title": "HELP to BRAN",
+      "difficulty": "Advanced",
+      "wordLength": 4,
+      "startWord": "HELP",
+      "targetWord": "BRAN",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "HELP",
+        "POLE",
+        "ROPE",
+        "BORE",
+        "BORN",
+        "BRAN"
+      ],
+      "nodes": [
+        {
+          "word": "BORE",
+          "nextWords": [
+            "BORN",
+            "BRED",
+            "ROPE"
+          ]
+        },
+        {
+          "word": "BORN",
+          "nextWords": [
+            "BORE",
+            "BRAN"
+          ]
+        },
+        {
+          "word": "BRAN",
+          "nextWords": [
+            "BORN"
+          ]
+        },
+        {
+          "word": "BRED",
+          "nextWords": [
+            "BORE"
+          ]
+        },
+        {
+          "word": "CARP",
+          "nextWords": [
+            "CART",
+            "CROP"
+          ]
+        },
+        {
+          "word": "CART",
+          "nextWords": [
+            "CARP"
+          ]
+        },
+        {
+          "word": "CREW",
+          "nextWords": [
+            "CROW"
+          ]
+        },
+        {
+          "word": "CROP",
+          "nextWords": [
+            "CARP",
+            "CROW",
+            "ROPE"
+          ]
+        },
+        {
+          "word": "CROW",
+          "nextWords": [
+            "CREW",
+            "CROP"
+          ]
+        },
+        {
+          "word": "HELP",
+          "nextWords": [
+            "POLE"
+          ]
+        },
+        {
+          "word": "POLE",
+          "nextWords": [
+            "HELP",
+            "ROPE"
+          ]
+        },
+        {
+          "word": "ROPE",
+          "nextWords": [
+            "BORE",
+            "CROP",
+            "POLE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-4-letter-007",
+      "title": "BANG to FIRE",
+      "difficulty": "Advanced",
+      "wordLength": 4,
+      "startWord": "BANG",
+      "targetWord": "FIRE",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "BANG",
+        "BRAN",
+        "NEAR",
+        "WREN",
+        "WIRE",
+        "FIRE"
+      ],
+      "nodes": [
+        {
+          "word": "ABLE",
+          "nextWords": [
+            "DEAL"
+          ]
+        },
+        {
+          "word": "BANG",
+          "nextWords": [
+            "BRAN"
+          ]
+        },
+        {
+          "word": "BRAN",
+          "nextWords": [
+            "BANG",
+            "NEAR"
+          ]
+        },
+        {
+          "word": "DEAL",
+          "nextWords": [
+            "ABLE",
+            "READ"
+          ]
+        },
+        {
+          "word": "DRAW",
+          "nextWords": [
+            "READ"
+          ]
+        },
+        {
+          "word": "FIRE",
+          "nextWords": [
+            "WIRE"
+          ]
+        },
+        {
+          "word": "NEAR",
+          "nextWords": [
+            "BRAN",
+            "READ",
+            "WREN"
+          ]
+        },
+        {
+          "word": "READ",
+          "nextWords": [
+            "DEAL",
+            "DRAW",
+            "NEAR",
+            "REED"
+          ]
+        },
+        {
+          "word": "REED",
+          "nextWords": [
+            "READ",
+            "REEL"
+          ]
+        },
+        {
+          "word": "REEL",
+          "nextWords": [
+            "REED"
+          ]
+        },
+        {
+          "word": "WIRE",
+          "nextWords": [
+            "FIRE",
+            "WREN"
+          ]
+        },
+        {
+          "word": "WREN",
+          "nextWords": [
+            "NEAR",
+            "WIRE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-4-letter-008",
+      "title": "ROSY to ITCH",
+      "difficulty": "Advanced",
+      "wordLength": 4,
+      "startWord": "ROSY",
+      "targetWord": "ITCH",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "ROSY",
+        "SOAR",
+        "RASH",
+        "ARCH",
+        "CHAT",
+        "ITCH"
+      ],
+      "nodes": [
+        {
+          "word": "ARCH",
+          "nextWords": [
+            "CHAT",
+            "RASH"
+          ]
+        },
+        {
+          "word": "CHAT",
+          "nextWords": [
+            "ARCH",
+            "FACT",
+            "ITCH",
+            "PATH"
+          ]
+        },
+        {
+          "word": "FACT",
+          "nextWords": [
+            "CHAT",
+            "FAST"
+          ]
+        },
+        {
+          "word": "FAST",
+          "nextWords": [
+            "FACT",
+            "SOFT"
+          ]
+        },
+        {
+          "word": "HOST",
+          "nextWords": [
+            "SOFT"
+          ]
+        },
+        {
+          "word": "ITCH",
+          "nextWords": [
+            "CHAT"
+          ]
+        },
+        {
+          "word": "PATH",
+          "nextWords": [
+            "CHAT",
+            "TRAP"
+          ]
+        },
+        {
+          "word": "RASH",
+          "nextWords": [
+            "ARCH",
+            "SOAR"
+          ]
+        },
+        {
+          "word": "ROSY",
+          "nextWords": [
+            "SOAR"
+          ]
+        },
+        {
+          "word": "SOAR",
+          "nextWords": [
+            "RASH",
+            "ROSY"
+          ]
+        },
+        {
+          "word": "SOFT",
+          "nextWords": [
+            "FAST",
+            "HOST"
+          ]
+        },
+        {
+          "word": "TRAP",
+          "nextWords": [
+            "PATH"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-4-letter-009",
+      "title": "MINE to SLED",
+      "difficulty": "Advanced",
+      "wordLength": 4,
+      "startWord": "MINE",
+      "targetWord": "SLED",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "MINE",
+        "NICE",
+        "NECK",
+        "DECK",
+        "DESK",
+        "SLED"
+      ],
+      "nodes": [
+        {
+          "word": "CASE",
+          "nextWords": [
+            "SAKE"
+          ]
+        },
+        {
+          "word": "DECK",
+          "nextWords": [
+            "DESK",
+            "NECK"
+          ]
+        },
+        {
+          "word": "DESK",
+          "nextWords": [
+            "DECK",
+            "SAKE",
+            "SLED"
+          ]
+        },
+        {
+          "word": "KNEE",
+          "nextWords": [
+            "NECK"
+          ]
+        },
+        {
+          "word": "MASK",
+          "nextWords": [
+            "MAST",
+            "SAKE"
+          ]
+        },
+        {
+          "word": "MAST",
+          "nextWords": [
+            "MASK",
+            "SALT"
+          ]
+        },
+        {
+          "word": "MINE",
+          "nextWords": [
+            "NICE"
+          ]
+        },
+        {
+          "word": "NECK",
+          "nextWords": [
+            "DECK",
+            "KNEE",
+            "NICE"
+          ]
+        },
+        {
+          "word": "NICE",
+          "nextWords": [
+            "MINE",
+            "NECK"
+          ]
+        },
+        {
+          "word": "SAKE",
+          "nextWords": [
+            "CASE",
+            "DESK",
+            "MASK"
+          ]
+        },
+        {
+          "word": "SALT",
+          "nextWords": [
+            "MAST"
+          ]
+        },
+        {
+          "word": "SLED",
+          "nextWords": [
+            "DESK"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-4-letter-010",
+      "title": "FOLK to WILL",
+      "difficulty": "Advanced",
+      "wordLength": 4,
+      "startWord": "FOLK",
+      "targetWord": "WILL",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 5,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 5,
+      "solutionPath": [
+        "FOLK",
+        "FOIL",
+        "OILY",
+        "IDLY",
+        "WILD",
+        "WILL"
+      ],
+      "nodes": [
+        {
+          "word": "COOL",
+          "nextWords": [
+            "LOCK",
+            "LOOP"
+          ]
+        },
+        {
+          "word": "DOCK",
+          "nextWords": [
+            "LOCK"
+          ]
+        },
+        {
+          "word": "FOIL",
+          "nextWords": [
+            "FOLK",
+            "OILY"
+          ]
+        },
+        {
+          "word": "FOLK",
+          "nextWords": [
+            "FOIL",
+            "LOCK"
+          ]
+        },
+        {
+          "word": "HOOP",
+          "nextWords": [
+            "LOOP"
+          ]
+        },
+        {
+          "word": "IDLY",
+          "nextWords": [
+            "OILY",
+            "WILD"
+          ]
+        },
+        {
+          "word": "LOCK",
+          "nextWords": [
+            "COOL",
+            "DOCK",
+            "FOLK"
+          ]
+        },
+        {
+          "word": "LOOP",
+          "nextWords": [
+            "COOL",
+            "HOOP"
+          ]
+        },
+        {
+          "word": "OILY",
+          "nextWords": [
+            "FOIL",
+            "IDLY",
+            "ONLY"
+          ]
+        },
+        {
+          "word": "ONLY",
+          "nextWords": [
+            "OILY"
+          ]
+        },
+        {
+          "word": "WILD",
+          "nextWords": [
+            "IDLY",
+            "WILL"
+          ]
+        },
+        {
+          "word": "WILL",
+          "nextWords": [
+            "WILD"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-4-letter-001",
+      "title": "INCH to CAKE",
+      "difficulty": "Expert",
+      "wordLength": 4,
+      "startWord": "INCH",
+      "targetWord": "CAKE",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "INCH",
+        "HINT",
+        "THAN",
+        "HEAT",
+        "HEAR",
+        "RACE",
+        "CAKE"
+      ],
+      "nodes": [
+        {
+          "word": "CAKE",
+          "nextWords": [
+            "RACE"
+          ]
+        },
+        {
+          "word": "HEAR",
+          "nextWords": [
+            "HEAT",
+            "HERD",
+            "RACE"
+          ]
+        },
+        {
+          "word": "HEAT",
+          "nextWords": [
+            "HEAR",
+            "PEAT",
+            "THAN"
+          ]
+        },
+        {
+          "word": "HERD",
+          "nextWords": [
+            "HEAR"
+          ]
+        },
+        {
+          "word": "HINT",
+          "nextWords": [
+            "INCH",
+            "THAN",
+            "THIS"
+          ]
+        },
+        {
+          "word": "INCH",
+          "nextWords": [
+            "HINT"
+          ]
+        },
+        {
+          "word": "LUSH",
+          "nextWords": [
+            "SHUT"
+          ]
+        },
+        {
+          "word": "PEAT",
+          "nextWords": [
+            "HEAT"
+          ]
+        },
+        {
+          "word": "RACE",
+          "nextWords": [
+            "CAKE",
+            "HEAR"
+          ]
+        },
+        {
+          "word": "SHUT",
+          "nextWords": [
+            "LUSH",
+            "THIS"
+          ]
+        },
+        {
+          "word": "THAN",
+          "nextWords": [
+            "HEAT",
+            "HINT"
+          ]
+        },
+        {
+          "word": "THIS",
+          "nextWords": [
+            "HINT",
+            "SHUT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-4-letter-002",
+      "title": "BOTH to PINK",
+      "difficulty": "Expert",
+      "wordLength": 4,
+      "startWord": "BOTH",
+      "targetWord": "PINK",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "BOTH",
+        "BLOT",
+        "LOST",
+        "SILT",
+        "SLIP",
+        "SKIP",
+        "PINK"
+      ],
+      "nodes": [
+        {
+          "word": "BLOT",
+          "nextWords": [
+            "BOIL",
+            "BOTH",
+            "LOST"
+          ]
+        },
+        {
+          "word": "BOIL",
+          "nextWords": [
+            "BLOT",
+            "FOIL"
+          ]
+        },
+        {
+          "word": "BOTH",
+          "nextWords": [
+            "BLOT",
+            "OATH"
+          ]
+        },
+        {
+          "word": "FAIL",
+          "nextWords": [
+            "FAIR",
+            "FOIL"
+          ]
+        },
+        {
+          "word": "FAIR",
+          "nextWords": [
+            "FAIL"
+          ]
+        },
+        {
+          "word": "FOIL",
+          "nextWords": [
+            "BOIL",
+            "FAIL"
+          ]
+        },
+        {
+          "word": "LOST",
+          "nextWords": [
+            "BLOT",
+            "SILT"
+          ]
+        },
+        {
+          "word": "OATH",
+          "nextWords": [
+            "BOTH"
+          ]
+        },
+        {
+          "word": "PINK",
+          "nextWords": [
+            "SKIP"
+          ]
+        },
+        {
+          "word": "SILT",
+          "nextWords": [
+            "LOST",
+            "SLIP"
+          ]
+        },
+        {
+          "word": "SKIP",
+          "nextWords": [
+            "PINK",
+            "SLIP"
+          ]
+        },
+        {
+          "word": "SLIP",
+          "nextWords": [
+            "SILT",
+            "SKIP"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-4-letter-003",
+      "title": "ONLY to WARM",
+      "difficulty": "Expert",
+      "wordLength": 4,
+      "startWord": "ONLY",
+      "targetWord": "WARM",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "ONLY",
+        "LOAN",
+        "LOAF",
+        "FAIL",
+        "FAIR",
+        "FARM",
+        "WARM"
+      ],
+      "nodes": [
+        {
+          "word": "FAIL",
+          "nextWords": [
+            "FAIR",
+            "FLIP",
+            "LOAF"
+          ]
+        },
+        {
+          "word": "FAIR",
+          "nextWords": [
+            "FAIL",
+            "FARM",
+            "PAIR"
+          ]
+        },
+        {
+          "word": "FARM",
+          "nextWords": [
+            "FAIR",
+            "WARM"
+          ]
+        },
+        {
+          "word": "FLIP",
+          "nextWords": [
+            "FAIL"
+          ]
+        },
+        {
+          "word": "GIFT",
+          "nextWords": [
+            "GRIT"
+          ]
+        },
+        {
+          "word": "GRIP",
+          "nextWords": [
+            "GRIT",
+            "PAIR"
+          ]
+        },
+        {
+          "word": "GRIT",
+          "nextWords": [
+            "GIFT",
+            "GRIP"
+          ]
+        },
+        {
+          "word": "LOAF",
+          "nextWords": [
+            "FAIL",
+            "LOAN"
+          ]
+        },
+        {
+          "word": "LOAN",
+          "nextWords": [
+            "LOAF",
+            "ONLY"
+          ]
+        },
+        {
+          "word": "ONLY",
+          "nextWords": [
+            "LOAN"
+          ]
+        },
+        {
+          "word": "PAIR",
+          "nextWords": [
+            "FAIR",
+            "GRIP"
+          ]
+        },
+        {
+          "word": "WARM",
+          "nextWords": [
+            "FARM"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-4-letter-004",
+      "title": "MIND to GLOW",
+      "difficulty": "Expert",
+      "wordLength": 4,
+      "startWord": "MIND",
+      "targetWord": "GLOW",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "MIND",
+        "KIND",
+        "KNIT",
+        "KNOT",
+        "TOWN",
+        "GOWN",
+        "GLOW"
+      ],
+      "nodes": [
+        {
+          "word": "AMID",
+          "nextWords": [
+            "MADE",
+            "MIND"
+          ]
+        },
+        {
+          "word": "BITE",
+          "nextWords": [
+            "KITE"
+          ]
+        },
+        {
+          "word": "EXAM",
+          "nextWords": [
+            "MADE"
+          ]
+        },
+        {
+          "word": "GLOW",
+          "nextWords": [
+            "GOWN"
+          ]
+        },
+        {
+          "word": "GOWN",
+          "nextWords": [
+            "GLOW",
+            "TOWN"
+          ]
+        },
+        {
+          "word": "KIND",
+          "nextWords": [
+            "KNIT",
+            "MIND"
+          ]
+        },
+        {
+          "word": "KITE",
+          "nextWords": [
+            "BITE",
+            "KNIT"
+          ]
+        },
+        {
+          "word": "KNIT",
+          "nextWords": [
+            "KIND",
+            "KITE",
+            "KNOT"
+          ]
+        },
+        {
+          "word": "KNOT",
+          "nextWords": [
+            "KNIT",
+            "TOWN"
+          ]
+        },
+        {
+          "word": "MADE",
+          "nextWords": [
+            "AMID",
+            "EXAM"
+          ]
+        },
+        {
+          "word": "MIND",
+          "nextWords": [
+            "AMID",
+            "KIND"
+          ]
+        },
+        {
+          "word": "TOWN",
+          "nextWords": [
+            "GOWN",
+            "KNOT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-4-letter-005",
+      "title": "LIKE to DAWN",
+      "difficulty": "Expert",
+      "wordLength": 4,
+      "startWord": "LIKE",
+      "targetWord": "DAWN",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "LIKE",
+        "HIKE",
+        "HIVE",
+        "VIEW",
+        "WAVE",
+        "ANEW",
+        "DAWN"
+      ],
+      "nodes": [
+        {
+          "word": "ANEW",
+          "nextWords": [
+            "DAWN",
+            "WAVE"
+          ]
+        },
+        {
+          "word": "DAWN",
+          "nextWords": [
+            "ANEW"
+          ]
+        },
+        {
+          "word": "HIKE",
+          "nextWords": [
+            "HIVE",
+            "LIKE"
+          ]
+        },
+        {
+          "word": "HIVE",
+          "nextWords": [
+            "HIKE",
+            "VIEW"
+          ]
+        },
+        {
+          "word": "LIKE",
+          "nextWords": [
+            "HIKE",
+            "MILE"
+          ]
+        },
+        {
+          "word": "MILE",
+          "nextWords": [
+            "LIKE",
+            "TIME"
+          ]
+        },
+        {
+          "word": "RENT",
+          "nextWords": [
+            "TIRE"
+          ]
+        },
+        {
+          "word": "TIME",
+          "nextWords": [
+            "MILE",
+            "TIRE"
+          ]
+        },
+        {
+          "word": "TIRE",
+          "nextWords": [
+            "RENT",
+            "TIME"
+          ]
+        },
+        {
+          "word": "VIEW",
+          "nextWords": [
+            "HIVE",
+            "WAVE",
+            "WIFE"
+          ]
+        },
+        {
+          "word": "WAVE",
+          "nextWords": [
+            "ANEW",
+            "VIEW"
+          ]
+        },
+        {
+          "word": "WIFE",
+          "nextWords": [
+            "VIEW"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-4-letter-006",
+      "title": "BOIL to GATE",
+      "difficulty": "Expert",
+      "wordLength": 4,
+      "startWord": "BOIL",
+      "targetWord": "GATE",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "BOIL",
+        "BAIL",
+        "TAIL",
+        "SALT",
+        "SEAL",
+        "SAGE",
+        "GATE"
+      ],
+      "nodes": [
+        {
+          "word": "BAIL",
+          "nextWords": [
+            "BOIL",
+            "TAIL"
+          ]
+        },
+        {
+          "word": "BOIL",
+          "nextWords": [
+            "BAIL"
+          ]
+        },
+        {
+          "word": "ELSE",
+          "nextWords": [
+            "PEEL",
+            "SEAL"
+          ]
+        },
+        {
+          "word": "FILE",
+          "nextWords": [
+            "TILE"
+          ]
+        },
+        {
+          "word": "GATE",
+          "nextWords": [
+            "SAGE"
+          ]
+        },
+        {
+          "word": "HEAL",
+          "nextWords": [
+            "SEAL"
+          ]
+        },
+        {
+          "word": "PEEL",
+          "nextWords": [
+            "ELSE"
+          ]
+        },
+        {
+          "word": "SAGE",
+          "nextWords": [
+            "GATE",
+            "SEAL"
+          ]
+        },
+        {
+          "word": "SALT",
+          "nextWords": [
+            "SEAL",
+            "TAIL"
+          ]
+        },
+        {
+          "word": "SEAL",
+          "nextWords": [
+            "ELSE",
+            "HEAL",
+            "SAGE",
+            "SALT"
+          ]
+        },
+        {
+          "word": "TAIL",
+          "nextWords": [
+            "BAIL",
+            "SALT",
+            "TILE"
+          ]
+        },
+        {
+          "word": "TILE",
+          "nextWords": [
+            "FILE",
+            "TAIL"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-4-letter-007",
+      "title": "WIDE to ROPE",
+      "difficulty": "Expert",
+      "wordLength": 4,
+      "startWord": "WIDE",
+      "targetWord": "ROPE",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "WIDE",
+        "VIEW",
+        "VEIN",
+        "ENVY",
+        "VERY",
+        "PREY",
+        "ROPE"
+      ],
+      "nodes": [
+        {
+          "word": "AIDE",
+          "nextWords": [
+            "MADE",
+            "WIDE"
+          ]
+        },
+        {
+          "word": "BAIL",
+          "nextWords": [
+            "LAMB"
+          ]
+        },
+        {
+          "word": "ENVY",
+          "nextWords": [
+            "VEIN",
+            "VERY"
+          ]
+        },
+        {
+          "word": "LAMB",
+          "nextWords": [
+            "BAIL",
+            "LAME"
+          ]
+        },
+        {
+          "word": "LAME",
+          "nextWords": [
+            "LAMB",
+            "MADE"
+          ]
+        },
+        {
+          "word": "MADE",
+          "nextWords": [
+            "AIDE",
+            "LAME"
+          ]
+        },
+        {
+          "word": "PREY",
+          "nextWords": [
+            "ROPE",
+            "VERY"
+          ]
+        },
+        {
+          "word": "ROPE",
+          "nextWords": [
+            "PREY"
+          ]
+        },
+        {
+          "word": "VEIN",
+          "nextWords": [
+            "ENVY",
+            "VIEW"
+          ]
+        },
+        {
+          "word": "VERY",
+          "nextWords": [
+            "ENVY",
+            "PREY"
+          ]
+        },
+        {
+          "word": "VIEW",
+          "nextWords": [
+            "VEIN",
+            "WIDE"
+          ]
+        },
+        {
+          "word": "WIDE",
+          "nextWords": [
+            "AIDE",
+            "VIEW"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-4-letter-008",
+      "title": "FOWL to SORT",
+      "difficulty": "Expert",
+      "wordLength": 4,
+      "startWord": "FOWL",
+      "targetWord": "SORT",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "FOWL",
+        "GOLF",
+        "GOLD",
+        "DOLL",
+        "TOLL",
+        "SLOT",
+        "SORT"
+      ],
+      "nodes": [
+        {
+          "word": "DOLL",
+          "nextWords": [
+            "GOLD",
+            "TOLL"
+          ]
+        },
+        {
+          "word": "FLAW",
+          "nextWords": [
+            "FLEA",
+            "FOWL"
+          ]
+        },
+        {
+          "word": "FLEA",
+          "nextWords": [
+            "FLAW",
+            "LACE",
+            "LIFE"
+          ]
+        },
+        {
+          "word": "FOWL",
+          "nextWords": [
+            "FLAW",
+            "GOLF"
+          ]
+        },
+        {
+          "word": "GOLD",
+          "nextWords": [
+            "DOLL",
+            "GOLF"
+          ]
+        },
+        {
+          "word": "GOLF",
+          "nextWords": [
+            "FOWL",
+            "GOLD"
+          ]
+        },
+        {
+          "word": "LACE",
+          "nextWords": [
+            "FLEA"
+          ]
+        },
+        {
+          "word": "LIFE",
+          "nextWords": [
+            "FLEA",
+            "LIME"
+          ]
+        },
+        {
+          "word": "LIME",
+          "nextWords": [
+            "LIFE"
+          ]
+        },
+        {
+          "word": "SLOT",
+          "nextWords": [
+            "SORT",
+            "TOLL"
+          ]
+        },
+        {
+          "word": "SORT",
+          "nextWords": [
+            "SLOT"
+          ]
+        },
+        {
+          "word": "TOLL",
+          "nextWords": [
+            "DOLL",
+            "SLOT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-4-letter-009",
+      "title": "MEEK to ROSY",
+      "difficulty": "Expert",
+      "wordLength": 4,
+      "startWord": "MEEK",
+      "targetWord": "ROSY",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "MEEK",
+        "DEEM",
+        "SEED",
+        "SEEN",
+        "NOSE",
+        "ROSE",
+        "ROSY"
+      ],
+      "nodes": [
+        {
+          "word": "BITE",
+          "nextWords": [
+            "EMIT"
+          ]
+        },
+        {
+          "word": "DEEM",
+          "nextWords": [
+            "DIME",
+            "MEEK",
+            "SEED"
+          ]
+        },
+        {
+          "word": "DICE",
+          "nextWords": [
+            "DIME"
+          ]
+        },
+        {
+          "word": "DIME",
+          "nextWords": [
+            "DEEM",
+            "DICE",
+            "EMIT"
+          ]
+        },
+        {
+          "word": "EMIT",
+          "nextWords": [
+            "BITE",
+            "DIME"
+          ]
+        },
+        {
+          "word": "HONE",
+          "nextWords": [
+            "NOSE"
+          ]
+        },
+        {
+          "word": "MEEK",
+          "nextWords": [
+            "DEEM"
+          ]
+        },
+        {
+          "word": "NOSE",
+          "nextWords": [
+            "HONE",
+            "ROSE",
+            "SEEN"
+          ]
+        },
+        {
+          "word": "ROSE",
+          "nextWords": [
+            "NOSE",
+            "ROSY"
+          ]
+        },
+        {
+          "word": "ROSY",
+          "nextWords": [
+            "ROSE"
+          ]
+        },
+        {
+          "word": "SEED",
+          "nextWords": [
+            "DEEM",
+            "SEEN"
+          ]
+        },
+        {
+          "word": "SEEN",
+          "nextWords": [
+            "NOSE",
+            "SEED"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert-4-letter-010",
+      "title": "SNAP to LIFE",
+      "difficulty": "Expert",
+      "wordLength": 4,
+      "startWord": "SNAP",
+      "targetWord": "LIFE",
+      "rules": {
+        "allowRearrangement": true,
+        "allowAnagramOnlyMove": true,
+        "maxTurns": 6,
+        "maxLetterReplacementsPerTurn": 1,
+        "allowRepeatedWords": false,
+        "candidateScope": "puzzleWordsOnly",
+        "uniqueSolution": true
+      },
+      "scoring": {
+        "primary": "completion",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "solutionMoves": 6,
+      "solutionPath": [
+        "SNAP",
+        "PANE",
+        "GAPE",
+        "GALE",
+        "AXLE",
+        "FLEX",
+        "LIFE"
+      ],
+      "nodes": [
+        {
+          "word": "AXLE",
+          "nextWords": [
+            "FLEX",
+            "GALE"
+          ]
+        },
+        {
+          "word": "FLEX",
+          "nextWords": [
+            "AXLE",
+            "LIFE"
+          ]
+        },
+        {
+          "word": "GALE",
+          "nextWords": [
+            "AXLE",
+            "GAPE"
+          ]
+        },
+        {
+          "word": "GAPE",
+          "nextWords": [
+            "GALE",
+            "PANE"
+          ]
+        },
+        {
+          "word": "LIFE",
+          "nextWords": [
+            "FLEX"
+          ]
+        },
+        {
+          "word": "MEAN",
+          "nextWords": [
+            "PANE"
+          ]
+        },
+        {
+          "word": "PACK",
+          "nextWords": [
+            "PARK"
+          ]
+        },
+        {
+          "word": "PANE",
+          "nextWords": [
+            "GAPE",
+            "MEAN",
+            "SNAP"
+          ]
+        },
+        {
+          "word": "PARK",
+          "nextWords": [
+            "PACK",
+            "SPAR"
+          ]
+        },
+        {
+          "word": "SNAP",
+          "nextWords": [
+            "PANE",
+            "SPAR"
+          ]
+        },
+        {
+          "word": "SPAR",
+          "nextWords": [
+            "PARK",
+            "SNAP",
+            "STAR"
+          ]
+        },
+        {
+          "word": "STAR",
+          "nextWords": [
+            "SPAR"
+          ]
+        }
+      ]
+    }
+  ]
+}

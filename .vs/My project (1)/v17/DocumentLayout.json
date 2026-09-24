@@ -1,0 +1,115 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CE1FEE-67BE-6533-73AA-CC578BE80DCD}|Assembly-CSharp.csproj|c:\\users\\ken_b\\repos\\tsppuzzlegame\\my project (1)\\assets\\scripts\\tsppuzzlesloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CE1FEE-67BE-6533-73AA-CC578BE80DCD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tsppuzzlesloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CE1FEE-67BE-6533-73AA-CC578BE80DCD}|Assembly-CSharp.csproj|C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\assets\\scripts\\tsppuzzlesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CE1FEE-67BE-6533-73AA-CC578BE80DCD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tsppuzzlesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\Assets\\Scripts\\TspPuzzleLoader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\TspPuzzleLoader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\Assets\\Scripts\\TspPuzzleLoaderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\TspPuzzleLoaderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CE1FEE-67BE-6533-73AA-CC578BE80DCD}|Assembly-CSharp.csproj|C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\assets\\scripts\\tspmenucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CE1FEE-67BE-6533-73AA-CC578BE80DCD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tspmenucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\Assets\\Scripts\\TspPuzzleData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\TspPuzzleData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TspPuzzlesData.cs",
+              "DocumentMoniker": "C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\Assets\\Scripts\\TspPuzzlesData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TspPuzzlesData.cs",
+              "ToolTip": "C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\Assets\\Scripts\\TspPuzzlesData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TspPuzzlesData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T22:37:58.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TspPuzzlesLoader.cs",
+              "DocumentMoniker": "C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\Assets\\Scripts\\TspPuzzlesLoader.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TspPuzzlesLoader.cs",
+              "ToolTip": "C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\Assets\\Scripts\\TspPuzzlesLoader.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TspPuzzlesLoader.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAcwHAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T22:36:39.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TspPuzzleLoader.cs",
+              "DocumentMoniker": "C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\Assets\\Scripts\\TspPuzzleLoader.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TspPuzzleLoader.cs",
+              "ToolTip": "C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\Assets\\Scripts\\TspPuzzleLoader.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TspPuzzleLoader.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T22:26:40.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TspPuzzleLoaderer.cs",
+              "DocumentMoniker": "C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\Assets\\Scripts\\TspPuzzleLoaderer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TspPuzzleLoaderer.cs",
+              "ToolTip": "C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\Assets\\Scripts\\TspPuzzleLoaderer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TspPuzzleLoaderer.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T22:20:32.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TspPuzzleData.cs",
+              "DocumentMoniker": "C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\Assets\\Scripts\\TspPuzzleData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TspPuzzleData.cs",
+              "ToolTip": "C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\Assets\\Scripts\\TspPuzzleData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TspPuzzleData.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwBYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T22:10:02.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TspMenuController.cs",
+              "DocumentMoniker": "C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\Assets\\Scripts\\TspMenuController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TspMenuController.cs",
+              "ToolTip": "C:\\Users\\ken_b\\Repos\\TSPPuzzleGame\\My project (1)\\Assets\\Scripts\\TspMenuController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TspMenuController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwAkAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T20:22:58.528Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
