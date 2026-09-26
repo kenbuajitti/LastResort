@@ -124,36 +124,28 @@ public class TspResponsiveLayout : MonoBehaviour
         if (game) GameLayout(w, h); else MenuLayout(w, h);
         Canvas.ForceUpdateCanvases();
     }
-    public void RegisterWordBrowser(Button previous, Button next, TMP_Text counter, Button done = null, Toggle filter = null, TMP_Dropdown letters = null)
+    public void RegisterWordBrowser(Button previous, Button next, TMP_Text counter, Button done = null, Toggle filter = null)
     {
         foreach (var component in new Component[] { previous, next, counter })
             items[component.name] = component.GetComponent<RectTransform>();
         if (done != null) items[done.name] = done.GetComponent<RectTransform>();
         if (filter != null) items[filter.name] = filter.GetComponent<RectTransform>();
-        if (letters != null)
-        {
-            items[letters.name] = letters.GetComponent<RectTransform>();
-            items["LettersHeading"] = letters.transform.Find("LettersHeading") as RectTransform;
-        }
         Apply();
     }
     void GameLayout(float w, float h)
     {
         bool wide = w / h >= 1.25f;
         bool hasDone = items.ContainsKey("WordPuzzleDoneButton");
-        float filterRow = items.ContainsKey("LettersDropdown") ? 48f : 0f;
         float boardWidth = wide ? Mathf.Max(340, w * .58f) : w - 32;
-        float boardHeight = wide ? h - 32 : h - (hasDone ? 368 : 340) - filterRow;
-        float bx = 16, by = wide ? 16 : 108 + filterRow;
+        float boardHeight = wide ? h - 32 : h - (hasDone ? 368 : 340);
+        float bx = 16, by = wide ? 16 : 108;
         Box("PuzzleArea", bx, by, boardWidth, boardHeight);
         float x = wide ? boardWidth + 36 : 16;
         float width = wide ? w - x - 16 : w - 32;
         Box("TitleText", x, 10, width, 42);
-        Box("NodeCountDropdown", x + 110, 60 + filterRow, width - 110, 36);
-        Box("NodesHeading", -110, 0, 102, 36, false);
-        Box("LettersDropdown", x + 110, 60, width - 110, 36);
-        Box("LettersHeading", -110, 0, 102, 36, false);
-        float controlsY = wide ? 130 + filterRow : by + boardHeight + 16;
+        Box("NodeCountDropdown", x + 112, 60, width - 112, 36);
+        Box("NodesHeading", -112, 0, 106, 36, false);
+        float controlsY = wide ? 130 : by + boardHeight + 16;
         float third = (width - 16) / 3;
         Box("BrowsePreviousButton", x, controlsY, third, 44);
         Box("PuzzleCounterText", x + third + 8, controlsY, third, 44);
@@ -172,39 +164,19 @@ public class TspResponsiveLayout : MonoBehaviour
             hasDone ? (wide ? 70 : 66) : (wide ? 100 : 72));
         Box("MainMenuButton", x, controlsY + (wide ? 176 : hasDone ? 166 : 140), width, 48);
         TextStyle("TitleText", 32, 20);
-        // Both filter labels use one fixed size; independent autosizing made
-        // the longer LETTERS label smaller than LEVEL.
-        foreach (string labelName in new[] { "NodesHeading", "LettersHeading" })
+        TextStyle("NodesHeading", 20, 14);
+        // Keep DIFFICULTY on one line whenever the responsive layout refreshes.
+        if (items.TryGetValue("NodesHeading", out var headingRect))
         {
-            TextStyle(labelName, 20, 20);
-            if (!items.TryGetValue(labelName, out var headingRect)) continue;
             var heading = headingRect.GetComponent<TMP_Text>();
-            if (heading == null) continue;
-            heading.enableAutoSizing = false;
-            heading.fontSize = 20;
-            heading.enableWordWrapping = false;
+            if (heading != null) heading.enableWordWrapping = false;
         }
         TextStyle("PuzzleCounterText", 24, 16);
         TextStyle("StatusText", 23, 16);
         var dropdown = items["NodeCountDropdown"].GetComponent<TMP_Dropdown>();
         dropdown.captionText.enableAutoSizing = true;
-        dropdown.captionText.fontSizeMin = 16;
+        dropdown.captionText.fontSizeMin = 14;
         dropdown.captionText.fontSizeMax = 24;
-        dropdown.captionText.enableWordWrapping = false;
-        dropdown.itemText.enableAutoSizing = true;
-        dropdown.itemText.fontSizeMin = 14;
-        dropdown.itemText.fontSizeMax = 24;
-        dropdown.itemText.enableWordWrapping = false;
-        if (items.TryGetValue("LettersDropdown", out var lettersRect))
-        {
-            var letters = lettersRect.GetComponent<TMP_Dropdown>();
-            letters.captionText.enableAutoSizing = true;
-            letters.captionText.fontSizeMin = 16;
-            letters.captionText.fontSizeMax = 24;
-            letters.captionText.enableWordWrapping = false;
-            letters.template.sizeDelta = new Vector2(letters.template.sizeDelta.x, 100);
-            items["LettersHeading"].GetComponent<TMP_Text>().enableWordWrapping = false;
-        }
         items["Template"].sizeDelta = new Vector2(items["Template"].sizeDelta.x, Mathf.Min(300, h - 116));
     }
     void MenuLayout(float w, float h)
@@ -219,6 +191,11 @@ public class TspResponsiveLayout : MonoBehaviour
         Box("HowToPlayText", 24, 76, width - 48, h - 216, false);
         Box("CloseHowToPlayButton", width / 2 - 110, h - 112, 220, 52, false);
         TextStyle("GameTitleText", 56, 32); TextStyle("SubtitleText", 30);
+        if (items.TryGetValue("SubtitleText", out var descriptionRect))
+        {
+            var description = descriptionRect.GetComponent<TMP_Text>();
+            if (description != null) description.color = Color.black;
+        }
         TextStyle("HowtoPlayTitleText", 32); TextStyle("HowToPlayText", 26, 20);
         if (items.TryGetValue("HowToPlayText", out var helpRect))
         {

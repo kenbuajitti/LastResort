@@ -1,0 +1,2836 @@
+{
+  "schemaVersion": 1,
+  "packId": "numberiq-starter-v1",
+  "title": "NumberIQ Starter Puzzles",
+  "description": "20 beginner, 20 intermediate and 10 advanced sample puzzles. Every shortest solution has 4-6 moves. Difficulty labels are provisional until playtested.",
+  "formatNotes": {
+    "candidateGeneration": "Apply each listed operation to the current number. Keep only integer results within inclusive minNumber/maxNumber bounds. Exclude unchanged values and any number already in the current ladder. Preserve operations array order.",
+    "duplicateCandidates": "Show one candidate per result number. If several operations produce that number, retain all matching operation ids for its label; selecting the result counts as one turn.",
+    "operationTypes": "add, subtract, multiply and divide use the positive integer operand. divide is legal only with zero remainder. reverseDigits ignores operand (stored as 0).",
+    "digitReversal": "Reverse decimal digits, then discard leading zeroes: 23 becomes 32; 40 becomes 4. One-digit numbers and palindromes reverse to themselves and are excluded as no-op moves.",
+    "turnLimit": "maxTurns 0 means no hard turn limit. optimalTurns is the verified shortest solution length, not a limit on player moves.",
+    "undo": "Undo removes the last ladder number and restores the preceding state. Removed numbers become selectable again. Elapsed time continues.",
+    "completion": "Complete immediately on reaching targetNumber. Do not generate further moves. If there are no legal candidates before reaching the target, allow Undo or Retry.",
+    "timer": "Start timing on START, stop when the target is reached. Retry resets the current ladder and timer.",
+    "solution": "optimalPath includes start and target. optimalOperationIds[i] transforms optimalPath[i] into optimalPath[i+1]. This is one shortest solution; other equally short solutions are valid.",
+    "scoring": "Fewer turns rank first; elapsed time breaks ties. Turns equal current ladder length minus one. Undo rewinds turns, but not elapsed time.",
+    "playerState": "Keep DONE flags, selected puzzle and player results outside this read-only puzzle pack. Use packId plus puzzle id as the stable key.",
+    "compatibility": "Plain objects and arrays with explicit primitive fields. Requires a NumberIQ loader; this is not a drop-in replacement for the WordIQ puzzle format."
+  },
+  "difficulties": [
+    {
+      "id": "beginner",
+      "label": "Beginner",
+      "rank": 1,
+      "puzzleCount": 20
+    },
+    {
+      "id": "intermediate",
+      "label": "Intermediate",
+      "rank": 2,
+      "puzzleCount": 20
+    },
+    {
+      "id": "advanced",
+      "label": "Advanced",
+      "rank": 3,
+      "puzzleCount": 10
+    }
+  ],
+  "puzzles": [
+    {
+      "id": "beginner-001",
+      "title": "4 to 31",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 4,
+      "targetNumber": 31,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        4,
+        7,
+        14,
+        28,
+        31
+      ],
+      "optimalOperationIds": [
+        "add_3",
+        "multiply_2",
+        "multiply_2",
+        "add_3"
+      ]
+    },
+    {
+      "id": "beginner-002",
+      "title": "14 to 86",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 14,
+      "targetNumber": 86,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 5,
+      "optimalPath": [
+        14,
+        17,
+        20,
+        40,
+        43,
+        86
+      ],
+      "optimalOperationIds": [
+        "add_3",
+        "add_3",
+        "multiply_2",
+        "add_3",
+        "multiply_2"
+      ]
+    },
+    {
+      "id": "beginner-003",
+      "title": "33 to 54",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 33,
+      "targetNumber": 54,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 6,
+      "optimalPath": [
+        33,
+        36,
+        18,
+        21,
+        24,
+        27,
+        54
+      ],
+      "optimalOperationIds": [
+        "add_3",
+        "divide_2",
+        "add_3",
+        "add_3",
+        "add_3",
+        "multiply_2"
+      ]
+    },
+    {
+      "id": "beginner-004",
+      "title": "45 to 30",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 45,
+      "targetNumber": 30,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        45,
+        48,
+        24,
+        27,
+        30
+      ],
+      "optimalOperationIds": [
+        "add_3",
+        "divide_2",
+        "add_3",
+        "add_3"
+      ]
+    },
+    {
+      "id": "beginner-005",
+      "title": "26 to 14",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 26,
+      "targetNumber": 14,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 5,
+      "optimalPath": [
+        26,
+        13,
+        16,
+        8,
+        11,
+        14
+      ],
+      "optimalOperationIds": [
+        "divide_2",
+        "add_3",
+        "divide_2",
+        "add_3",
+        "add_3"
+      ]
+    },
+    {
+      "id": "beginner-006",
+      "title": "38 to 62",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 38,
+      "targetNumber": 62,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 6,
+      "optimalPath": [
+        38,
+        19,
+        22,
+        25,
+        28,
+        31,
+        62
+      ],
+      "optimalOperationIds": [
+        "divide_2",
+        "add_3",
+        "add_3",
+        "add_3",
+        "add_3",
+        "multiply_2"
+      ]
+    },
+    {
+      "id": "beginner-007",
+      "title": "23 to 19",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 23,
+      "targetNumber": 19,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        23,
+        26,
+        13,
+        16,
+        19
+      ],
+      "optimalOperationIds": [
+        "add_3",
+        "divide_2",
+        "add_3",
+        "add_3"
+      ]
+    },
+    {
+      "id": "beginner-008",
+      "title": "50 to 37",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 50,
+      "targetNumber": 37,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 5,
+      "optimalPath": [
+        50,
+        25,
+        28,
+        31,
+        34,
+        37
+      ],
+      "optimalOperationIds": [
+        "divide_2",
+        "add_3",
+        "add_3",
+        "add_3",
+        "add_3"
+      ]
+    },
+    {
+      "id": "beginner-009",
+      "title": "44 to 68",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 44,
+      "targetNumber": 68,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 6,
+      "optimalPath": [
+        44,
+        22,
+        25,
+        28,
+        31,
+        34,
+        68
+      ],
+      "optimalOperationIds": [
+        "divide_2",
+        "add_3",
+        "add_3",
+        "add_3",
+        "add_3",
+        "multiply_2"
+      ]
+    },
+    {
+      "id": "beginner-010",
+      "title": "6 to 51",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 6,
+      "targetNumber": 51,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        6,
+        12,
+        24,
+        48,
+        51
+      ],
+      "optimalOperationIds": [
+        "multiply_2",
+        "multiply_2",
+        "multiply_2",
+        "add_3"
+      ]
+    },
+    {
+      "id": "beginner-011",
+      "title": "34 to 52",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 34,
+      "targetNumber": 52,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 5,
+      "optimalPath": [
+        34,
+        17,
+        20,
+        23,
+        26,
+        52
+      ],
+      "optimalOperationIds": [
+        "divide_2",
+        "add_3",
+        "add_3",
+        "add_3",
+        "multiply_2"
+      ]
+    },
+    {
+      "id": "beginner-012",
+      "title": "40 to 7",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 40,
+      "targetNumber": 7,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 6,
+      "optimalPath": [
+        40,
+        20,
+        10,
+        5,
+        8,
+        4,
+        7
+      ],
+      "optimalOperationIds": [
+        "divide_2",
+        "divide_2",
+        "divide_2",
+        "add_3",
+        "divide_2",
+        "add_3"
+      ]
+    },
+    {
+      "id": "beginner-013",
+      "title": "42 to 6",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 42,
+      "targetNumber": 6,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        42,
+        21,
+        24,
+        12,
+        6
+      ],
+      "optimalOperationIds": [
+        "divide_2",
+        "add_3",
+        "divide_2",
+        "divide_2"
+      ]
+    },
+    {
+      "id": "beginner-014",
+      "title": "48 to 36",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 48,
+      "targetNumber": 36,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 5,
+      "optimalPath": [
+        48,
+        24,
+        27,
+        30,
+        33,
+        36
+      ],
+      "optimalOperationIds": [
+        "divide_2",
+        "add_3",
+        "add_3",
+        "add_3",
+        "add_3"
+      ]
+    },
+    {
+      "id": "beginner-015",
+      "title": "66 to 27",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 66,
+      "targetNumber": 27,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 6,
+      "optimalPath": [
+        66,
+        33,
+        36,
+        18,
+        21,
+        24,
+        27
+      ],
+      "optimalOperationIds": [
+        "divide_2",
+        "add_3",
+        "divide_2",
+        "add_3",
+        "add_3",
+        "add_3"
+      ]
+    },
+    {
+      "id": "beginner-016",
+      "title": "8 to 41",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 8,
+      "targetNumber": 41,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        8,
+        16,
+        19,
+        38,
+        41
+      ],
+      "optimalOperationIds": [
+        "multiply_2",
+        "add_3",
+        "multiply_2",
+        "add_3"
+      ]
+    },
+    {
+      "id": "beginner-017",
+      "title": "49 to 35",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 49,
+      "targetNumber": 35,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 5,
+      "optimalPath": [
+        49,
+        52,
+        26,
+        29,
+        32,
+        35
+      ],
+      "optimalOperationIds": [
+        "add_3",
+        "divide_2",
+        "add_3",
+        "add_3",
+        "add_3"
+      ]
+    },
+    {
+      "id": "beginner-018",
+      "title": "3 to 45",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 3,
+      "targetNumber": 45,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 6,
+      "optimalPath": [
+        3,
+        6,
+        9,
+        18,
+        21,
+        42,
+        45
+      ],
+      "optimalOperationIds": [
+        "add_3",
+        "add_3",
+        "multiply_2",
+        "add_3",
+        "multiply_2",
+        "add_3"
+      ]
+    },
+    {
+      "id": "beginner-019",
+      "title": "52 to 8",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 52,
+      "targetNumber": 8,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        52,
+        26,
+        13,
+        16,
+        8
+      ],
+      "optimalOperationIds": [
+        "divide_2",
+        "divide_2",
+        "add_3",
+        "divide_2"
+      ]
+    },
+    {
+      "id": "beginner-020",
+      "title": "9 to 66",
+      "difficulty": "beginner",
+      "difficultyRank": 1,
+      "startNumber": 9,
+      "targetNumber": 66,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 5,
+      "optimalPath": [
+        9,
+        12,
+        15,
+        30,
+        33,
+        66
+      ],
+      "optimalOperationIds": [
+        "add_3",
+        "add_3",
+        "multiply_2",
+        "add_3",
+        "multiply_2"
+      ]
+    },
+    {
+      "id": "intermediate-001",
+      "title": "34 to 42",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 34,
+      "targetNumber": 42,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        34,
+        41,
+        48,
+        45,
+        42
+      ],
+      "optimalOperationIds": [
+        "add_7",
+        "add_7",
+        "subtract_3",
+        "subtract_3"
+      ]
+    },
+    {
+      "id": "intermediate-002",
+      "title": "23 to 38",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 23,
+      "targetNumber": 38,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 5,
+      "optimalPath": [
+        23,
+        30,
+        37,
+        44,
+        41,
+        38
+      ],
+      "optimalOperationIds": [
+        "add_7",
+        "add_7",
+        "add_7",
+        "subtract_3",
+        "subtract_3"
+      ]
+    },
+    {
+      "id": "intermediate-003",
+      "title": "64 to 76",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 64,
+      "targetNumber": 76,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 6,
+      "optimalPath": [
+        64,
+        71,
+        78,
+        85,
+        82,
+        79,
+        76
+      ],
+      "optimalOperationIds": [
+        "add_7",
+        "add_7",
+        "add_7",
+        "subtract_3",
+        "subtract_3",
+        "subtract_3"
+      ]
+    },
+    {
+      "id": "intermediate-004",
+      "title": "66 to 84",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 66,
+      "targetNumber": 84,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        66,
+        73,
+        80,
+        87,
+        84
+      ],
+      "optimalOperationIds": [
+        "add_7",
+        "add_7",
+        "add_7",
+        "subtract_3"
+      ]
+    },
+    {
+      "id": "intermediate-005",
+      "title": "55 to 86",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 55,
+      "targetNumber": 86,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 5,
+      "optimalPath": [
+        55,
+        52,
+        49,
+        46,
+        43,
+        86
+      ],
+      "optimalOperationIds": [
+        "subtract_3",
+        "subtract_3",
+        "subtract_3",
+        "subtract_3",
+        "multiply_2"
+      ]
+    },
+    {
+      "id": "intermediate-006",
+      "title": "8 to 79",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 8,
+      "targetNumber": 79,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 6,
+      "optimalPath": [
+        8,
+        15,
+        22,
+        29,
+        36,
+        72,
+        79
+      ],
+      "optimalOperationIds": [
+        "add_7",
+        "add_7",
+        "add_7",
+        "add_7",
+        "multiply_2",
+        "add_7"
+      ]
+    },
+    {
+      "id": "intermediate-007",
+      "title": "20 to 65",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 20,
+      "targetNumber": 65,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        20,
+        27,
+        34,
+        68,
+        65
+      ],
+      "optimalOperationIds": [
+        "add_7",
+        "add_7",
+        "multiply_2",
+        "subtract_3"
+      ]
+    },
+    {
+      "id": "intermediate-008",
+      "title": "29 to 24",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 29,
+      "targetNumber": 24,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 5,
+      "optimalPath": [
+        29,
+        36,
+        33,
+        30,
+        27,
+        24
+      ],
+      "optimalOperationIds": [
+        "add_7",
+        "subtract_3",
+        "subtract_3",
+        "subtract_3",
+        "subtract_3"
+      ]
+    },
+    {
+      "id": "intermediate-009",
+      "title": "31 to 48",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 31,
+      "targetNumber": 48,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 6,
+      "optimalPath": [
+        31,
+        28,
+        25,
+        22,
+        44,
+        51,
+        48
+      ],
+      "optimalOperationIds": [
+        "subtract_3",
+        "subtract_3",
+        "subtract_3",
+        "multiply_2",
+        "add_7",
+        "subtract_3"
+      ]
+    },
+    {
+      "id": "intermediate-010",
+      "title": "47 to 96",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 47,
+      "targetNumber": 96,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        47,
+        54,
+        51,
+        48,
+        96
+      ],
+      "optimalOperationIds": [
+        "add_7",
+        "subtract_3",
+        "subtract_3",
+        "multiply_2"
+      ]
+    },
+    {
+      "id": "intermediate-011",
+      "title": "38 to 92",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 38,
+      "targetNumber": 92,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 5,
+      "optimalPath": [
+        38,
+        45,
+        52,
+        49,
+        46,
+        92
+      ],
+      "optimalOperationIds": [
+        "add_7",
+        "add_7",
+        "subtract_3",
+        "subtract_3",
+        "multiply_2"
+      ]
+    },
+    {
+      "id": "intermediate-012",
+      "title": "7 to 71",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 7,
+      "targetNumber": 71,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 6,
+      "optimalPath": [
+        7,
+        14,
+        28,
+        35,
+        32,
+        64,
+        71
+      ],
+      "optimalOperationIds": [
+        "add_7",
+        "multiply_2",
+        "add_7",
+        "subtract_3",
+        "multiply_2",
+        "add_7"
+      ]
+    },
+    {
+      "id": "intermediate-013",
+      "title": "12 to 66",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 12,
+      "targetNumber": 66,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        12,
+        19,
+        26,
+        33,
+        66
+      ],
+      "optimalOperationIds": [
+        "add_7",
+        "add_7",
+        "add_7",
+        "multiply_2"
+      ]
+    },
+    {
+      "id": "intermediate-014",
+      "title": "26 to 64",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 26,
+      "targetNumber": 64,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 5,
+      "optimalPath": [
+        26,
+        33,
+        30,
+        60,
+        67,
+        64
+      ],
+      "optimalOperationIds": [
+        "add_7",
+        "subtract_3",
+        "multiply_2",
+        "add_7",
+        "subtract_3"
+      ]
+    },
+    {
+      "id": "intermediate-015",
+      "title": "3 to 93",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 3,
+      "targetNumber": 93,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 6,
+      "optimalPath": [
+        3,
+        10,
+        17,
+        24,
+        48,
+        96,
+        93
+      ],
+      "optimalOperationIds": [
+        "add_7",
+        "add_7",
+        "add_7",
+        "multiply_2",
+        "multiply_2",
+        "subtract_3"
+      ]
+    },
+    {
+      "id": "intermediate-016",
+      "title": "10 to 44",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 10,
+      "targetNumber": 44,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        10,
+        20,
+        40,
+        47,
+        44
+      ],
+      "optimalOperationIds": [
+        "multiply_2",
+        "multiply_2",
+        "add_7",
+        "subtract_3"
+      ]
+    },
+    {
+      "id": "intermediate-017",
+      "title": "30 to 36",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 30,
+      "targetNumber": 36,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 5,
+      "optimalPath": [
+        30,
+        27,
+        24,
+        21,
+        18,
+        36
+      ],
+      "optimalOperationIds": [
+        "subtract_3",
+        "subtract_3",
+        "subtract_3",
+        "subtract_3",
+        "multiply_2"
+      ]
+    },
+    {
+      "id": "intermediate-018",
+      "title": "16 to 2",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 16,
+      "targetNumber": 2,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 6,
+      "optimalPath": [
+        16,
+        13,
+        10,
+        7,
+        4,
+        1,
+        2
+      ],
+      "optimalOperationIds": [
+        "subtract_3",
+        "subtract_3",
+        "subtract_3",
+        "subtract_3",
+        "subtract_3",
+        "multiply_2"
+      ]
+    },
+    {
+      "id": "intermediate-019",
+      "title": "19 to 80",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 19,
+      "targetNumber": 80,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        19,
+        26,
+        33,
+        40,
+        80
+      ],
+      "optimalOperationIds": [
+        "add_7",
+        "add_7",
+        "add_7",
+        "multiply_2"
+      ]
+    },
+    {
+      "id": "intermediate-020",
+      "title": "13 to 62",
+      "difficulty": "intermediate",
+      "difficultyRank": 2,
+      "startNumber": 13,
+      "targetNumber": 62,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 5,
+      "optimalPath": [
+        13,
+        20,
+        27,
+        34,
+        31,
+        62
+      ],
+      "optimalOperationIds": [
+        "add_7",
+        "add_7",
+        "add_7",
+        "subtract_3",
+        "multiply_2"
+      ]
+    },
+    {
+      "id": "advanced-001",
+      "title": "2 to 68",
+      "difficulty": "advanced",
+      "difficultyRank": 3,
+      "startNumber": 2,
+      "targetNumber": 68,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        },
+        {
+          "id": "reverseDigits",
+          "type": "reverseDigits",
+          "operand": 0,
+          "label": "Reverse digits"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        2,
+        9,
+        16,
+        61,
+        68
+      ],
+      "optimalOperationIds": [
+        "add_7",
+        "add_7",
+        "reverseDigits",
+        "add_7"
+      ]
+    },
+    {
+      "id": "advanced-002",
+      "title": "56 to 55",
+      "difficulty": "advanced",
+      "difficultyRank": 3,
+      "startNumber": 56,
+      "targetNumber": 55,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "reverseDigits",
+          "type": "reverseDigits",
+          "operand": 0,
+          "label": "Reverse digits"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 5,
+      "optimalPath": [
+        56,
+        59,
+        62,
+        26,
+        52,
+        55
+      ],
+      "optimalOperationIds": [
+        "add_3",
+        "add_3",
+        "reverseDigits",
+        "multiply_2",
+        "add_3"
+      ]
+    },
+    {
+      "id": "advanced-003",
+      "title": "53 to 86",
+      "difficulty": "advanced",
+      "difficultyRank": 3,
+      "startNumber": 53,
+      "targetNumber": 86,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "reverseDigits",
+          "type": "reverseDigits",
+          "operand": 0,
+          "label": "Reverse digits"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 6,
+      "optimalPath": [
+        53,
+        50,
+        47,
+        74,
+        71,
+        68,
+        86
+      ],
+      "optimalOperationIds": [
+        "subtract_3",
+        "subtract_3",
+        "reverseDigits",
+        "subtract_3",
+        "subtract_3",
+        "reverseDigits"
+      ]
+    },
+    {
+      "id": "advanced-004",
+      "title": "42 to 89",
+      "difficulty": "advanced",
+      "difficultyRank": 3,
+      "startNumber": 42,
+      "targetNumber": 89,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        },
+        {
+          "id": "reverseDigits",
+          "type": "reverseDigits",
+          "operand": 0,
+          "label": "Reverse digits"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        42,
+        21,
+        28,
+        82,
+        89
+      ],
+      "optimalOperationIds": [
+        "divide_2",
+        "add_7",
+        "reverseDigits",
+        "add_7"
+      ]
+    },
+    {
+      "id": "advanced-005",
+      "title": "13 to 77",
+      "difficulty": "advanced",
+      "difficultyRank": 3,
+      "startNumber": 13,
+      "targetNumber": 77,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "reverseDigits",
+          "type": "reverseDigits",
+          "operand": 0,
+          "label": "Reverse digits"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 5,
+      "optimalPath": [
+        13,
+        31,
+        34,
+        37,
+        74,
+        77
+      ],
+      "optimalOperationIds": [
+        "reverseDigits",
+        "add_3",
+        "add_3",
+        "multiply_2",
+        "add_3"
+      ]
+    },
+    {
+      "id": "advanced-006",
+      "title": "68 to 83",
+      "difficulty": "advanced",
+      "difficultyRank": 3,
+      "startNumber": 68,
+      "targetNumber": 83,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        },
+        {
+          "id": "reverseDigits",
+          "type": "reverseDigits",
+          "operand": 0,
+          "label": "Reverse digits"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 6,
+      "optimalPath": [
+        68,
+        34,
+        17,
+        24,
+        31,
+        38,
+        83
+      ],
+      "optimalOperationIds": [
+        "divide_2",
+        "divide_2",
+        "add_7",
+        "add_7",
+        "add_7",
+        "reverseDigits"
+      ]
+    },
+    {
+      "id": "advanced-007",
+      "title": "37 to 80",
+      "difficulty": "advanced",
+      "difficultyRank": 3,
+      "startNumber": 37,
+      "targetNumber": 80,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "reverseDigits",
+          "type": "reverseDigits",
+          "operand": 0,
+          "label": "Reverse digits"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        37,
+        34,
+        43,
+        40,
+        80
+      ],
+      "optimalOperationIds": [
+        "subtract_3",
+        "reverseDigits",
+        "subtract_3",
+        "multiply_2"
+      ]
+    },
+    {
+      "id": "advanced-008",
+      "title": "67 to 26",
+      "difficulty": "advanced",
+      "difficultyRank": 3,
+      "startNumber": 67,
+      "targetNumber": 26,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_3",
+          "type": "add",
+          "operand": 3,
+          "label": "+3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "reverseDigits",
+          "type": "reverseDigits",
+          "operand": 0,
+          "label": "Reverse digits"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 5,
+      "optimalPath": [
+        67,
+        70,
+        7,
+        10,
+        13,
+        26
+      ],
+      "optimalOperationIds": [
+        "add_3",
+        "reverseDigits",
+        "add_3",
+        "add_3",
+        "multiply_2"
+      ]
+    },
+    {
+      "id": "advanced-009",
+      "title": "27 to 82",
+      "difficulty": "advanced",
+      "difficultyRank": 3,
+      "startNumber": 27,
+      "targetNumber": 82,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "add_7",
+          "type": "add",
+          "operand": 7,
+          "label": "+7"
+        },
+        {
+          "id": "divide_2",
+          "type": "divide",
+          "operand": 2,
+          "label": "/2"
+        },
+        {
+          "id": "reverseDigits",
+          "type": "reverseDigits",
+          "operand": 0,
+          "label": "Reverse digits"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 6,
+      "optimalPath": [
+        27,
+        34,
+        41,
+        14,
+        21,
+        28,
+        82
+      ],
+      "optimalOperationIds": [
+        "add_7",
+        "add_7",
+        "reverseDigits",
+        "add_7",
+        "add_7",
+        "reverseDigits"
+      ]
+    },
+    {
+      "id": "advanced-010",
+      "title": "29 to 79",
+      "difficulty": "advanced",
+      "difficultyRank": 3,
+      "startNumber": 29,
+      "targetNumber": 79,
+      "rules": {
+        "minNumber": 1,
+        "maxNumber": 99,
+        "integersOnly": true,
+        "allowRepeatedNumbers": false,
+        "allowNoOpMoves": false,
+        "maxTurns": 0
+      },
+      "operations": [
+        {
+          "id": "subtract_3",
+          "type": "subtract",
+          "operand": 3,
+          "label": "-3"
+        },
+        {
+          "id": "multiply_2",
+          "type": "multiply",
+          "operand": 2,
+          "label": "x2"
+        },
+        {
+          "id": "reverseDigits",
+          "type": "reverseDigits",
+          "operand": 0,
+          "label": "Reverse digits"
+        }
+      ],
+      "scoring": {
+        "primary": "fewestTurns",
+        "tieBreaker": "elapsedSeconds"
+      },
+      "optimalTurns": 4,
+      "optimalPath": [
+        29,
+        58,
+        85,
+        82,
+        79
+      ],
+      "optimalOperationIds": [
+        "multiply_2",
+        "reverseDigits",
+        "subtract_3",
+        "subtract_3"
+      ]
+    }
+  ]
+}

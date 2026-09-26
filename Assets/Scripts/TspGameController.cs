@@ -1,11 +1,12 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-// Word selection, ladder history, and elapsed timer. Keep class and serialized field names
+// Number selection, ladder history, and elapsed timer. Keep class and serialized field names
 // so the existing game scene needs no Inspector rewiring.
 public class TspGameController : MonoBehaviour
 {
@@ -15,38 +16,44 @@ public class TspGameController : MonoBehaviour
     [SerializeField] Button startButton, undoButton, submitButton, mainMenuButton;
     [SerializeField] TMP_Text statusText, timerText;
     [SerializeField] TMP_Dropdown nodeCountDropdown;
-    TMP_Dropdown lettersDropdown;
     [SerializeField] GameObject resultPanel, routeNavigationPanel;
 
-    readonly List<WordPuzzle> puzzles = new();
-    readonly List<WordPuzzle> matching = new();
-    static readonly string[] levels = { "Beginner", "Intermediate", "Advanced", "Expert" };
+    readonly List<NumberIQPuzzle> puzzles = new();
+    readonly List<NumberIQPuzzle> matching = new();
+    readonly List<int> difficultyRanks = new();
     readonly List<RectTransform> tiles = new();
-    readonly List<string> ladder = new();
-    readonly HashSet<string> candidates = new();
+    readonly List<int> ladder = new();
+    readonly HashSet<int> candidates = new();
     RectTransform ladderViewport;
     TMP_Text ladderText;
     ScrollRect ladderScroll;
-    Button restart;
+    Button restart, revealPathButton, closePathButton;
+    RectTransform revealPanel, revealViewport;
+    TMP_Text revealHeading, revealText;
+    ScrollRect revealScroll;
+    Graphic revealBackground;
+    // Optional override; otherwise reuse the existing scene's board/game background.
+    [SerializeField] Graphic revealBackgroundSource;
+    bool PathVisible => revealPanel != null && revealPanel.gameObject.activeSelf;
     RectTransform board, content, viewport;
-    TMP_Text heading, currentLabel, candidateLabel, counter;
+    TMP_Text heading, currentLabel, candidateLabel, counter, operationsLabel, solutionText;
     Button previous, next, doneButton;
     Toggle filterButton;
     Image puzzleFilterTrack, puzzleFilterKnob;
     Sprite puzzleSwitchSprite;
     Texture2D puzzleSwitchTexture;
     bool onlyNotDone = true;
-    string packId = "wordiq";
+    string packId = "numberiq";
     // Session-only, like RouteIQ: survives menu changes, never writes to disk.
     static readonly HashSet<string> donePuzzles = new();
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     static void ResetDoneSession() { donePuzzles.Clear(); }
 
-    string DoneKey(WordPuzzle p)
+    string DoneKey(NumberIQPuzzle p)
     {
         // Include endpoints so regenerated packs that reuse IDs do not collide.
-        return packId + "|" + p.wordLength + "|" + p.id + "|" + p.startWord + "|" + p.targetWord;
+        return packId + "|" + p.difficultyRank + "|" + p.id + "|" + p.startNumber + "|" + p.targetNumber;
     }
     void ToggleDone()
     {
@@ -68,14 +75,14 @@ public class TspGameController : MonoBehaviour
             UpdatePuzzleSwitchAppearance(!onlyNotDone);
             return;
         }
-        WordPuzzle current = matching.Count > 0 ? matching[index] : null;
+        NumberIQPuzzle current = matching.Count > 0 ? matching[index] : null;
         onlyNotDone = !allPuzzles;
         RebuildMatching();
         int retained = current == null ? -1 : matching.IndexOf(current);
         if (retained >= 0)
         {
             index = retained;
-            RefreshWords();
+            RefreshNumbers();
         }
         else ShowPuzzle();
     }
@@ -83,8 +90,8 @@ public class TspGameController : MonoBehaviour
     {
         matching.Clear();
         int option = nodeCountDropdown.value;
-        if (option >= 0 && option < levels.Length)
-            matching.AddRange(puzzles.FindAll(p => p.difficulty == levels[option] && p.wordLength == lettersDropdown.value + 3
+        if (option >= 0 && option < difficultyRanks.Count)
+            matching.AddRange(puzzles.FindAll(p => p.difficultyRank == difficultyRanks[option]
                 && (!onlyNotDone || !donePuzzles.Contains(DoneKey(p)))));
         // Removing the current puzzle leaves the next one at the same index.
         if (index >= matching.Count) index = 0;
@@ -100,7 +107,7 @@ public class TspGameController : MonoBehaviour
     ScrollRect scroll;
     Vector2 lastBoardSize;
     int index;
-    bool started, timerRunning;
+    bool started, timerRunning, loading = true;
     double elapsedSeconds, timerStartedAt;
 
     double ElapsedSeconds => elapsedSeconds + (timerRunning
@@ -116,10 +123,10 @@ public class TspGameController : MonoBehaviour
 
     void StartPuzzle()
     {
-        if (started || matching.Count == 0) return;
+        if (PathVisible || started || matching.Count == 0) return;
         started = true;
         ResumeTimer();
-        RefreshWords();
+        RefreshNumbers();
     }
 
     void ResumeTimer()
@@ -170,48 +177,45 @@ public class TspGameController : MonoBehaviour
         timerText.fontSizeMax = 26;
         timerText.raycastTarget = false;
         UpdateTimerDisplay();
-        // Clone the scene dropdown so its font, template and pointer behavior match.
-        lettersDropdown = Instantiate(nodeCountDropdown, nodeCountDropdown.transform.parent);
-        lettersDropdown.name = "LettersDropdown";
-        var lettersHeading = lettersDropdown.transform.Find("NodesHeading");
-        lettersHeading.name = "LettersHeading";
-        lettersHeading.GetComponent<TMP_Text>().text = "LETTERS";
-        lettersDropdown.onValueChanged = new TMP_Dropdown.DropdownEvent();
-        lettersDropdown.ClearOptions();
-        lettersDropdown.AddOptions(new List<string> { "3", "4" });
-        lettersDropdown.SetValueWithoutNotify(0);
-        lettersDropdown.RefreshShownValue();
-        lettersDropdown.onValueChanged.AddListener(SelectDifficulty);
         nodeCountDropdown.onValueChanged = new TMP_Dropdown.DropdownEvent();
         nodeCountDropdown.onValueChanged.AddListener(SelectDifficulty);
         var label = nodeCountDropdown.transform.Find("NodesHeading").GetComponent<TMP_Text>();
-        label.text = "LEVEL";
-        canvas.transform.Find("TitleText").GetComponent<TMP_Text>().text = "WORD IQ";
-        statusText.text = "Exactly one path reaches the target. Letters may be rearranged.";
+        label.text = "DIFFICULTY";
+        canvas.transform.Find("TitleText").GetComponent<TMP_Text>().text = "NUMBER IQ";
+        statusText.text = "Loading number puzzles...";
+        nodeCountDropdown.interactable = false;
+        previous.interactable = next.interactable = filterButton.interactable = false;
         board.GetComponent<Image>().color = new Color(.94f, .96f, .98f);
-        heading = MakeText("WordPuzzleHeading", board, 34);
-        currentLabel = MakeText("CurrentWord", board, 28);
+        heading = MakeText("NumberIQPuzzleHeading", board, 34);
+        heading.text = "Loading puzzles...";
+        operationsLabel = MakeText("OperationsLabel", board, 22);
+        currentLabel = MakeText("CurrentNumber", board, 28);
         currentLabel.color = new Color(.76f, .12f, .19f);
         candidateLabel = MakeText("CandidatesHeading", board, 20);
-        candidateLabel.text = "NEXT WORDS";
-        viewport = MakeRect("WordViewport", board);
+        candidateLabel.text = "NEXT NUMBERS";
+        viewport = MakeRect("NumberViewport", board);
         viewport.gameObject.AddComponent<RectMask2D>();
         var hitArea = viewport.gameObject.AddComponent<Image>();
         hitArea.color = new Color(0, 0, 0, 0);
         scroll = viewport.gameObject.AddComponent<ScrollRect>();
-        content = MakeRect("WordCandidates", viewport);
+        content = MakeRect("NumberCandidates", viewport);
         content.anchorMin = new Vector2(0, 1);
         content.anchorMax = new Vector2(1, 1);
         content.pivot = new Vector2(.5f, 1);
         scroll.viewport = viewport;
         scroll.content = content;
+        solutionText = MakeText("NumberSolution", content, 23);
+        solutionText.alignment = TextAlignmentOptions.TopLeft;
+        solutionText.enableAutoSizing = false;
+        solutionText.textWrappingMode = TextWrappingModes.Normal;
+        solutionText.gameObject.SetActive(false);
         scroll.horizontal = false;
         scroll.movementType = ScrollRect.MovementType.Clamped;
         ladderViewport = MakeRect("LadderViewport", board);
         ladderViewport.gameObject.AddComponent<RectMask2D>();
         ladderViewport.gameObject.AddComponent<Image>().color = new Color(0, 0, 0, 0);
         ladderScroll = ladderViewport.gameObject.AddComponent<ScrollRect>();
-        ladderText = MakeText("WordLadder", ladderViewport, 26);
+        ladderText = MakeText("NumberLadder", ladderViewport, 26);
         ladderText.enableAutoSizing = false;
         ladderText.textWrappingMode = TextWrappingModes.NoWrap;
         ladderText.alignment = TextAlignmentOptions.MidlineLeft;
@@ -222,10 +226,10 @@ public class TspGameController : MonoBehaviour
         ladderScroll.movementType = ScrollRect.MovementType.Clamped;
         undoButton.transform.SetParent(board, false);
         undoButton.onClick = new Button.ButtonClickedEvent();
-        undoButton.onClick.AddListener(UndoWord);
+        undoButton.onClick.AddListener(UndoNumber);
         undoButton.gameObject.SetActive(true);
         undoButton.interactable = false;
-        restart = MakeButton("RestartWordButton", "RESTART", ShowPuzzle);
+        restart = MakeButton("RetryNumberButton", "RETRY", ShowPuzzle);
         restart.transform.SetParent(board, false);
         restart.interactable = false;
         startButton.transform.SetParent(board, false);
@@ -233,142 +237,142 @@ public class TspGameController : MonoBehaviour
         startButton.onClick.AddListener(StartPuzzle);
         startButton.gameObject.SetActive(true);
         startButton.interactable = false;
-        canvas.GetComponent<TspResponsiveLayout>().RegisterWordBrowser(previous, next, counter, doneButton, filterButton, lettersDropdown);
+        revealPathButton = MakeButton("RevealPathButton", "Reveal Path", RevealPath);
+        revealPathButton.transform.SetParent(board, false);
+        revealPathButton.interactable = false;
+        CreateRevealPanel();
+        canvas.GetComponent<TspResponsiveLayout>().RegisterWordBrowser(previous, next, counter, doneButton, filterButton);
     }
 
-    void Start()
+    IEnumerator Start()
     {
-        try
-        {
-            var asset = Resources.Load<TextAsset>("wordiq-puzzles");
-            if (asset == null) throw new Exception("Missing Assets/Resources/wordiq-puzzles.json");
-            var pack = JsonUtility.FromJson<WordPack>(asset.text);
-            if (pack == null || pack.schemaVersion != 2 || pack.puzzles == null)
-                throw new Exception("Expected WordIQ schemaVersion 2 with a puzzles array.");
-            packId = string.IsNullOrEmpty(pack.packId) ? "wordiq" : pack.packId;
-            var ids = new HashSet<string>(StringComparer.Ordinal);
-            foreach (var p in pack.puzzles)
-            {
-                if (!WordIQPuzzleValidation.Valid(p) || !ids.Add(p.id)) { Debug.LogWarning("Skipping invalid WordIQ puzzle: " + p?.id); continue; }
-                puzzles.Add(p);
-            }
-            if (puzzles.Count == 0) throw new Exception("No valid schema 2 puzzles found.");
-            nodeCountDropdown.ClearOptions();
-            nodeCountDropdown.AddOptions(new List<string> { "Beginner - 3", "Intermediate - 4", "Advanced - 5", "Expert - 6" });
-            nodeCountDropdown.SetValueWithoutNotify(0);
-            nodeCountDropdown.RefreshShownValue();
-            lettersDropdown.interactable = nodeCountDropdown.interactable = puzzles.Count > 0;
-            SelectDifficulty(0);
-        }
-        catch (Exception e)
-        {
-            Debug.LogError("WordIQ: " + e.Message);
-            heading.text = "No puzzle available";
-            statusText.text = "The word puzzle file could not be loaded.";
-            lettersDropdown.interactable = nodeCountDropdown.interactable = previous.interactable = next.interactable = false;
-        }
+        yield return NumberIQPuzzleLoader.Load(OnPackLoaded, OnLoadFailed);
+    }
+
+    void OnPackLoaded(NumberIQPack pack)
+    {
+        loading = false;
+        packId = pack.packId;
+        puzzles.AddRange(pack.puzzles);
+        foreach (var puzzle in puzzles)
+            if (!difficultyRanks.Contains(puzzle.difficultyRank)) difficultyRanks.Add(puzzle.difficultyRank);
+        difficultyRanks.Sort();
+        nodeCountDropdown.ClearOptions();
+        nodeCountDropdown.AddOptions(difficultyRanks.ConvertAll(DifficultyLabel));
+        nodeCountDropdown.SetValueWithoutNotify(0);
+        nodeCountDropdown.RefreshShownValue();
+        SelectDifficulty(0);
+    }
+
+    static string DifficultyLabel(int rank) => rank == 1 ? "Beginner" : rank == 2 ? "Intermediate" : "Advanced";
+
+    void OnLoadFailed(string error)
+    {
+        loading = false;
+        Debug.LogError("NumberIQ: " + error);
+        heading.text = "Unable to load puzzles";
+        statusText.text = "Check StreamingAssets/numberiq-puzzles.json. See Console for details.";
+        candidateLabel.text = "Return to menu and try again";
+        counter.text = "0 of 0";
+        nodeCountDropdown.interactable = previous.interactable = next.interactable = filterButton.interactable = false;
+        LayoutBoard();
     }
 
     void SelectDifficulty(int option)
     {
+        if (loading || timerRunning) return;
         index = 0;
         RebuildMatching();
         ShowPuzzle();
     }
     void Browse(int direction)
     {
-        if (matching.Count == 0) return;
+        if (timerRunning || matching.Count == 0) return;
         index = (index + direction + matching.Count) % matching.Count;
         ShowPuzzle();
     }
     void ShowPuzzle()
     {
+        ClosePath();
         timerRunning = false;
         started = false;
         elapsedSeconds = 0d;
         UpdateTimerDisplay();
         ladder.Clear();
-        if (matching.Count > 0) ladder.Add(matching[index].startWord);
-        RefreshWords();
+        if (matching.Count > 0) ladder.Add(matching[index].startNumber);
+        RefreshNumbers();
     }
-    // Turn count is the number of edges: the initial word is turn zero.
-    static int TurnLimit(WordPuzzle p) => p.rules != null && p.rules.maxTurns > 0
-        ? Math.Min(6, p.rules.maxTurns) : 6;
+    void SelectNumber(int number)
+    {
+        if (PathVisible || !started || !timerRunning || matching.Count == 0 || !candidates.Contains(number)) return;
+        // Re-check rules rather than trusting a stale tile callback.
+        if (!NumberIQLogic.Candidates(matching[index], ladder).Exists(c => c.number == number)) return;
+        ladder.Add(number);
+        if (number == matching[index].targetNumber) StopTimer();
+        RefreshNumbers();
+    }
 
-    bool WithinTurnLimit(WordPuzzle p, string word)
+    void UndoNumber()
     {
-        int turns = ladder.Count - 1;
-        return turns < TurnLimit(p) && (turns < TurnLimit(p) - 1 || word == p.targetWord);
-    }
-
-    void SelectWord(string word)
-    {
-        if (!started || !timerRunning || matching.Count == 0 || ladder.Count == 0 ||
-            ladder[ladder.Count - 1] == matching[index].targetWord || !candidates.Contains(word)
-            || !WithinTurnLimit(matching[index], word)) return;
-        ladder.Add(word);
-        if (word == matching[index].targetWord) StopTimer();
-        RefreshWords();
-    }
-    void UndoWord()
-    {
-        if (!started || ladder.Count <= 1) return;
-        ResumeTimer();
+        // A finished result reveals the solution; start a fresh attempt with Retry.
+        if (PathVisible || !timerRunning || ladder.Count <= 1) return;
         ladder.RemoveAt(ladder.Count - 1);
-        RefreshWords();
+        RefreshNumbers();
     }
-    void RefreshWords()
+
+    void RefreshNumbers()
     {
         UpdateDoneButton();
+        revealPathButton.interactable = !loading && matching.Count > 0;
         filterButton.SetIsOnWithoutNotify(!onlyNotDone);
         UpdatePuzzleSwitchAppearance(!onlyNotDone);
-        filterButton.interactable = !timerRunning;
+        filterButton.interactable = !timerRunning && !loading;
         foreach (var tile in tiles) { tile.gameObject.SetActive(false); Destroy(tile.gameObject); }
         tiles.Clear();
         candidates.Clear();
-        undoButton.interactable = ladder.Count > 1;
+        solutionText.gameObject.SetActive(false);
+        undoButton.interactable = timerRunning && ladder.Count > 1;
         restart.interactable = started;
         startButton.interactable = !started && matching.Count > 0;
         ladderText.text = string.Join("  →  ", ladder);
         counter.text = matching.Count == 0 ? "0 of 0" : $"{index + 1} of {matching.Count}";
-        previous.interactable = next.interactable = matching.Count > 1;
+        previous.interactable = next.interactable = !timerRunning && matching.Count > 1;
+        nodeCountDropdown.interactable = !timerRunning && difficultyRanks.Count > 0;
         currentLabel.text = "";
         if (matching.Count == 0)
         {
             heading.text = onlyNotDone ? "No unfinished puzzles" : "No puzzles available";
             statusText.text = onlyNotDone
                 ? "Turn on All Puzzles to revisit or unmark completed puzzles."
-                : "No puzzles are available for this Letters/Level combination.";
-            candidateLabel.text = "";
+                : "No puzzles are available for this difficulty.";
+            candidateLabel.text = operationsLabel.text = "";
             LayoutBoard();
             return;
         }
         var p = matching[index];
-        heading.text = p.startWord + " → " + p.targetWord + "  <size=65%>(" + p.wordLength + " letters)</size>";
-        string current = ladder[ladder.Count - 1];
-        bool complete = started && current == p.targetWord;
-        if (complete && timerRunning) StopTimer();
+        heading.text = p.startNumber + " → " + p.targetNumber;
+        operationsLabel.text = "OPERATIONS: " + string.Join("   |   ", p.operations.ConvertAll(NumberIQLogic.OperationLabel));
+        int current = ladder[ladder.Count - 1];
+        bool complete = started && current == p.targetNumber;
         int turns = ladder.Count - 1;
-        currentLabel.text = (complete ? "TARGET REACHED: " : "CURRENT: ") + current
-            + "   |   " + turns + "/" + TurnLimit(p) + " turns";
-        var node = p.nodes.Find(n => n.word == current);
-        if (started && !complete && node.nextWords != null) foreach (var word in node.nextWords)
+        currentLabel.text = (complete ? "TARGET: " : "CURRENT: ") + current + "   |   " + turns
+            + (p.rules.maxTurns > 0 ? "/" + p.rules.maxTurns : "") + " moves";
+        if (started && !complete) foreach (var candidate in NumberIQLogic.Candidates(p, ladder))
         {
-            if (!WithinTurnLimit(p, word) || word == current || ((p.rules == null || !p.rules.allowRepeatedWords) && ladder.Contains(word))
-                || !candidates.Add(word)) continue;
-            var tile = MakeRect("Candidate_" + word, content);
+            int number = candidate.number;
+            candidates.Add(number);
+            var tile = MakeRect("Candidate_" + number, content);
             var bg = tile.gameObject.AddComponent<Image>();
             bg.color = new Color(.08f, .39f, .44f);
             bg.raycastTarget = true;
             var button = tile.gameObject.AddComponent<Button>();
             button.targetGraphic = bg;
-            button.onClick.AddListener(() => SelectWord(word));
-            // A replaced tile must not remain selected for keyboard submit.
+            button.onClick.AddListener(() => SelectNumber(number));
             var navigation = button.navigation;
             navigation.mode = Navigation.Mode.None;
             button.navigation = navigation;
-            var text = MakeText("Word", tile, 28);
-            text.text = word;
+            var text = MakeText("Number", tile, 28);
+            text.text = number + "\n<size=65%>" + string.Join(" / ", candidate.labels) + "</size>";
             text.color = Color.white;
             text.rectTransform.anchorMin = Vector2.zero;
             text.rectTransform.anchorMax = Vector2.one;
@@ -376,13 +380,22 @@ public class TspGameController : MonoBehaviour
             text.rectTransform.offsetMax = new Vector2(-8, -4);
             tiles.Add(tile);
         }
-        bool finalTurn = turns >= TurnLimit(p) - 1;
-        candidateLabel.text = !started ? "SELECT START TO BEGIN" : complete ? "LADDER COMPLETE" : finalTurn ? (tiles.Count > 0 ? "FINAL TURN — SELECT THE TARGET" : "TURN LIMIT — UNDO OR RESTART") : tiles.Count > 0 ? "NEXT WORDS" : "NO NEXT WORDS — UNDO TO TRY ANOTHER PATH";
-        statusText.text = !started ? $"{p.difficulty}: {p.solutionMoves} moves. Exactly one path to the target. Select START."
-            : complete ? "Target reached! You found the only path. Restart to try for a faster time."
-            : finalTurn ? (tiles.Count > 0 ? "Only the target can be selected on the final turn." : "The target is not available for the final turn. Select UNDO or RESTART.")
-            : tiles.Count == 0 ? "No unused candidates remain. Select UNDO to go back."
-            : "Exactly one path reaches the target. Wrong branches need UNDO. Drag the ladder to review.";
+        bool limitReached = p.rules.maxTurns > 0 && turns >= p.rules.maxTurns;
+        candidateLabel.text = !started ? "SELECT START TO BEGIN" : complete ? "PUZZLE COMPLETE"
+            : limitReached ? "TURN LIMIT — UNDO OR RETRY" : tiles.Count > 0 ? "NEXT NUMBERS" : "NO NEXT NUMBERS — UNDO OR RETRY";
+        statusText.text = !started ? "Reach the target in the fewest moves. START begins the timer."
+            : complete ? "Mark DONE, choose another puzzle, or RETRY for a fresh attempt."
+            : tiles.Count == 0 ? "Select UNDO to go back, or RETRY to start again."
+            : "Choose a number. Whole numbers only; no repeats. Undo keeps the timer running.";
+        if (complete)
+        {
+            int extra = turns - p.optimalTurns;
+            solutionText.text = "<b>" + (extra == 0 ? "OPTIMAL!" : "TARGET REACHED") + "</b>\n"
+                + "Your moves: " + turns + "   |   Optimal: " + p.optimalTurns + "\n"
+                + "Extra moves: " + extra + "   |   Time: " + ElapsedSeconds.ToString("0.0") + "s\n\n"
+                + "<b>One optimal ladder</b>\n" + string.Join(" → ", p.optimalPath);
+            solutionText.gameObject.SetActive(true);
+        }
         LayoutBoard();
         scroll.StopMovement();
         scroll.verticalNormalizedPosition = 1;
@@ -395,27 +408,175 @@ public class TspGameController : MonoBehaviour
     {
         lastBoardSize = board.rect.size;
         float w = board.rect.width, h = board.rect.height;
-        Place(heading.rectTransform, 12, 12, w - 24, 48);
-        Place(timerText.rectTransform, 12, 62, w - 24, 32);
-        Place(ladderViewport, 16, 100, w - 32, 44);
-        Place(ladderText.rectTransform, 0, 0, Mathf.Max(w - 32, ladderText.preferredWidth + 16), 44);
-        Place(currentLabel.rectTransform, 12, 150, w - 24, 36);
-        Place(candidateLabel.rectTransform, 12, 194, w - 24, 32);
-        Place(viewport, 16, 236, w - 32, Mathf.Max(48, h - 308));
+        Place(heading.rectTransform, 12, 8, w - 24, 42);
+        Place(timerText.rectTransform, 12, 50, w - 24, 30);
+        Place(operationsLabel.rectTransform, 12, 83, w - 24, 34);
+        Place(ladderViewport, 16, 122, w - 32, 42);
+        Place(ladderText.rectTransform, 0, 0, Mathf.Max(w - 32, ladderText.preferredWidth + 16), 42);
+        Place(currentLabel.rectTransform, 12, 170, w - 24, 32);
+        Place(candidateLabel.rectTransform, 12, 208, w - 24, 30);
+        Place(viewport, 16, 246, w - 32, Mathf.Max(48, h - 368));
+        Place((RectTransform)revealPathButton.transform, 16, h - 112, w - 32, 44);
+        LayoutRevealPanel(w, h);
         float actionWidth = (w - 56) / 3;
         Place((RectTransform)startButton.transform, 16, h - 60, actionWidth, 44);
         Place((RectTransform)undoButton.transform, 28 + actionWidth, h - 60, actionWidth, 44);
         Place((RectTransform)restart.transform, 40 + 2 * actionWidth, h - 60, actionWidth, 44);
         float available = Mathf.Max(1, w - 32);
-        int letters = matching.Count == 0 ? 3 : matching[index].wordLength;
-        float desired = Mathf.Max(112, letters * 22 + 24);
-        int columns = Mathf.Max(1, Mathf.FloorToInt((available + 12) / (desired + 12)));
+        int columns = Mathf.Clamp(Mathf.FloorToInt((available + 12) / 148), 1, 3);
         float tileWidth = (available - (columns - 1) * 12) / columns;
         int rows = Mathf.CeilToInt(tiles.Count / (float)columns);
-        content.sizeDelta = new Vector2(0, Mathf.Max(viewport.rect.height, rows * 68 - 12));
+        float contentHeight = Mathf.Max(viewport.rect.height, rows * 94 - 12);
+        if (solutionText.gameObject.activeSelf)
+        {
+            float resultHeight = solutionText.GetPreferredValues(solutionText.text, available - 8, 0).y + 16;
+            Place(solutionText.rectTransform, 4, 0, available - 8, resultHeight);
+            contentHeight = Mathf.Max(contentHeight, resultHeight);
+        }
+        content.sizeDelta = new Vector2(0, contentHeight);
         for (int i = 0; i < tiles.Count; i++)
-            Place(tiles[i], (i % columns) * (tileWidth + 12), (i / columns) * 68, tileWidth, 56);
+            Place(tiles[i], (i % columns) * (tileWidth + 12), (i / columns) * 94, tileWidth, 82);
     }
+    void CreateRevealPanel()
+    {
+        revealPanel = MakeRect("NumberIQRevealPanel", board);
+        var backdrop = revealPanel.gameObject.AddComponent<Image>();
+        backdrop.color = new Color(.94f, .96f, .98f, 1f);
+        backdrop.raycastTarget = true;
+        revealHeading = MakeText("RevealHeading", revealPanel, 30);
+        revealViewport = MakeRect("RevealViewport", revealPanel);
+        revealViewport.gameObject.AddComponent<RectMask2D>();
+        revealViewport.gameObject.AddComponent<Image>().color = Color.clear;
+        revealScroll = revealViewport.gameObject.AddComponent<ScrollRect>();
+        revealText = MakeText("RevealNumbers", revealViewport, 28);
+        revealText.enableAutoSizing = false;
+        revealText.textWrappingMode = TextWrappingModes.Normal;
+        revealText.alignment = TextAlignmentOptions.Top;
+        revealScroll.viewport = revealViewport;
+        revealScroll.content = revealText.rectTransform;
+        revealScroll.horizontal = false;
+        revealScroll.vertical = true;
+        revealScroll.movementType = ScrollRect.MovementType.Clamped;
+        closePathButton = MakeButton("ClosePathButton", "Close", ClosePath);
+        closePathButton.transform.SetParent(revealPanel, false);
+        closePathButton.interactable = true;
+        var navigation = closePathButton.navigation;
+        navigation.mode = Navigation.Mode.None;
+        closePathButton.navigation = navigation;
+        revealPanel.gameObject.SetActive(false);
+    }
+
+    static bool HasArtwork(Graphic graphic)
+    {
+        return (graphic is Image image && image.overrideSprite != null)
+            || (graphic is RawImage raw && raw.texture != null);
+    }
+
+    Graphic FindGameBackground()
+    {
+        if (revealBackgroundSource != null) return revealBackgroundSource;
+        // Prefer artwork assigned directly to the game board.
+        var boardGraphic = board.GetComponent<Graphic>();
+        if (HasArtwork(boardGraphic)) return boardGraphic;
+        Graphic best = null;
+        float bestArea = -1;
+        foreach (var graphic in board.GetComponentInParent<Canvas>().GetComponentsInChildren<Graphic>())
+        {
+            if (!graphic.enabled || graphic.transform.IsChildOf(revealPanel)
+                || !HasArtwork(graphic) || graphic.GetComponentInParent<Selectable>() != null) continue;
+            string name = graphic.name.ToLowerInvariant();
+            if (!name.Contains("background") && name != "bg") continue;
+            var rect = graphic.rectTransform.rect;
+            float area = rect.width * rect.height;
+            if (area > bestArea) { best = graphic; bestArea = area; }
+        }
+        return best != null ? best : boardGraphic;
+    }
+
+    void CopyGameBackground()
+    {
+        // Refresh on each reveal so later changes to the game's artwork are reflected.
+        if (revealBackground != null)
+        {
+            revealBackground.gameObject.SetActive(false);
+            Destroy(revealBackground.gameObject);
+            revealBackground = null;
+        }
+        var source = FindGameBackground();
+        if (source == null) return;
+        var rt = MakeRect("RevealGameBackground", revealPanel);
+        rt.SetAsFirstSibling();
+        if (source is RawImage raw)
+        {
+            var copy = rt.gameObject.AddComponent<RawImage>();
+            copy.texture = raw.texture;
+            copy.uvRect = raw.uvRect;
+            revealBackground = copy;
+        }
+        else if (source is Image image)
+        {
+            var copy = rt.gameObject.AddComponent<Image>();
+            copy.sprite = image.overrideSprite;
+            copy.type = image.type;
+            copy.preserveAspect = image.preserveAspect;
+            copy.fillCenter = image.fillCenter;
+            copy.fillMethod = image.fillMethod;
+            copy.fillAmount = image.fillAmount;
+            copy.fillClockwise = image.fillClockwise;
+            copy.fillOrigin = image.fillOrigin;
+            copy.pixelsPerUnitMultiplier = image.pixelsPerUnitMultiplier;
+            revealBackground = copy;
+        }
+        else { Destroy(rt.gameObject); return; }
+        revealBackground.color = source.color;
+        revealBackground.raycastTarget = false;
+    }
+
+    void RevealPath()
+    {
+        if (loading || matching.Count == 0) return;
+        var p = matching[index];
+        revealHeading.text = "SOLUTION LADDER — " + p.optimalTurns + " MOVES";
+        var lines = new List<string> { p.optimalPath[0].ToString() };
+        for (int i = 0; i < p.optimalOperationIds.Count; i++)
+        {
+            var op = p.operations.Find(o => o.id == p.optimalOperationIds[i]);
+            lines.Add("<size=75%>↓  " + NumberIQLogic.OperationLabel(op) + "</size>");
+            lines.Add(p.optimalPath[i + 1].ToString());
+        }
+        revealText.text = string.Join("\n", lines);
+        CopyGameBackground();
+        revealPanel.gameObject.SetActive(true);
+        revealPanel.SetAsLastSibling();
+        LayoutBoard();
+        Canvas.ForceUpdateCanvases();
+        revealScroll.StopMovement();
+        revealScroll.verticalNormalizedPosition = 1;
+        closePathButton.Select();
+        // Match WordIQ: preserve progress, elapsed timer and Done status.
+    }
+
+    void ClosePath()
+    {
+        if (revealPanel == null) return;
+        revealPanel.gameObject.SetActive(false);
+        if (UnityEngine.EventSystems.EventSystem.current != null)
+            UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
+    }
+
+    void LayoutRevealPanel(float w, float h)
+    {
+        if (revealPanel == null) return;
+        Place(revealPanel, 0, 0, w, h);
+        if (revealBackground != null) Place(revealBackground.rectTransform, 0, 0, w, h);
+        Place(revealHeading.rectTransform, 16, 16, w - 32, 48);
+        float viewHeight = Mathf.Max(48, h - 144);
+        Place(revealViewport, 16, 72, w - 32, viewHeight);
+        float textHeight = revealText.GetPreferredValues(revealText.text, w - 32, 0).y + 16;
+        Place(revealText.rectTransform, 0, 0, w - 32, Mathf.Max(viewHeight, textHeight));
+        Place((RectTransform)closePathButton.transform, 16, h - 60, w - 32, 44);
+    }
+
     static void Place(RectTransform rt, float x, float y, float w, float h)
     {
         rt.anchorMin = rt.anchorMax = new Vector2(0, 1);
