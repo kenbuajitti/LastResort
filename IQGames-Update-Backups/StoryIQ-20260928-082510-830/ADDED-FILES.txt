@@ -1,0 +1,5 @@
+Assets\Editor\StoryIQWebBuild.cs
+Assets\Editor\StoryIQWebBuild.cs.meta
+Assets\WebGLTemplates\IQGamesResponsive\index.html
+Assets\WebGLTemplates\IQGamesResponsive\index.html.meta
+BUILD-STORYIQ.txt

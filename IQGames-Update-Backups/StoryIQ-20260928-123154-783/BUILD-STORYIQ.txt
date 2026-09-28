@@ -1,0 +1,18 @@
+StoryIQ — ROUTEIQ BUILD AND SOUND UPDATE
+
+This is an update for your existing project, not a complete Unity project.
+Close Unity. Run INSTALL.cmd in this folder and select the existing StoryIQ
+project folder containing Assets, Packages and ProjectSettings.
+The installer backs up replaced files and changes only Web-related settings.
+Existing .meta files are preserved. Keep each game's update with its own project.
+
+Open the project with its installed Unity version and Web Build Support.
+Choose IQ Games > Build StoryIQ for itch.io.
+Upload the resulting Builds/StoryIQ-<timestamp>.zip to itch.io, not this update ZIP.
+Ordinary Web builds also validate the responsive template and package an upload ZIP.
+A profile that overrides the template is rejected with an explanatory error.
+
+CHECK: wide fullscreen stays landscape; portrait phone still adapts; resize works.
+StoryIQ has no music controller in the supplied source; this update changes its Web build only. Its existing layout, story service URL and server remain unchanged.
+
+Validation: source and JavaScript checks completed. Unity is unavailable in the editing environment; Unity compilation and live gameplay must be checked locally. No compiled WebGL build is included.

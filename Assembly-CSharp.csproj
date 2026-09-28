@@ -58,6 +58,8 @@
     <Compile Include="Assets\Scripts\TspGameController.cs" />
     <Compile Include="Assets\Scripts\LastResort\LastResortService.cs" />
     <Compile Include="Assets\Scripts\TspRouteLine.cs" />
+    <Compile Include="Assets\Scripts\NumberIQPuzzleData.cs" />
+    <Compile Include="Assets\Scripts\NumberIQPuzzleLoader.cs" />
     <Compile Include="Assets\Scripts\WordIQPuzzleData.cs" />
     <Compile Include="Assets\Scripts\TspPuzzleRenderer.cs" />
     <Compile Include="Assets\Scripts\LastResort\LastResortStory.cs" />
