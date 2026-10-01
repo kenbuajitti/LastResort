@@ -53,6 +53,8 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.5.7f1\Editor\Data\BCLExtensions\TargetingPacks\netstandard2.1\analyzers\dotnet\roslyn4.0\cs\System.Text.Json.SourceGeneration.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\IQSpeakerGraphic.cs" />
+    <Compile Include="Assets\Scripts\IQMusic.cs" />
     <Compile Include="Assets\Scripts\TspResponsiveLayout.cs" />
     <Compile Include="Assets\Scripts\TspPuzzlesData.cs" />
     <Compile Include="Assets\Scripts\TspGameController.cs" />
@@ -61,6 +63,7 @@
     <Compile Include="Assets\Scripts\NumberIQPuzzleData.cs" />
     <Compile Include="Assets\Scripts\NumberIQPuzzleLoader.cs" />
     <Compile Include="Assets\Scripts\WordIQPuzzleData.cs" />
+    <Compile Include="Assets\Scripts\LastResort\LastResortPresentation.cs" />
     <Compile Include="Assets\Scripts\TspPuzzleRenderer.cs" />
     <Compile Include="Assets\Scripts\LastResort\LastResortStory.cs" />
     <Compile Include="Assets\Scripts\TspPuzzleLoader.cs" />

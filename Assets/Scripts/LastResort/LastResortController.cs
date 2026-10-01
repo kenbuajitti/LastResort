@@ -9,7 +9,7 @@ using UnityEngine.InputSystem.UI;
 
 namespace LastResort
 {
-    public sealed class LastResortController : MonoBehaviour
+    public sealed partial class LastResortController : MonoBehaviour
     {
         readonly Color ink = new Color(.08f, .16f, .20f);
         readonly Color cream = new Color(.97f, .95f, .88f);
@@ -51,7 +51,9 @@ namespace LastResort
                 Debug.LogError("Check Assets/Resources/LastResort/Opening.json. Five unique choices are required.");
                 return;
             }
+            BuildSeriesMenu();
             ShowMenu();
+            StartCoroutine(ShowIntroduction());
         }
 
         void BuildShell()
@@ -73,7 +75,7 @@ namespace LastResort
             canvasObject.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
             CanvasScaler scaler = canvasObject.GetComponent<CanvasScaler>();
             scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-            scaler.referenceResolution = new Vector2(900, 1100);
+            scaler.referenceResolution = new Vector2(1280, 720);
             scaler.matchWidthOrHeight = .5f;
             RectTransform background = Panel("Background", canvasObject.transform, ink);
             Stretch(background);
@@ -150,6 +152,8 @@ namespace LastResort
                 events.AddComponent<StandaloneInputModule>();
 #endif
             }
+            if (FindFirstObjectByType<AudioListener>() == null)
+                Camera.main.gameObject.AddComponent<AudioListener>();
             UpdateSafeArea();
         }
 
@@ -169,10 +173,14 @@ namespace LastResort
             safeArea.offsetMin = safeArea.offsetMax = Vector2.zero;
             Canvas.ForceUpdateCanvases();
             frame.sizeDelta = new Vector2(Mathf.Min(1050, safeArea.rect.width), 0);
+            LayoutSeriesMenu();
         }
 
         void ClearPage(string status)
         {
+            if (menuRoot != null) menuRoot.gameObject.SetActive(false);
+            if (helpRoot != null) helpRoot.gameObject.SetActive(false);
+            frame.gameObject.SetActive(true);
             EventSystem.current?.SetSelectedGameObject(null);
             foreach (Transform child in content)
             {
@@ -193,24 +201,15 @@ namespace LastResort
         void ShowMenu()
         {
             showingStory = false;
-            ClearPage("FIVE DAYS. TWENTY DECISIONS.");
-            home.gameObject.SetActive(false);
-            Label(content, "WELCOME TO THE BELLWEATHER", 23, teal);
-            Label(content, "A holiday to die for.", 48, ink);
-            Label(content, setup.premise, 28, ink);
-            Label(content, "Everyone has a story. Someone is leaving something out.", 28, teal);
-            if (pendingRequest != null)
-                MakeButton(content, "RETRY STORY CONNECTION", RetryLive);
-            else if (liveStory != null && !liveStory.isEnding)
-                MakeButton(content, "CONTINUE YOUR STAY", ShowLiveStory);
-            else if (liveStory != null && liveStory.isEnding)
-                MakeButton(content, "READ YOUR ENDING", ShowLiveStory);
-            MakeButton(content, "BEGIN YOUR STAY", BeginLive);
-            MakeButton(content, "MEET THE CHARACTERS", ShowCast);
-            MakeButton(content, "HOW TO PLAY", ShowHelp);
-            MakeButton(content, "TRY THE OFFLINE PREVIEW", BeginStay);
-            Label(content, "A new story unfolds from your choices. The live game requires a connection to the story server.", 22, ink);
-            FinishPage();
+            EventSystem.current?.SetSelectedGameObject(null);
+            frame.gameObject.SetActive(false);
+            helpRoot.gameObject.SetActive(false);
+            menuRoot.gameObject.SetActive(true);
+            resumeButton.gameObject.SetActive(pendingRequest != null || liveStory != null);
+            resumeButton.GetComponentInChildren<TMP_Text>().text = pendingRequest != null
+                ? "RETRY CONNECTION" : liveStory != null && liveStory.isEnding
+                ? "READ YOUR ENDING" : "CONTINUE YOUR STAY";
+            LayoutSeriesMenu();
         }
 
         void BeginStay()
@@ -262,14 +261,9 @@ namespace LastResort
 
         void ShowHelp()
         {
-            ClearPage("HOW TO PLAY");
-            home.gameObject.SetActive(true);
-            Label(content, "Read. Decide. Live with it.", 40, ink);
-            Label(content, "Read the scene, then choose one of five actions. Scroll or swipe to see the entire story and all five choices. There is no timer.", 27, ink);
-            Label(content, "The live game spans five days and twenty decisions. Each accepted choice shapes the next scene. After your twentieth decision, the story resolves and an epilogue follows.", 27, ink);
-            Label(content, "Choose BEGIN YOUR STAY for a live story, or TRY THE OFFLINE PREVIEW for a written sample. Return to the menu to pause, then CONTINUE YOUR STAY to resume. Keep the game and story server open: closing either loses the current stay. A failed request can be retried without counting the choice twice.", 25, ink);
-            MakeButton(content, "RETURN TO MENU", ShowMenu);
-            FinishPage();
+            helpRoot.gameObject.SetActive(true);
+            helpRoot.SetAsLastSibling();
+            LayoutSeriesMenu();
         }
 
         void ReturnToMenu()
@@ -420,7 +414,7 @@ namespace LastResort
 
         Button MakeButton(Transform parent, string caption, UnityAction action)
         {
-            RectTransform rect = Panel("ChoiceButton", parent, teal);
+            RectTransform rect = Panel("ChoiceButton", parent, Color.white);
             var button = rect.gameObject.AddComponent<Button>();
             button.targetGraphic = rect.GetComponent<Image>();
             ColorBlock colors = button.colors;
@@ -430,12 +424,12 @@ namespace LastResort
             button.colors = colors;
             button.onClick.AddListener(action);
             var size = rect.gameObject.AddComponent<LayoutElement>();
-            size.minHeight = 90;
+            size.minHeight = 64;
             var padding = rect.gameObject.AddComponent<VerticalLayoutGroup>();
-            padding.padding = new RectOffset(22, 22, 16, 16);
+            padding.padding = new RectOffset(18, 18, 12, 12);
             padding.childControlHeight = padding.childControlWidth = true;
             padding.childForceExpandHeight = padding.childForceExpandWidth = true;
-            var text = Label(rect, caption, 25, cream);
+            var text = Label(rect, caption, 23, Color.black);
             text.alignment = TextAlignmentOptions.MidlineLeft;
             return button;
         }

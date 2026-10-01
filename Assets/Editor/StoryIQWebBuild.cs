@@ -19,6 +19,13 @@ public sealed class StoryIQWebBuild : IPreprocessBuildWithReport, IPostprocessBu
         if (!File.Exists("Assets/WebGLTemplates/IQGamesResponsive/index.html"))
             throw new BuildFailedException("StoryIQ responsive Web template is missing.");
         PlayerSettings.productName = "StoryIQ";
+        // The runtime cover supplies the five-second animated introduction.
+        PlayerSettings.SplashScreen.show = false;
+        PlayerSettings.SplashScreen.showUnityLogo = false;
+        if (!File.Exists("Assets/Resources/StoryIQ/Cover.png") ||
+            !File.Exists("Assets/Resources/IQAudio/Puzzling.mp3") ||
+            !File.Exists("Assets/Plugins/WebGL/StoryIQNavigation.jslib"))
+            throw new BuildFailedException("StoryIQ menu, music or navigation assets are missing. Restore the complete update before building.");
         PlayerSettings.WebGL.template = Template;
         PlayerSettings.defaultWebScreenWidth = 960;
         PlayerSettings.defaultWebScreenHeight = 600;

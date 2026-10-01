@@ -1,18 +1,39 @@
-StoryIQ — ROUTEIQ BUILD AND SOUND UPDATE
+STORYIQ - MATCHING IQ GAMES PRESENTATION
 
-This is an update for your existing project, not a complete Unity project.
-Close Unity. Run INSTALL.cmd in this folder and select the existing StoryIQ
-project folder containing Assets, Packages and ProjectSettings.
-The installer backs up replaced files and changes only Web-related settings.
-Existing .meta files are preserved. Keep each game's update with its own project.
+This ZIP contains the complete Unity source project based on your latest upload.
+Extract it into a NEW folder. In Unity Hub, add the LastResort-main folder that
+contains Assets, Packages and ProjectSettings. Use Unity 6000.5.7f1 with Web Build
+Support installed. Let Unity finish importing, then open:
+Assets/Scenes/LastResortMenu.unity
 
-Open the project with its installed Unity version and Web Build Support.
+BUILD FOR ITCH.IO
 Choose IQ Games > Build StoryIQ for itch.io.
-Upload the resulting Builds/StoryIQ-<timestamp>.zip to itch.io, not this update ZIP.
-Ordinary Web builds also validate the responsive template and package an upload ZIP.
-A profile that overrides the template is rejected with an explanatory error.
+Upload the NEW Builds/StoryIQ-<timestamp>.zip created by that command.
+Do not upload this source project ZIP, or an older StoryIQWeb.zip retained from
+your original project. The build command creates a fresh output folder and ZIP.
 
-CHECK: wide fullscreen stays landscape; portrait phone still adapts; resize works.
-StoryIQ has no music controller in the supplied source; this update changes its Web build only. Its existing layout, story service URL and server remain unchanged.
+CHANGES
+- Five-second cover introduction with a slow zoom; Unity splash disabled in the
+  project and supplied Web build profile.
+- Existing StoryIQ landscape cover, responsive layout, white menu buttons with
+  black text, and white description. No duplicate title over the cover.
+- PLAY, HOW TO PLAY, MEET THE CHARACTERS, OFFLINE PREVIEW, ALL IQ GAMES.
+- CONTINUE YOUR STAY / RETRY CONNECTION / READ YOUR ENDING appear when relevant.
+- HOW TO PLAY is a smaller modal over the menu with a CLOSE button.
+- The Puzzling music from RouteIQ, quiet volume, default OFF on each fresh launch.
+  Drawn speaker icon stays available while reading and reflects audible state.
+- ALL IQ GAMES opens https://iqgamesonline.com/?iqreturn=1&game=StoryIQ in another
+  tab, preserving the game and story in the original tab. Use the website's return
+  control or switch back to the game tab. If popups are blocked, a clickable link
+  and RETURN TO STORYIQ fallback are shown. In Unity Editor, return to the Editor.
+- White story-choice buttons and smaller minimum button height.
 
-Validation: source and JavaScript checks completed. Unity is unavailable in the editing environment; Unity compilation and live gameplay must be checked locally. No compiled WebGL build is included.
+The story logic, story data, StoryServer files and configured Render endpoint are
+preserved. Closing/reloading the game can still lose the current stay.
+
+VALIDATION
+Source/resource checks and JavaScript navigation/audio checks passed here.
+Unity is not installed in the editing environment: this is NOT a compiled WebGL
+build. In Unity, check the Console and test the introduction, landscape/portrait
+resize, help CLOSE, sound on/off, character list, offline preview, live PLAY,
+MENU/CONTINUE, and ALL IQ GAMES/return before publishing the new build.
