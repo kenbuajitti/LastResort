@@ -24,7 +24,8 @@ namespace LastResort
         TMP_FontAsset font;
         RectTransform safeArea, frame, content;
         ScrollRect scroll;
-        TMP_Text progress;
+        TMP_Text progress, readingHint;
+        bool novelRequested;
         Button home;
         Rect lastSafeArea;
         Vector2 lastScreen;
@@ -138,9 +139,9 @@ namespace LastResort
             progress = Label(frame, "", 22, cream, false);
             SetBounds(progress.rectTransform, Vector2.zero, new Vector2(1, 0), new Vector2(18, 61), new Vector2(-18, 96));
             progress.alignment = TextAlignmentOptions.Center;
-            var note = Label(frame, "LAST RESORT  |  Scroll to read more", 18, new Color(.73f, .80f, .78f), false);
-            SetBounds(note.rectTransform, Vector2.zero, new Vector2(1, 0), new Vector2(18, 8), new Vector2(-18, 57));
-            note.alignment = TextAlignmentOptions.Center;
+            readingHint = Label(frame, "LAST RESORT  |  Scroll to read more", 18, new Color(.73f, .80f, .78f), false);
+            SetBounds(readingHint.rectTransform, Vector2.zero, new Vector2(1, 0), new Vector2(18, 8), new Vector2(-18, 57));
+            readingHint.alignment = TextAlignmentOptions.Center;
 
             if (EventSystem.current == null)
             {
@@ -174,6 +175,7 @@ namespace LastResort
             Canvas.ForceUpdateCanvases();
             frame.sizeDelta = new Vector2(Mathf.Min(1050, safeArea.rect.width), 0);
             LayoutSeriesMenu();
+            if (novelRoot != null && novelRoot.gameObject.activeSelf) RefreshNovel();
         }
 
         void ClearPage(string status)
@@ -188,10 +190,16 @@ namespace LastResort
                 Destroy(child.gameObject);
             }
             progress.text = status;
+            castMode = false;
+            novelRequested = false;
+            if (novelRoot != null) novelRoot.gameObject.SetActive(false);
+            scroll.gameObject.SetActive(true);
+            readingHint.gameObject.SetActive(true);
         }
 
         void FinishPage()
         {
+            if (novelRequested) { PresentNovelPage(); return; }
             Canvas.ForceUpdateCanvases();
             LayoutRebuilder.ForceRebuildLayoutImmediate(content);
             scroll.StopMovement();
@@ -200,6 +208,7 @@ namespace LastResort
 
         void ShowMenu()
         {
+            castMode = false;
             showingStory = false;
             EventSystem.current?.SetSelectedGameObject(null);
             frame.gameObject.SetActive(false);
@@ -218,6 +227,7 @@ namespace LastResort
             showingStory = true;
             ClearPage("OFFLINE PREVIEW  |  DAY 1  |  DECISION 1");
             home.gameObject.SetActive(true);
+            novelRequested = true;
             Label(content, "ARRIVAL / THE JETTY", 23, teal);
             Label(content, setup.openingTitle, 40, ink);
             Label(content, setup.opening, 27, ink);
@@ -235,11 +245,12 @@ namespace LastResort
             if (!session.TryRecord(choice)) return;
             showingStory = false;
             ClearPage("OFFLINE PREVIEW  |  ONE SAMPLE DECISION");
+            novelRequested = true;
             Label(content, "YOUR FIRST MOVE", 23, teal);
             Label(content, choice.text, 36, ink);
             Label(content, choice.previewResponse, 27, ink);
             Label(content, "End of the opening preview", 30, teal);
-            Label(content, "This is a written sample response. Return to the menu and select BEGIN YOUR STAY for the live, twenty-decision story.", 24, ink);
+            Label(content, "This is a written sample response. Return to the menu and select PLAY for the live, twenty-decision story.", 24, ink);
             MakeButton(content, "TRY ANOTHER OPENING CHOICE", BeginStay);
             MakeButton(content, "RETURN TO MENU", ShowMenu);
             FinishPage();
@@ -247,16 +258,7 @@ namespace LastResort
 
         void ShowCast()
         {
-            ClearPage("THE PEOPLE AT THE BELLWEATHER");
-            home.gameObject.SetActive(true);
-            Label(content, "An interesting guest list.", 40, ink);
-            foreach (CastMember person in setup.cast)
-            {
-                Label(content, person.name, 29, teal);
-                Label(content, person.introduction, 25, ink);
-            }
-            MakeButton(content, "RETURN TO MENU", ShowMenu);
-            FinishPage();
+            ShowCastCharacter(0);
         }
 
         void ShowHelp()
@@ -356,6 +358,7 @@ namespace LastResort
             home.gameObject.SetActive(true);
             ClearPage(liveStory.isEnding ? "DAY 5 OF 5  |  20 OF 20 DECISIONS MADE" :
                 "DAY " + liveStory.day + " OF 5  |  DECISION " + (liveStory.completed + 1) + " OF 20");
+            novelRequested = true;
             Label(content, liveStory.isEnding ? "DEPARTURE" : "THE BELLWEATHER", 23, teal);
             Label(content, liveStory.title, 40, ink);
             Label(content, liveStory.narrative, 27, ink);

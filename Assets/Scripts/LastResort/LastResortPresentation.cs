@@ -24,7 +24,7 @@ namespace LastResort
 
         void BuildSeriesMenu()
         {
-            coverTexture = Resources.Load<Texture2D>("StoryIQ/Cover");
+            coverTexture = Resources.Load<Texture2D>("StoryIQ/Ensemble");
             music = IQMusic.GetPlayer();
             menuRoot = Panel("StoryIQ Menu", safeArea, new Color(.025f, .04f, .10f));
             Stretch(menuRoot);
@@ -68,8 +68,8 @@ namespace LastResort
             SetBounds(heading.rectTransform, new Vector2(0, 1), Vector2.one,
                 new Vector2(20, -66), new Vector2(-20, -20));
             var body = Label(helpCard,
-                "Read each scene and choose one of five actions. Scroll or swipe on the story screen to see every choice. There is no timer.\n\n" +
-                "Your holiday spans five days and twenty decisions. Your choices shape the next scene and the final epilogue.\n\n" +
+                "Click the text or NEXT to read one line at a time. BACK rereads earlier lines. At the end of each scene, choose an action. There is no timer.\n\n" +
+                "The illustration changes with the mood of the text. Your holiday spans five days and twenty decisions. Your choices shape the next scene and the final epilogue.\n\n" +
                 "PLAY starts a live story. OFFLINE PREVIEW offers one written sample decision. MEET THE CHARACTERS introduces the guests.\n\n" +
                 "Use MENU, then CONTINUE YOUR STAY to resume. Keep the game tab open to retain your stay. If a connection fails, RETRY CONNECTION resumes the same request.",
                 24, Color.white, false);
@@ -132,16 +132,17 @@ namespace LastResort
             if (menuRoot == null) return;
             float w = safeArea.rect.width, h = safeArea.rect.height;
             bool portrait = h > w;
-            FitCover(menuCover, w, h, portrait);
+            FitCover(menuCover, portrait ? w : w * .54f, portrait ? h * .42f : h * .86f, false);
+            menuCover.anchoredPosition = portrait ? new Vector2(0, h * .27f) : new Vector2(-w * .22f, 0);
             if (introCover != null) FitCover(introCover, w, h, false);
             int count = 0;
             foreach (var button in menuButtons) if (button.gameObject.activeSelf) count++;
             float bh = Mathf.Clamp((h * .66f - 102) / Mathf.Max(1, count), 36, 46);
             float height = 94 + count * (bh + 8);
-            float width = Mathf.Min(430, w - 36);
+            float width = Mathf.Min(430, portrait ? w - 36 : w * .44f);
             menuStack.anchorMin = menuStack.anchorMax = new Vector2(.5f, 0);
             menuStack.pivot = new Vector2(.5f, 0);
-            menuStack.anchoredPosition = new Vector2(0, portrait ? 30 : 18);
+            menuStack.anchoredPosition = new Vector2(portrait ? 0 : w * .27f, portrait ? 30 : Mathf.Max(18, (h - height) * .5f));
             menuStack.sizeDelta = new Vector2(width, height);
             SetBounds(menuDescription.rectTransform, new Vector2(0, 1), Vector2.one,
                 new Vector2(16, -82), new Vector2(-16, -12));
@@ -162,8 +163,9 @@ namespace LastResort
 
         void FitCover(RectTransform rect, float w, float h, bool top)
         {
-            if (coverTexture == null) return;
-            float aspect = (float)coverTexture.width / coverTexture.height;
+            var texture = rect.GetComponent<RawImage>().texture;
+            if (texture == null) return;
+            float aspect = (float)texture.width / texture.height;
             float width = Mathf.Min(w, h * aspect);
             rect.sizeDelta = new Vector2(width, width / aspect);
             rect.anchoredPosition = new Vector2(0, top ? (h - width / aspect) * .5f : 0);
@@ -174,6 +176,8 @@ namespace LastResort
             introRoot = Panel("StoryIQ five-second introduction", safeArea, new Color(.025f, .04f, .10f));
             Stretch(introRoot);
             introCover = CreateCover(introRoot);
+            var ensemble = Resources.Load<Texture2D>("StoryIQ/Ensemble");
+            if (ensemble != null) introCover.GetComponent<RawImage>().texture = ensemble;
             LayoutSeriesMenu();
             float elapsed = 0;
             while (elapsed < 5f)
